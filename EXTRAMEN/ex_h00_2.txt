@@ -1,0 +1,116 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H00_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     11.desember 2000, oppgave 2.
+
+//     Laget av Frode Haug, HiG, desember 2000.
+
+
+
+OPPGAVE A:
+==========
+
+    "Dad"-arrayen etterhvert:      A  B  C  D  E  F
+                             A B:  B  1  -  -  -  -
+                             A C:  B  C  2  -  -  -
+                             D E:  B  C  2  E  1  -
+                             B D:  B  C  E  E  4  -
+                             A F:  E  E  E  E  F  5
+
+
+    Resulterende skog:     F
+                           |  
+                           E   
+                        / / \ \ 
+                        A B C D 
+
+
+
+
+OPPGAVE B:
+==========
+
+  1) Det finnes MANGE mulige l›sninger, EN kan v‘re:  FCHJDIKAGEB
+
+     Poenget er at man tar bare en eller annen kant ut fra en node,
+     og fortsetter med dette til det stanser (ved at en node ikke har noen
+     etterf›lgere, eller at man allerede har bes›kt den man kommer til.)
+     Is†fall g†r man kun tilbake til den siste/forrige noden som har noen
+     ubes›kte og fortsetter algoritmen/tankegangen ut fra dette punktet.
+
+
+  2) Det finnes MANGE mulige l›sninger, EN kan v‘re:  FADCKIEHGBJ
+
+     Poenget er at n†r man kommer til en node, s† legges alle dens
+     naboer bakerst i en k›. S† tar man den f›rste i k›en, og legger dens
+     naboer bakerst. Deretter tas neste i k›en, og slik fortsetter det.
+
+
+  3) Om vi skal kople grafen best†ende av GIK sammen med resten av
+     nodene, s† er EG den kanten som TOTALT sett har minst vekt fra
+     ALLE de andre nodene og over til GIK. Derfor M den velges som
+     kontaktpunkt mot resten av grafen.
+
+
+  4)  F--------D     B        A
+       \            / .       |
+        \          /   .      |
+         C--------E     I-----K
+         |         \   /
+         |          \ /
+     J---H           G
+
+
+
+
+
+OPPGAVE C:
+==========
+
+    Tilstandsmaskinen:
+
+              ______     a    ______
+         ---> | q0 |<-------->| q1 | <---
+        a|    ------          ------    |a
+         |      | \            / |      |
+         |     b|  \          /  |b     |
+       _____    |   \ c    c /   |   ______
+    ---| q4 | <--    \      /    --> | q2 |---
+    |  ------         \    /         ------  |
+   b|   ^  |          V    V          |  ^   |b
+    |___|  |        __________        |  |___|
+           |  c     | ______ |     c  |
+           -------> | | q3 | | <-------
+                    | ------ |
+                    ----------
+                     |     ^
+                     |_____|
+                     a, b, c
+
+
+
+
+    Enklere:     ________
+                 |      | a, b
+               ______   |
+               | q0 | <--
+               ------
+                 |
+                 | c
+                 |
+                 V
+             __________
+             | ______ |
+             | | q1 | |
+             | ------ |
+             ----------
+              |     ^
+              |_____|
+              a, b, c
+
+
+
+
+   Maskinen godtar et vilk†rlig antall a'er og b'er.
+   Forekommer det minst EN 'c', s† er setningen godtatt.
+

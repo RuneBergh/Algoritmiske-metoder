@@ -1,0 +1,62 @@
+﻿//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H14_1.TXT
+
+//     Løsningsforslag til eksamen i "Algoritmiske metoder",
+//     15.desember 2014, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, desember 2014.
+
+
+
+OPPGAVE A:
+==========
+
+    Etter 2.for-l›kke  - count:   4 4 3 3
+
+    Etter 3.for-l›kke  - count:   4 8 11 14
+
+    MIDT i 4.for-l›kke - count:   2 5 9 14
+                       -     b:   - - A A - B B B - C C - - -
+
+
+
+
+
+
+OPPGAVE B:
+==========
+
+ "PROSEDYRE" sorteres vha. Quicksort.
+   Figur tilsvarende 9.3 s.119 i l‘reboka blir da som f›lger:
+   (NB: Partisjonselementet er skrevet med STOR bokstav,
+        mens resten er skrevet med sm† bokstaver.)
+
+
+              0  1  2  3  4  5  6  7  8
+   Initielt:  P  R  O  S  E  D  Y  R  E
+
+              d  e  E  s  r  p  y  r  o
+
+              d  E
+
+                       O  r  p  y  r  s
+
+                          r  p  r  S  y
+
+                          p  R  r
+
+
+
+
+
+
+OPPGAVE C:
+==========
+                KP                             P
+         E       O     RS               //          \
+       AD EE  KNN O  R RR SUY          K                S
+                                   /       \         //   \
+                                 E           O       R     U
+                               /   \       /   \    / \   //\\
+                              D     E     N     O   R  R  S  Y
+                             //     \\   //\\          \\
+                             A       E   K  N           R

@@ -1,0 +1,93 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H00_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     11.desember 2000, oppgave 1.
+
+//     Laget av Frode Haug, HiG, desember 2000.
+
+
+
+OPPGAVE A:
+==========
+
+      Utskriftssekvens:  ABDdbCEeFfca
+
+
+
+      Algoritmen er et eksempel p† en trippelordertraversering,
+      alts† en kombinasjon av preorder, inorder og postorder:
+
+       void trippelorder (node* t)  {
+         if (t != z)  {
+           cout << t->ch;
+           trippelorder(t->l);
+           cout << t->ch;
+           trippelorder(t->r);
+           cout << t->ch;
+         }
+       }
+
+
+
+
+
+OPPGAVE B:
+==========
+
+      Store bokstaver markerer de som er involvert i downheap og BYTTES.
+      Sm† bokstaver er de som ogs† er involvert, men beholder sin plass.
+    
+      Bottom-up heap konstruksjon:
+            1  2  3  4  5  6  7  8  9 10 11
+            P  U  L  T  O  S  T  K  R  E  M
+                        o              e  m
+                     t           k  r
+                  T        s  L
+               u     t  o 
+            U  T  t  R  o        k  P
+
+      Dvs:  U  T  T  R  O  S  L  K  P  E  M
+
+
+      Heap-sort:
+            T  R  t  P  o  s  l  k  M  e  U
+            T  r  S  p  o  E  l  k  m  T  u
+            S  r  M  p  o  e  l  k  T  t  u
+            R  P  m  K  o  e  l  S  t  t  u 
+            P  O  m  k  L  e  R  s  t  t  u
+            O  L  m  k  E  P  r  s  t  t  u
+            M  l  E  k  O  p  r  s  t  t  u
+            L  K  e  M  o  p  r  s  t  t  u
+            K  E  L  m  o  p  r  s  t  t  u
+            E  K  l  m  o  p  r  s  t  t  u
+  
+      Svar: E  K  L  M  O  P  R  S  T  T  U
+
+
+
+
+
+OPPGAVE C:
+==========
+
+     Keyene:           P   U   L   T   O   S   T   K   R   E   M
+     k (alfabetnr.):  16  21  12  20  15  19  20  11  18   5  13
+
+     Hash1 (M = 11):   5  10   1   9   4   8   9   0   7   5   2
+     Hash2 (M = 11):   2   3   3   1   3   2   1   1   3   1   2
+
+
+     Indeks:           0   1   2   3   4   5   6   7   8   9  10
+     Innhold:          -   -   -   -   -   P   -   -   -   -   -
+                       -   -   -   -   -   P   -   -   -   -   U
+                       -   L   -   -   -   P   -   -   -   -   U
+                       -   L   -   -   -   P   -   -   -   T   U
+                       -   L   -   -   O   P   -   -   -   T   U
+                       -   L   -   -   O   P   -   -   S   T   U
+                       T*  L   -   -   O   P   -   -   S   T   U
+                       T*  L   K*  -   O   P   -   -   S   T   U
+                       T*  L   K*  -   O   P   -   R   S   T   U
+                       T*  L   K*  -   O   P   E*  R   S   T   U
+                       T*  L   K*  M*  O   P   E*  R   S   T   U
+
+     (* = bokstaver som hashes p† plass ved bruk av hash2 ogs†.)

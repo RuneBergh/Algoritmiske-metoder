@@ -1,0 +1,97 @@
+﻿//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H15_1.TXT
+
+//     Løsningsforslag til eksamen i "Algoritmiske metoder",
+//     14.desember 2015, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, november 2015.
+
+
+
+
+OPPGAVE A:
+==========
+
+    Infix-uttrykket:       (((4 + 2) + (3 * 2)) + ((3 + 4) * (2 * 5)))
+
+
+    skrevet POSTFIX blir:   4 2 + 3 2 * + 3 4 + 2 5 * * +
+
+
+                                                 *
+                                   *       +   * * *
+    Stakken underveis:     _ + _ + + + _ + + + + + + + _
+
+                           ('_' betyr at stakken er tom)
+
+
+
+
+
+
+OPPGAVE B:
+==========
+
+    "LIGAMESTER" satt inn i:
+
+        1)  Heap:   T S M L R E G A E I                                      
+               
+
+
+        2)  Binært søketre:             L
+                                      /   \
+                                     I     M
+                                    /       \
+                                   G         S
+                                  /         / \
+                                 A         R   T
+                                  \
+                                   E
+                                    \
+                                     E
+
+
+
+        3)  2-3-4 tre:                  I
+                                     /     \
+                                   E         M
+                                 /   \     /   \
+                                A    EG   L    RST
+
+
+
+        4)  Red-Black tre:              I           (eller EG rotert andre veien)
+                                     /     \
+                                   E         M
+                                 /   \     /   \
+                                A     G   L     S
+                                    //        // \\
+                                    E         R   T
+
+
+
+
+OPPGAVE C:
+==========
+
+ "LIGAMESTER" sorteres vha. Quicksort.
+ Figur tilsvarende 9.3 s.119 i læreboka blir da som følger:
+ (NB: Partisjonselementet er skrevet med STOR bokstav,
+      mens resten er skrevet med små bokstaver.)
+
+
+              0  1  2  3  4  5  6  7  8  9
+   Initielt:  L  I  G  A  M  E  S  T  E  R
+
+              l  i  g  a  m  e  e  R  s  t
+
+              e  a  E  i  m  l  g
+
+              A  e
+
+                       G  m  l  i
+
+                          I  l  m
+
+                             l  M
+
+                                      s  T

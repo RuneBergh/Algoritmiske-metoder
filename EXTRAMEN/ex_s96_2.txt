@@ -1,0 +1,38 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S96_2.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i 
+//     "Algoritmiske metoder", oppgave nr.2, september 1996.
+
+//     Laget av Frode Haug,  HIG,  september 1996.
+
+
+
+a)  Infix-uttrykket:      ( ( ( ( 7 * 14 ) * ( 16 + 3 ) ) + 74 ) * 12 )
+    skrevet POSTFIX blir: 7 14 * 16 3 + * 74 + 12 *
+
+                                 +
+    Stakken underveis:   - * - * * * - + - * -
+
+
+b)  Postfix-uttrykket:  3 7 + 4 18 * + 2 15 * * 7 +
+    Har svaret:  2467
+                                    18          15
+                            7     4  4 72     2  2 30         7
+    Stakken underveis:  - 3 3 10 10 10 10 82 82 82 82 2460 2460 2467 -
+
+                       
+c)                     +
+                    /    \
+                 *        G
+               /    \
+             +        +
+           /   \     / \
+         *       *  E   F
+        / \     / \
+       A   B   C   D
+
+
+d)  Preorder:      I E A A C A G E E H R N M L P X S Y
+    Inorder:       A A A C E E E G H I L M N P R S X Y
+    Postorder:     A A C A E E H G E L M P N S Y X R I
+    Level-order:   I E R A G N X A C E H M P S Y A E L

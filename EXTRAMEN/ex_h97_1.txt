@@ -1,0 +1,59 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H97_1.TXT
+
+//     Lõsningsforslag til eksamen i "Algoritmiske metoder I",
+//     18.desember 1997, oppgave 1.
+
+//     Laget av Frode Haug, HIG,  desember 1997.
+
+
+A)   Opprinnelig array:  87 78 54 31 31 27 13 17 15 17 16 17
+     Insert 67  :        87 78 67 31 31 54 13 17 15 17 16 17 27
+     Insert 78  :        87 78 78 31 31 54 67 17 15 17 16 17 27 13
+     Remove     :        78 31 78 17 31 54 67 13 15 17 16 17 27
+     Remove     :        78 31 67 17 31 54 27 13 15 17 16 17
+     Replace 31 :        67 31 54 17 31 31 27 13 15 17 16 17
+
+
+B)  Store bokstaver markerer de som er involvert i downheap og BYTTES.
+    SmÜ bostaver er de som ogsÜ er involvert, men beholder sin plass.
+    
+    Bottom-up heap konstruksjon:
+          1  2  3  4  5  6  7  8  9 10 11
+          A  L  G  M  E  T  E  R  G  ù  Y
+                      ù              E  y
+                   R           M  g
+                T        G  e
+             ù     r  Y              e  L
+          ù  Y  t  r  L              e  A
+    Dvs:  ù  Y  T  R  L  G  E  M  G  E  A
+
+ Heap-sort:
+          Y  R  t  M  l  g  e  A  g  e  ù
+          T  r  G  m  l  E  e  a  g  Y  õ
+          R  M  g  G  l  e  e  a  T  y  õ
+          M  L  g  g  A  e  e  R  t  y  õ
+          L  G  g  E  a  e  M  r  t  y  õ
+          G  E  g  e  a  L  m  r  t  y  õ
+          G  e  A  e  G  l  m  r  t  y  õ
+          E  e  a  G  g  l  m  r  t  y  õ
+          E  A  E  g  g  l  m  r  t  y  õ
+          A  E  e  g  g  l  m  r  t  y  õ
+ Svar:    A  E  E  G  G  L  M  R  T  Y  ù
+
+
+
+C)   "N":     Fõr:   K           Etter:     K
+                     \                     \\
+                      P                     P
+                    // \\                 /   \
+                    M   T                M     T
+                                         \\
+                                          N
+
+     "I":     Fõr:  Se oppgaveteksten     Etter:          H
+                                                      //     \\
+                                                      D        K
+                                                    /   \    /   \
+                                                   A     F  J     P
+                                                           //   // \\
+                                                           I    M   T

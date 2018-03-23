@@ -1,0 +1,84 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S99_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     19.august 1999, oppgave 2.
+
+//     Laget av Frode Haug, HiG,  august 1999.
+
+
+
+
+OPPGAVE A:
+==========
+
+a1)  Nabomatrisen:      | A  B  C  D  E  F  G  H
+                      --|-----------------------
+                      A | 1  0  1  1  1  0  0  1
+                      B | 0  1  1  0  0  1  1  1
+                      C | 1  1  1  0  1  1  0  0
+                      D | 1  0  0  1  1  0  0  0
+                      E | 1  0  1  1  1  0  1  0
+                      F | 0  1  1  0  0  1  0  0
+                      G | 0  1  0  0  1  0  1  1
+                      H | 1  1  0  0  0  0  1  1
+
+
+a2) Dybde-f›rst s›ketreet:
+                      A......
+                     /      :
+            ........C       :
+            :      /        :
+            :     B.......  :
+            :    / \     :  :
+            :...F   G    :  :
+            :      / \   :  :
+            :     /   H..:  :
+            :.....E...:.....:
+                 /          :
+                D...........:
+
+
+
+
+OPPGAVE B:
+==========
+
+"Dad"-arrayen etterhvert:      A  B  C  D  E  F  G  H
+                         A H:  1  -  -  -  -  -  -  A
+                         G H:  2  -  -  -  -  -  A  A
+                         F C:  2  -  F  -  -  1  A  A
+                         B G:  3  A  F  -  -  1  A  A
+                         E D:  3  A  F  E  1  1  A  A
+                         A E:  5  A  F  E  A  1  A  A
+                         E G:  5  A  F  E  A  1  A  A  --- Ingenting skjer
+                         C E:  7  A  F  E  A  A  A  A
+                         F B:  7  A  F  E  A  A  A  A  --- Ingenting skjer
+                         C A:  7  A  A  E  A  A  A  A
+
+
+Resulterende skog:       A
+                     / / | \ \ \
+                     B C E F G H
+                         |
+                         D
+
+
+
+
+OPPGAVE C:
+==========
+
+Prioritetsk›en etterhvert:
+                                 C-3   E-3   B-4
+                                 F-4   F-4   F-4   D-3
+                            A*   D-5   D-5   D-5   F-4  F-4
+                                                   
+
+
+
+Minimums spenntre:          E-------C
+                           /        |
+                          B         |   F
+                           \        | /
+                            D       A
+

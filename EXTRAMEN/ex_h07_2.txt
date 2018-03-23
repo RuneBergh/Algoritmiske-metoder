@@ -1,0 +1,99 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H07_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     4.desember 2007, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, november 2007.
+
+
+
+OPPGAVE A:
+==========
+
+   Nodenes naboer fra nabomatrisen:
+
+        A   B   C   D   E   F   G   H   I   J   K   L   M
+        -------------------------------------------------
+        B   A   H   E   D   D   B   C   A   I   A   F   D
+        I   G       F   M   H       F   J   M   D       E
+        K           K       L           K       I       J
+                    M                           M       K
+
+
+   Startende i 'M' - f†r dybde-f›rst s›ketree:
+
+                     ........M.......
+                     :     / :      :
+                     :   D   :      :
+                     : / | \ :      :
+                     E   F   K..... :
+                        / \    \  : :
+                       H   L    A : :
+                      /        / \: :
+                     C        B   I :
+                             /     \:
+                            G       J
+
+   En node i et slikt tre er et artikulasjonspunkt om det IKKE fra
+   ETHVERT subtre g†r MINST EN stiplet vei/kant forbi noden selv.
+   Av figuren kan vi defor se at treet/grafen har f›lgende FEM art.pkt:
+       A (for B-subtreet),   B (for G),   D (for F-subtreet),
+       F (for begge subtr‘r)   og   H (for C)
+
+
+
+
+
+OPPGAVE B:
+==========
+
+     Input:  Katalogen:  Output:
+       B
+       A     256: BA       B
+       R     257: AR       A
+       E     258: RE       R
+       -     259: E_       E
+       B     260: _B       -
+       A  (bygger bare videre, ingen output) 
+       N     261: BAN     256
+       A     262: NA       N
+       N     263: AN       A 
+       -     264: N_       N
+       B  (bygger bare videre, ingen output)
+       A     265: _BA     260
+       D     266: AD       A
+       E     267: DE       D
+       R     268: ER       E
+       -     269: R_       R
+       B  (bygger bare videre, ingen output)    
+       A  (bygger bare videre, ingen output)
+       R     270: _BAR    265
+    <slutt>                R
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   Max.flyt for HELE nettverket er 24.
+   Max.flyt ift. kapasitet (F/K) KAN i de ulike r›rene/kantene F.EKS. v‘re:
+
+      AB:   6 /  8
+      AC:  12 / 12
+      AD:   0 /  6
+      AE:   6 /  6
+      BC:   2 /  2
+      BE:   4 /  4
+      CD:   6 /  6
+      CF:   2 /  4
+      CG:   4 /  4
+      CH:   2 /  2
+      DF:   6 / 10
+      EG:  10 / 12
+      FH:   8 /  8
+      GH:   6 /  6
+      GI:   8 / 14
+      HI:  16 / 16
+

@@ -1,0 +1,137 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 30_1-8.TXT
+
+//   Lõsningsforslag til oppgave nr. 1, 2, 3, 5, 6, 7 og 8
+//   i kap.30 s.450 i lëreboka "Algorithms in C++".
+
+
+A)  Exercise nr.1 s.450 i lëreboka:
+      I Figure 30.2 fjerner vi kanten GJ og legger istedet til kanten IK.
+      Vi fÜr da fõlgende:
+         - Artikulasjonspunkter:       A (ift. B)  og   G (ellers to kompon.)
+         - Biconnectede komponenter:   ACGDEF, GHIJKLM og B
+
+
+B)  Exercise nr.2 s.450 i lëreboka:
+      Ved Ü sammenligne figurene 30.2, 30.3 og figuren fra oppgaven over,
+      sÜ fÜr vi fõlgende dybde-fõrst sõketre for grafen:
+
+                       ......A......
+                       :   /   \   :
+                       :  F...  B  :
+                       :  |  :     :
+                       :  E  :     :
+                       :/   \:     :
+             ..........G     D     :
+             :       /   \         :
+             :      L...  C........:
+             :      |  :
+             :      J  :
+             :    /   \:
+             :   K     M
+             :   |
+             :   I
+             :   |
+             :...H
+
+
+C)  Exercise nr.3 s.450 i lëreboka:
+      Svar:  V
+             Fra kap.29 vet vi at et spenntre med V noder har V-1 kanter.
+             Legger vi til bare EN kant, fÜr vi minst en cykel. Legger
+             vi alle V nodene i en sirkel, connected med V kanter, sÜ
+             har vi en sirkel, og kan fjerne hvem vi vil, og fortsatt
+             ha en sammenhengende graf.
+
+
+D)  Exercise nr.5 s.450 i lëreboka:
+       Om vi i koden midt pÜ side 444, 6.linje bytter "dad[j] = i"
+       med "dad[i] = j" fÜr vi fõlgende innhold i "dad" etterhvert:
+
+              A  B  C  D  E  F  G  H  I  J  K  L  M
+       A G:   G  -  -  -  -  -  -  -  -  -  -  -  -
+       A B:   G  -  -  -  -  -  B  -  -  -  -  -  -
+       A C:   G  C  -  -  -  -  B  -  -  -  -  -  -
+       L M:   G  C  -  -  -  -  B  -  -  -  -  M  -
+       J M:   G  C  -  -  -  -  B  -  -  M  -  M  -
+       J L:   G  C  -  -  -  -  B  -  -  M  -  M  -
+       J K:   G  C  -  -  -  -  B  -  -  M  -  M  K
+       E D:   G  C  -  -  D  -  B  -  -  M  -  M  K
+       F D:   G  C  -  -  D  D  B  -  -  M  -  M  K
+       H I:   G  C  -  -  D  D  B  I  -  M  -  M  K
+       F E:   G  C  -  -  D  D  B  I  -  M  -  M  K
+       A F:   G  C  D  -  D  D  B  I  -  M  -  M  K
+       G E:   G  C  D  -  D  D  B  I  -  M  -  M  K
+       G C:   G  C  D  -  D  D  B  I  -  M  -  M  K
+       G H:   G  C  D  I  D  D  B  I  -  M  -  M  K
+       J G:   G  C  D  I  D  D  B  I  -  M  I  M  K
+       L G:   G  C  D  I  D  D  B  I  -  M  I  M  K
+
+
+       Alt dette medfõrer fõlgende union-find forest:
+
+                               I
+                           /   |   \
+                          D    H    K
+                       /  | \       |
+                      C   E  F      M
+                      |           /   \
+                      B          L     J
+                      |
+                      G
+                      |
+                      A
+
+
+E)  Exercise nr.6 s.450 i lëreboka:
+       Om vi i koden side 447 erstatter ytre if-setnings innmat med
+       kun "dad[i] = j;" fÜr vi fõlgende innhold i "dad" etterhvert:
+
+              A  B  C  D  E  F  G  H  I  J  K  L  M
+       A G:   G  -  -  -  -  -  -  -  -  -  -  -  -
+       A B:   G  -  -  -  -  -  B  -  -  -  -  -  -
+       A C:   B  C  -  -  -  -  B  -  -  -  -  -  -
+       L M:   B  C  -  -  -  -  B  -  -  -  -  M  -
+       J M:   B  C  -  -  -  -  B  -  -  M  -  M  -
+       J L:   B  C  -  -  -  -  B  -  -  M  -  M  -
+       J K:   B  C  -  -  -  -  B  -  -  M  -  M  K
+       E D:   B  C  -  -  D  -  B  -  -  M  -  M  K
+       F D:   B  C  -  -  D  D  B  -  -  M  -  M  K
+       H I:   B  C  -  -  D  D  B  I  -  M  -  M  K
+       F E:   B  C  -  -  D  D  B  I  -  M  -  M  K
+       A F:   C  C  D  -  D  D  B  I  -  M  -  M  K
+       G E:   C  D  D  -  D  D  D  I  -  M  -  M  K
+       G C:   C  D  D  -  D  D  D  I  -  M  -  M  K
+       G H:   C  D  D  I  D  D  D  I  -  M  -  M  K
+       J G:   C  D  D  I  D  D  I  I  -  K  I  M  K
+       L G:   C  D  D  I  D  D  I  I  -  K  I  I  I
+
+
+       Alt dette medfõrer fõlgende union-find forest:
+
+                               I
+                        /  /  / \  \  \
+                       D  G  H   K  L  M
+                     // \\       |
+                    B C E F      J
+                      |
+                      A
+
+
+F)  Exercise nr.7 s.450 i lëreboka:
+    Leser kantene:  AB BC CD DE EF FG GH HI IJ ..... RS ST TU UV VW WX XY YZ
+       a) Weight balancing, UTEN path compression:
+          (Tar vekk koden tilknyttet 3. og 4. while-lõkke i koden s.447.)
+       b) Path compression, UTEN weight balancing:
+          (Erstatter ytre if-setnings innmat med "dad[j] = i;" i koden s.447.)
+G)  Exercise nr.8 s.450 i lëreboka:
+          Bruker BèDE weight balancing OG path compression:
+          (Bruker koden s.447 eksakt slik den stÜr.)
+
+       I alle tre tilfellene blir A rota, og alle de andre nodene blir
+       liggende som barn direkte under A !!!
+
+
+       PS: Dersom vi under b) i F) erstatter innmaten med "dad[i] = j;"
+           fÜr vi istedet en liste/lenke der 'Z' har 'Y' som mor, 'Y' har
+           'X' som mor, ....., 'C' har 'B' som mor og 'B' har 'A' som mor !!
+

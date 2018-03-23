@@ -1,0 +1,83 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S01_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     13.august 2001, oppgave 1.
+
+//     Laget av Frode Haug, HiG, august 2001.
+
+
+
+OPPGAVE A:
+==========
+
+      Funksjonen er av O(n)
+      Dette skyldes den ENE for-l›kka som finner svaret etter N itereringer.
+
+
+      En l›sning/innmat av O(1) vil v‘re:
+         return ( (n % 2) ? -1 : 1 );
+
+
+
+
+
+OPPGAVE B:
+==========
+
+      Store bokstaver markerer de som er involvert i downheap og BYTTES.
+      Sm† bokstaver er de som ogs† er involvert, men beholder sin plass.
+    
+      Bottom-up heap konstruksjon:
+            1  2  3  4  5  6  7  8  9 10 11
+            T  O  R  S  K  E  T  U  N  G  E
+                        k              g  e
+                     U           S  n
+                  T        e  R
+               U     S  k        O  n
+            U  T  t  s  k
+      Dvs:  U  T  T  S  K  E  R  O  N  G  E
+
+
+      Heap-sort:
+            1  2  3  4  5  6  7  8  9 10 11
+            T  S  t  O  k  e  r  E  n  g  U
+            T  s  R  o  k  e  G  e  n  T  u
+            S  O  r  N  k  e  g  e  T  t  u
+            R  o  G  n  k  e  E  S  t  t  u
+            O  N  g  E  k  e  R  s  t  t  u
+            N  K  g  e  E  O  r  s  t  t  u
+            K  E  g  e  N  o  r  s  t  t  u
+            G  e  E  K  n  o  r  s  t  t  u
+            E  e  G  k  n  o  r  s  t  t  u
+            E  E  g  k  n  o  r  s  t  t  u
+
+      Svar: E  E  G  K  N  O  R  S  T  T  U
+
+
+
+
+
+OPPGAVE C:
+==========
+
+     Keyene:           T   O   R   S   K   E   T   U   N   G   E
+     k (alfabetnr.):  20  15  18  19  11   5  20  21  14   7   5
+
+     Hash1 (M = 11):   9   4   7   8   0   5   9  10   3   7   5
+     Hash2 (M = 11):   5   5   2   1   4   5   5   4   1   3   5
+
+
+     Indeks:           0   1   2   3   4   5   6   7   8   9  10
+     Innhold:          -   -   -   -   -   -   -   -   -   T   -
+                       -   -   -   -   O   -   -   -   -   T   -
+                       -   -   -   -   O   -   -   R   -   T   -
+                       -   -   -   -   O   -   -   R   S   T   -
+                       K   -   -   -   O   -   -   R   S   T   -
+                       K   -   -   -   O   E   -   R   S   T   -
+                       K   -   -   T*  O   E   -   R   S   T   -
+                       K   -   -   T*  O   E   -   R   S   T   U
+                       K   -   -   T*  O   E   N*  R   S   T   U
+                       K   -   G*  T*  O   E   N*  R   S   T   U
+                       K   E*  G*  T*  O   E   N*  R   S   T   U
+
+     (* = bokstaver som hashes p† plass ved bruk av hash2 ogs†.)

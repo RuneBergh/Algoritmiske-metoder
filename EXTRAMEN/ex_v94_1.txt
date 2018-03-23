@@ -1,0 +1,27 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_V94_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder", 
+//     oppgave nr.1, 10.juni 1994.
+
+//     Laget av Ove Johan Foss, HIG,  v†ren 1994.
+
+
+
+Ove Johan minner om heap-betingelsen som g†r ut p† at data i en node 
+alltid er st›rre eller lik de i "barna" (jfr. ›verst s.149 i l‘reboka).
+
+
+a)  Bertram har rett, da heap-betingelsen alltid er oppfylt for en 
+    sortert avtagende array. (Jfr. exercise nr.2 s.162 i l‘reboka.)
+
+
+b)  21 19 18 7 14 16 17 4 5 6 9.
+    Legger inn 19 til sist i arrayen. Flytter den oppover i heapen
+    (mot venstre i arrayen) til heapbetingelsen er oppfylt. 
+    Jfr. kode s.150 i l‘reboka.
+
+
+c)  18 14 17 7 9 16 6 4 5.
+    Tar vekk f›rste element, og lar det siste komme inn p† plass nr.1.
+    Flytter denne nedover i heapen (mot h›yre i arrayen) til heap-
+    betingelsen er oppfylt. Jfr. kode s.152 og 153 i l‘reboka.

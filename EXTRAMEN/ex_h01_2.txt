@@ -1,0 +1,74 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H01_2.TXT
+
+//     L›sningsforslag til eksamen i 
+//     "Algoritmiske metoder I", oppgave nr.2, 11.desember 2001.
+
+//     Laget av Frode Haug, HIG, desember 2001.
+
+
+
+
+OPPGAVE A:
+==========
+    N†r "B" fjernes:
+        - "B" har et h›yre barn uten sitt venstre barn, derfor er
+        - den ANDRE setningen med  "else if (t->r->l == Z) ....."  aktuell.
+        - Treet etter at "B" er fjernet:       H
+                                             /   \
+                                            D    ... 
+                                           / \
+                                          C  ...
+                                         /
+                                        A
+
+    N†r "L" fjernes:
+        - "L" har ingen h›yre barn, derfor er
+        - den FRSTE setningen med  "if (t->r == Z) x = x->l;"  aktuell.
+        - Treet etter at "L" er fjernet:       H
+                                             /   \
+                                           ...    M
+                                                /   \
+                                               J    ... 
+                                              / \
+                                             I   K
+
+    N†r "D" fjernes:
+        - vil ingen av de to overst†ende casene var aktuelle, derfor er
+        - den TREDJE setningen med  "else ......"  aktuell.
+          Her vil den sekvensielt etterf›lgende noden (dvs. "E")
+          erstatte den som fjernes (dvs. "D").
+        - Treet etter at "D" er fjernet:       H
+                                             /   \
+                                           E     ...
+                                          / \
+                                         B   F
+                                        / \   \
+                                      ... ...  G
+
+
+
+OPPGAVE B:
+==========                 
+               G                              G
+         D           LS                   /       \
+      AA  EEE     H  PPR  U             D           L
+                                      /   \       /  \\
+                                     A     E     H     S
+                                      \\ // \\       /   \
+                                       A E   E      P     U
+                                                  // \\
+                                                  P   R
+
+
+OPPGAVE C:
+==========
+           A  B  C  D  E  F  G                                 G
+     G A:  G  -  -  -  -  -  1                            / / / \ \ \
+     F G:  G  -  -  -  -  G  2   Weight Balancing        A  B C D E F
+     B D:  G  1  -  B  -  G  2  
+     C D:  G  2  B  B  -  G  2   Weight Balancing
+     A C:  G  G  B  B  -  G  5  
+     D F:  G  G  B  G  -  G  5   Path Compression
+     C E:  G  G  G  G  G  G  6   Path Compression
+     E G:  G  G  G  G  G  G  6   (Ingenting skjer)
+

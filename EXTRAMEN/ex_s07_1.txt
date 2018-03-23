@@ -1,0 +1,68 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S07_1.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i "Algoritmiske metoder",
+//     8.august 2007, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, mai 2006.
+
+
+
+OPPGAVE A:
+==========
+
+    Infix-uttrykket:       (((4 + 3) * (((2 + 3) * (3 * 2)) + 4)) * 2)
+
+    skrevet POSTFIX blir:  4 3 + 2 3 + 3 2 * * 4 + * 2 *
+
+                                       *
+                                 +   * * *   +
+    Stakken underveis:     +   * * * * * * * * *  *
+
+
+
+
+
+OPPGAVE B:
+==========
+
+  "LASTGAME" sorteres vha. Quicksort.
+    Figur tilsvarende 9.3 s.119 i l‘reboka blir da som f›lger:
+    (NB: Partisjonselementet er skrevet med STOR bokstav,
+         mens resten er skrevet med sm† bokstaver.)
+
+        0  1  2  3  4  5  6  7
+        a  a  E  t  g  l  m  s
+        A  a
+                 m  g  l  S  t
+                 g  L  m
+
+
+
+
+
+OPPGAVE C:
+==========
+
+     Keyene:           T   H   E   L   A   S   T   G   A   M   E
+     k (alfabetnr.):  20   8   5  12   1  19  20   7   1  13   5
+
+     Hash1 (M = 11):   9   8   5   1   1   8   9   7   1   2   5
+     Hash2:            1   6   2   2   6   2   1   7   6   1   2
+
+
+
+     Indeks:           0   1   2   3   4   5   6   7   8   9  10
+     Innhold:          -   -   -   -   -   -   -   -   -   T   -
+                       -   -   -   -   -   -   -   -   H   T   -
+                       -   -   -   -   -   E   -   -   H   T   -
+                       -   L   -   -   -   E   -   -   H   T   -
+                       -   L   -   -   -   E   -   A*  H   T   -
+                       -   L   -   -   -   E   -   A*  H   T   S*
+                       T*  L   -   -   -   E   -   A*  H   T   S*
+                       T*  L   -   G*  -   E   -   A*  H   T   S*
+                       T*  L   A*  G*  -   E   -   A*  H   T   S*
+                       T*  L   A*  G*  M*  E   -   A*  H   T   S*
+                       T*  L   A*  G*  M*  E   E*  A*  H   T   S*
+                           
+     (* = bokstaver som hashes p† plass ved bruk av hash2 ogs†.)
+

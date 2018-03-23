@@ -1,0 +1,75 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H09_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     21.desember 2009, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, desember 2009.
+
+
+
+OPPGAVE A:
+==========
+
+     (start:)       draktenes
+   H: 4    I: 5     draktenes        (Ingenting skjer)
+   H: 4    I: 6     dEaktRnes     'E' vandrer forbi 'R'
+   H: 4    I: 7     deaktrnes        (Ingenting skjer)
+   H: 4    I: 8     deaEtrnKs     'E' vandrer forbi 'K'
+   H: 4    I: 9     deaeSrnkT     'S' vandrer forbi 'T'
+
+   H: 1    I: 2     deaesrnkt       (Ingenting skjer)
+   H: 1    I: 3     ADEesrnkt     'A' vandrer forbi 'E' og 'D'
+   H: 1    I: 4     adeesrnkt        (Ingenting skjer)
+   H: 1    I: 5     adeesrnkt        (Ingenting skjer)
+   H: 1    I: 6     adeeRSnkt     'R' vandrer forbi 'S'
+   H: 1    I: 7     adeeNRSkt     'N' vandrer forbi 'S' og 'R'
+   H: 1    I: 8     adeeKNRSt     'K' vandrer forbi 'S', 'R' og 'N' 
+   H: 1    I: 9     adeeknrst       (Ingenting skjer)
+
+
+
+
+
+OPPGAVE B:
+==========      
+                 E                         E
+          A            LRS            /         \
+       A    AD      EK  N  RR  T    A            R
+                                  /   \       //   \\
+                                 A     D     L       S
+                                     //     / \    /   \
+                                     A     K   N  R     T
+                                          //       \\
+                                          E         R
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   Keyene:           A   R   S   E   N   A   L   D   R   A   K   T   E   R
+   k (alfabetnr.):   1  18  19   5  14   1  12   4  18   1  11  20   5  18
+
+   Hash1 (M = 17):   1   1   2   5  14   1  12   4   1   1  11   3   5   1
+   Hash2:            3   2   1   3   2   3   4   4   2   3   1   4   3   2
+
+   Indeks:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+   Innhold:  -   A   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+             -   A   -   R*  -   -   -   -   -   -   -   -   -   -   -   -   -
+             -   A   S   R*  -   -   -   -   -   -   -   -   -   -   -   -   -
+             -   A   S   R*  -   E   -   -   -   -   -   -   -   -   -   -   -
+             -   A   S   R*  -   E   -   -   -   -   -   -   -   -   N   -   -
+             -   A   S   R*  A*  E   -   -   -   -   -   -   -   -   N   -   -
+             -   A   S   R*  A*  E   -   -   -   -   -   -   L   -   N   -   -
+             -   A   S   R*  A*  E   -   -   D*  -   -   -   L   -   N   -   -
+             -   A   S   R*  A*  E   -   R*  D*  -   -   -   L   -   N   -   -
+             -   A   S   R*  A*  E   -   R*  D*  -   A*  -   L   -   N   -   -
+             -   A   S   R*  A*  E   -   R*  D*  -   A*  K   L   -   N   -   -
+             -   A   S   R*  A*  E   -   R*  D*  -   A*  K   L   -   N   T*  -
+             E*  A   S   R*  A*  E   -   R*  D*  -   A*  K   L   -   N   T*  -
+             E*  A   S   R*  A*  E   -   R*  D*  R*  A*  K   L   -   N   T*  -
+
+   (* = bokstaver som hashes p† plass ved bruk av hash2 ogs†.)
+

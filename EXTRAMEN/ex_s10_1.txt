@@ -1,0 +1,111 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S10_1.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i "Algoritmiske metoder",
+//     10.august 2010, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, mai 2010.
+
+
+
+OPPGAVE A:
+==========
+
+  "RANGERS" sorteres vha. Quicksort.
+    Figur tilsvarende 9.3 s.119 i l‘reboka blir da som f›lger:
+    (NB: Partisjonselementet er skrevet med STOR bokstav,
+         mens resten er skrevet med sm† bokstaver.)
+
+        0  1  2  3  4  5  6
+        r  a  n  g  e  r  S
+
+        e  a  n  g  R  r
+
+        e  a  G  n
+
+        A  e
+
+
+
+
+
+OPPGAVE B:
+==========
+
+      Store bokstaver markerer de som er involvert i downheap og BYTTES.
+      Sm† bokstaver er de som ogs† er involvert, men beholder sin plass.
+    
+
+      Bottom Up Heap-konstruksjon:
+            1  2  3  4  5  6  7  8  9 10 11
+            E  M  I  R  A  T  E  S  C  U  P
+                        U              A  p
+                     S           R  c      
+                  T        I  e             
+               U     s  P              a  M
+            U  S  t  R  p        E  c
+
+      Dvs:  u  s  t  r  p  i  e  e  c  a  m
+
+
+      Heapsort:
+            T  s  M  r  p  i  e  e  c  a  U
+            S  R  m  E  p  i  e  A  c  T  u
+            R  P  m  e  C  i  e  a  S  t  u
+            P  E  m  A  c  i  e  R  s  t  u
+            M  e  I  a  c  E  P  r  s  t  u
+            I  e  E  a  c  M  p  r  s  t  u
+            E  C  e  a  I  m  p  r  s  t  u
+            E  c  A  E  i  m  p  r  s  t  u
+            C  A  E  e  i  m  p  r  s  t  u
+            A  C  e  e  i  m  p  r  s  t  u
+
+      Svar: A  C  E  E  I  M  P  R  S  T  U
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   N†r "J" fjernes:
+        - "J" har et h›yre barn uten sitt venstre barn, derfor er
+        - den ANDRE setningen med  "else if (t->r->l == z) ....."  aktuell.
+        - Treet etter at "J" er fjernet:
+                 F
+              /     \
+           .....       K
+                     /   \
+                    H      L
+                  .....
+
+
+   N†r "Q" fjernes:
+        - "Q" har ingen h›yre barn, derfor er
+        - den FRSTE setningen med  "if (t->r == z) x = x->l;"  aktuell.
+        - Treet etter at "Q" er fjernet:
+                 M 
+              /     \
+           .....     R
+                   /   \
+                 O    .....  
+               /   \
+              N     P
+
+
+
+   N†r "F" fjernes:
+        - vil ingen av de to overst†ende casene v‘re aktuelle, derfor er
+        - den TREDJE setningen med  "else ......"  aktuell.
+          Her vil den sekvensielt etterf›lgende noden (dvs. "G")
+          erstatte den som fjernes (dvs. "F").
+        - Treet etter at "F" er fjernet:
+                 M
+              /     \
+            G      .....
+          /   \
+         B      J
+       .....   / \
+              H   K 
+               \   \
+                I   L 

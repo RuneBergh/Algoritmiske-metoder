@@ -1,0 +1,35 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 14_70.TXT
+
+//   L›sningsforslag til oppgave nr. 7 og 10
+//   i kap.14 s.213 i l‘reboka "Algorithms in C++".
+
+
+A)  Exercise nr.7 s.213 i l‘reboka:
+
+    N›klene/nodene b›r settes inn etter AVTAGENDE ('decreasing')
+    aksessfrekvens (dvs. de aksessert oftest legges inn f›rst).
+    Dermed havner de oftest aksessert ›verst i treet.
+                                                     
+
+
+
+B)  Exercise nr.10 s.213 i l‘reboka:  
+
+    Etter † ha inserted "EASYQUESTION":
+                         
+                            E
+                       A         S
+                              Q     Y
+                             E     U
+                              I   S
+                               O   T
+                              N
+
+
+    N†r 'Q' er fjernet:     
+                            E
+                      A          S
+                             E       Y
+                               I    U
+                                O  S
+                               N    T

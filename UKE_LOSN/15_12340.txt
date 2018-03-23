@@ -1,0 +1,56 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 15_12340.TXT
+
+//   L›sningsforslag til oppgave nr. 1, 2, 3, 4 og 10
+//   i kap.15 s.230 i l‘reboka "Algorithms in C++".
+
+
+A)  Exercise nr.1 s.230 i l‘reboka:
+                     S
+                EI       U
+             A E NOQ   ST  Y
+
+
+
+B)  Exercise nr.2 s.230 i l‘reboka:
+                      S
+                   /     \
+                  E       U
+                /  \\    / \
+               A    I   S   Y
+                   / \   \\
+                  E   O   T
+                    // \\
+                    N   Q
+
+
+
+C)  Exercise nr.3 s.230 i l‘reboka:
+    N†r 'Z' settes inn etter 'Y' i fig.15.8 f†r vi at grenen med:
+
+       \                   \
+        R                   R
+         \                   \\         
+          X        blir        X        Dvs. KUN fire 'b'er bytter farge
+        // \\                 / \            og 'Z' hektes p† nederst med
+       S     Y               S   Y           en 'Red' link.
+                                  \\
+                                    Z
+
+
+
+D)  Exercise nr.4 s.230 i l‘reboka:
+           D             - Nye hektes stadig p† ytterst og nederst til h›yre.   
+       /      \          - Splitting skjer n†r en 'Black' node med to 'Red'e 
+      B        F           "barn" p†treffes p† vegen nedover i treet mot  
+     / \      / \\         nedre h›yre node (der den nye skal inn).
+    A   C    E    H      - Dersom "mora" allerede er 'Red', s† foretas en 
+                 / \       liten rotasjon om denne og "bestemora". Dette
+                G   J      skjer for bokstavene C, E, G, I, K, M, O, Q, ...
+                  // \\  - "St›rre" slike rotasjoner skjer ogs† for 
+                  I   K    bokstavene H, L, P, Q, T, X og Y.
+
+
+
+E)  Exercise nr.10 s.230 i l‘reboka:
+
+      I E N A G M R A C E H L P X A E S Y  (dvs. fig. 15.11 LEVEL-ORDER).

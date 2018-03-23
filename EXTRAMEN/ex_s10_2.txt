@@ -1,0 +1,110 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S10_2.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i "Algoritmiske metoder",
+//     10.august 2010, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, mai 2010.
+
+
+
+OPPGAVE A:
+==========
+
+   - "SILDESALATEN SYNES SPESIELT SALT OG SYRLIG SIDEN DEN SMAKTE SLIK"
+      har bokstavfrekvensen:
+                ' '  A   D   E   G   I   K   L   M   N   O   P   R   S   T   Y
+      k          0   1   4   5   7   9  11  12  13  14  15  16  18  19  20  25
+      count[k]   9   4   3   8   2   5   2   6   1   4   1   1   1  11   4   2
+
+
+
+   - Dette medf›rer f›lgende dad-array:
+                ' '  A   D   E   G   I   K   L   M   N   O   P   R   S   T   Y
+      k          0   1   4   5   7   9  11  12  13  14  15  16  18  19  20  25
+      count[k]   9   4   3   8   2   5   2   6   1   4   1   1   1  11   4   2
+      dad[k]    38  34 -31  37  31  35 -30 -35 -28 -33  28 -27  27  39  33  30
+
+      k         27  28  29  30  31  32  33  34  35  36  37  38  39  40  41
+      count[k]   2   2   4   4   5   8   8   9  11  16  17  20  27  37  64
+      dad[k]   -29  29 -32  32 -34 -36  36 -37 -38 -39  40 -40  41 -41   0
+
+
+
+   - Tegnet som et tre/en trie:          41   
+                                   /             \
+                               39                   40
+                            /      \             /      \
+                           S        36          37        38
+                                   /   \       /  \     /  \
+                                 33    32     E   34  ' '   35
+                                /  \  /  \       /  \      /  \
+                               T   N 30  29     A   31    I    L
+                                    / \  / \        / \
+                                    Y K 28 27      G   D
+                                        /\ /\
+                                       O M R P
+
+
+
+   - Vi f†r alts† f›lgende bitm›nster:
+          ' '   A     D   E     G    I     K    L      M    N      O      P      R   S    T     Y
+   k       0    1     4   5     7    9    11   12     13   14     15     16     18  19   20    25
+count[k]   9    4     3   8     2    5     2    6      1    4      1      1      1  11    4     2
+ len[k]    3    4     5   3     5    4     5    4      6    4      6      6      6   2    4     5
+         110 1010 10111 100 10110 1110 01101 1111 011101 0101 011100 011111 011110  00 0100 01100  
+( code[k]  6   10    23   4    22   14    13   15     29    5     28     31     30   0    4    12 )
+
+
+
+   - Totalt antall bit i kodet melding blir:
+     (9*3) + (4*4) + (3*5) + (8*3) + (2*5) + (5*4) + (2*5) + (6*4) +
+     (1*6) + (4*4) + (1*6) + (1*6) + (1*6) + (11*2) + (4*4) + (2*5) = 234 bits
+                                                                      =========
+
+
+
+
+
+OPPGAVE B:
+==========
+"Dad"-arrayen etterhvert:
+
+           A  B  C  D  E  F  G 
+     A E:  1  -  -  -  A  -  -
+     B C:  1  1  B  -  A  -  -
+     D F:  1  1  B  1  A  D  -
+     G A:  2  1  B  1  A  D  A      Weight Balancing
+     D B:  2  D  B  3  A  D  A
+     C E:  D  D  B  6  A  D  A      Weight Balancing
+     F E:  D  D  B  6  A  D  A         (Ingenting skjer)
+     B F:  D  D  B  6  A  D  A         (Ingenting skjer)
+     D G:  D  D  B  6  A  D  A         (Ingenting skjer)
+
+
+
+Resulterende skog:          D
+                         /  |  \       
+                        A   B   F
+                       / \  |
+                      E   G C
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   Korteste sti fra "I" til ALLE de andre nodene vil involvere kantene:
+
+         AB  BI  CI  DG  EB  FI  GB  HA
+
+
+
+   Prioritetsk›en etterhvert:
+
+                    F-3
+                    C-3   C-3
+              B-2   G-4   G-4   G-4   A-4   E-5
+              F-3   A-4   A-4   A-4   E-5   H-6   H-6
+         I*   C-3   E-5   E-5   E-5   D-8   D-8   D-8   D-8

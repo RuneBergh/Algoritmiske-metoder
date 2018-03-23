@@ -1,0 +1,85 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S00_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     17.august 2000, oppgave 1.
+
+//     Laget av Frode Haug, HiG,  august 2000.
+
+
+
+
+OPPGAVE A:
+==========
+
+   PREORDER og INORDER:
+      Fra preorder-sekvensen er roten for treet kjent.
+      Nodene p† venstre og h›yre side av denne i inorder-sekvensen utgj›r
+      nodene i henholdsvis venstre og h›yre subtre for denne rota.
+      Fra preorder-sekvensen finner vi s† videre de neste r›ttene i subtr‘rne,
+      og av inorder-sekvensen ser vi stadig deres venstre og h›yre sider.
+
+
+
+   PREORDER og POSTORDER:
+      NEI, man kan som oftest ikke konstruere det opprinnelige treet.
+      F.eks: Begge tr‘rne    A      A 
+                            /        \
+                           B          B
+             vil ha AB som preorder-sekvens  og BA som postorder-sekvens.
+
+      (Men, dersom alle ikke-bladnoder (ikke-terminalnoder) i det bin‘re
+      treet ALLTID har TO ikke-tomme subtr‘r, s† vil struktruren v‘re
+      karakterisert vha. preorder- og postorder-sekvensen.)
+
+
+
+   INORDER OG POSTORDER:   OK
+      JA, man kan ogs† her konstruere det opprinnelige treet.
+      Fra bakerst i postorder-sekvensen er roten for treet kjent.
+      Nodene p† venstre og h›yre side av denne i inorder-sekvensen utgj›r
+      nodene i henholdsvis venstre og h›yre subtre for denne rota.
+      Fra postorder-sekvensen finner vi s† videre de neste r›ttene i subtr‘rne,
+      og av inorder-sekvensen ser vi stadig deres venstre og h›yre sider.
+
+
+
+
+
+OPPGAVE B:
+==========
+                    tombolabua
+   H: 4  I: 5       OombTlabua    'O' vandrer forbi 'T'.
+   H: 4  I: 6       oLmbtOabua    'L' vandrer forbi 'O'.
+   H: 4  I: 7       olAbtoMbua    'A' vandrer forbi 'M'.
+   H: 4  I: 8       olabtombua        (Ingenting skjer)
+   H: 4  I: 9       olabtombua        (Ingenting skjer)
+   H: 4  I: 10      oAabtLmbuO    'A' vandrer forbi 'O' og 'L'.
+
+   H: 1  I: 2       AOabtlmbuo    'A' vandrer forbi 'O'.
+   H: 1  I: 3       aAObtlmbuo    'A' vandrer forbi 'O'.
+   H: 1  I: 4       aaBOtlmbuo    'B' vandrer forbi 'O'.
+   H: 1  I: 5       aabotlmbuo        (Ingenting skjer)
+   H: 1  I: 6       aabLOTmbuo    'L' vandrer forbi 'T' og 'O'.
+   H: 1  I: 7       aablMOTbuo    'M' vandrer forbi 'T' og 'O'.
+   H: 1  I: 8       aabBLMOTuo    'B' vandrer forbi 'T', 'O', 'M' og 'L'.
+   H: 1  I: 9       aabblmotuo        (Ingenting skjer)
+   H: 1  I: 10      aabblmoOTU    'O' vandrer forbi 'U' og 'T'.
+
+
+
+
+
+OPPGAVE C:
+==========
+
+Start:   T O M B O L A B U A
+         O T 
+         M O T 
+               B O 
+         B M O O T 
+                   A L 
+                   A B L 
+                         A U 
+                   A A B L U 
+Slutt:   A A B B L M O O T U 
+

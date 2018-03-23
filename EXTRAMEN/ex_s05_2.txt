@@ -1,0 +1,82 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S05_2.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i 
+//     "Algoritmiske metoder", oppgave nr.2, 9.august 2005.
+
+//     Laget av Frode Haug, HiG, juni 2005.
+
+
+
+
+OPPGAVE A:
+==========
+
+a1)  Nabomatrisen:      | A  B  C  D  E  F  G  H  I
+                      --|--------------------------
+                      A | 1  1  0  0  1  1  0  1  0
+                      B | 1  1  1  0  0  1  1  0  0
+                      C | 0  1  1  0  1  0  0  0  0
+                      D | 0  0  0  1  0  0  0  1  0
+                      E | 1  0  1  0  1  0  0  1  1
+                      F | 1  1  0  0  0  1  1  0  0
+                      G | 0  1  0  0  0  1  1  0  0
+                      H | 1  0  0  1  1  0  0  1  0
+                      I | 0  0  0  0  1  0  0  0  1
+
+
+a2) Dybde-f›rst s›ketreet:
+
+                          .....A........
+                          :     \    : :
+                          :  ....B   : :
+                          :  :  / \  : :
+                          :..:.F   C : :
+                             :/     \: :
+                             G       E :
+                                    / \:
+                                   I   H
+                                        \
+                                         D
+
+
+
+
+
+OPPGAVE B:                             
+==========                             
+
+   Prioritetsk›en etterhvert:
+                               E-1
+                               D-2   B-1
+                               C-2   D-2   D-1
+                          A*   B-2   C-2   C-1  C-1
+
+
+   Minimums spenntre:     B-----E
+                        / |     |
+                      D   |     |
+                          C     A
+
+
+
+
+
+OPPGAVE C:
+==========
+
+    Tilstandsmaskinen:
+
+           ____          ___
+           |  | 1        |  | 0                    ________
+          _V__|_     0  _V__|_     1  ______    1  |______|    
+     ---->| q0 |------->| q1 |------->| q2 |------>|| q3 ||
+          ------        ------        ------       |------|
+            ^            ^  ^           |          --------
+            |            |  |____0______|            |  |
+            |            |_____________________0_____|  |
+            |___1_______________________________________|
+
+
+
+    Maskinen godtar et vilk†rlig antall 0'er og 1'ere.
+    Men, det M avslutte med "011".

@@ -1,0 +1,71 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H06_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     4.desember 2006, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, desember 2006.
+
+
+
+OPPGAVE A:
+==========
+
+    Infix-uttrykket:       (((6 + 4) * (3 + 2)) * (((3 + 3) + (1 + 3)) * 5))
+
+
+    skrevet POSTFIX blir:  6 4 + 3 2 + * 3 3 + 1 3 + + 5 * *
+
+                                               +
+                                 +       +   + + +   *
+    Stakken underveis:     +   * * *   * * * * * * * * *
+
+
+
+
+
+OPPGAVE B:
+==========
+
+  "EMIRATES" sorteres vha. Quicksort.
+    Figur tilsvarende 9.3 s.119 i l‘reboka blir da som f›lger:
+    (NB: Partisjonselementet er skrevet med STOR bokstav,
+         mens resten er skrevet med sm† bokstaver.)
+
+        0  1  2  3  4  5  6  7
+        e  m  i  r  a  e  S  t
+        a  E  i  r  e  m
+              i  e  M  r
+              E  i
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   Keyene:          E   M   I   R   A   T   E   S   S   T   A   D   I   U   M
+   k (alfabetnr.):  5  13   9  18   1  20   5  19  19  20   1   4   9  21  13
+
+   Hash1 (M = 17):  5  13   9   1   1   3   5   2   2   3   1   4   9   4  13
+   Hash2:           5   2   1   2   4   5   5   1   1   5   4   1   1   4   2
+
+   Indeks:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+   Innhold:  -   -   -   -   -   E   -   -   -   -   -   -   -   -   -   -   -
+             -   -   -   -   -   E   -   -   -   -   -   -   -   M   -   -   -
+             -   -   -   -   -   E   -   -   -   I   -   -   -   M   -   -   -
+             -   R   -   -   -   E   -   -   -   I   -   -   -   M   -   -   -
+             A*  R   -   -   -   E   -   -   -   I   -   -   -   M   -   -   -
+             A*  R   -   T   -   E   -   -   -   I   -   -   -   M   -   -   -
+             A*  R   -   T   -   E   -   -   -   I   E*  -   -   M   -   -   -
+             A*  R   S   T   -   E   -   -   -   I   E*  -   -   M   -   -   -
+             A*  R   S   T   S*  E   -   -   -   I   E*  -   -   M   -   -   -
+             A*  R   S   T   S*  E   -   -   T*  I   E*  -   -   M   -   -   -
+             A*  R   S   T   S*  E   -   -   T*  I   E*  -   A*  M   -   -   -
+             A*  R   S   T   S*  E   D*  -   T*  I   E*  -   A*  M   -   -   -
+             A*  R   S   T   S*  E   D*  -   T*  I   E*  I*  A*  M   -   -   -
+             A*  R   S   T   S*  E   D*  -   T*  I   E*  I*  A*  M   -   -   U*
+             A*  R   S   T   S*  E   D*  -   T*  I   E*  I*  A*  M   -   M*  U*
+                                             
+   (* = bokstaver som hashes p† plass ved bruk av hash2 ogs†.)
+

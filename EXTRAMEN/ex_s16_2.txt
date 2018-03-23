@@ -1,0 +1,62 @@
+﻿
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S16_2.TXT
+
+//  Løsning til kontinuasjonseksamen i Alg.met, august 2016, oppgave nr.2.
+//  Laget av Frode Haug, NTNU
+
+
+
+
+
+
+OPPGAVE A:
+==========
+
+   "Dad"-arrayen etterhvert:
+        
+              A  B  C  D  E  F
+        F C:  -  -  F  -  -  1
+        D A:  D  -  F  1  -  1
+        E F:  D  -  F  1  F  2	  Weight Balancing
+        A E:  D  -  F  F  F  4    Weight Balancing
+        C A:  F  -  F  F  F  4    Path Compression
+        B F:  F  F  F  F  F  5    Weight Balancing
+
+
+   Resulterende skog:       F
+                        / / | \ \ 
+                       A B  C  D E
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   Korteste sti fra "H" til ALLE de andre nodene vil involvere kantene:
+
+         AH  BH  CG  DI  AE  AF  GH  AI
+
+
+   Prioritetskøen etterhvert:
+
+                            I-2a   E-2a   
+                            E-2a   B-2h   B-2h
+              G-1h   A-1h   B-2h   F-3a   F-3a   F-3a
+              A-1h   B-2h   F-3a   C-3g   C-3g   C-3g   C-3g
+         H*   B-2h   C-3g   C-3g   D-4i   D-4i   D-4i   D-4i   D-4i
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   De FEM ulike topologiske sorteringssekvensene er:
+       C B D A F E
+       C B D F A E
+       C D B A F E
+       C D B F A E
+       C D F B A E 

@@ -1,0 +1,54 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H96_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     19.desember 1996, oppgave 2.
+
+//     Laget av Frode Haug, HIG,  desember 1996.
+
+
+A)     ............A...      ........G
+       :          /   :      :       /
+       :  .......B... :      :      H...
+       :  :     /   : :      :     /   :
+       :  :    D    : :      :    I    :
+       :  :   /     : :      :   /     :
+       :  :..E      : :      :..J......:
+       :    /       : :
+       :...C        : :
+          /         : :
+         F..........: :
+         :............:
+
+
+
+B)         A  B  C  D  E  F  G  H  I  J
+    A H:   -  -  -  -  -  -  -  A  -  -
+    A C:   -  -  A  -  -  -  -  A  -  -
+    D F:   -  -  A  -  -  D  -  A  -  -
+    G H:   G  -  A  -  -  D  -  A  -  -                    J
+    I F:   G  -  A  I  -  D  -  A  -  -                 /     \
+    F E:   G  -  A  I  I  D  -  A  -  -                B       G
+    B D:   G  -  A  I  I  D  -  A  B  -                |       |
+    E I:   G  -  A  I  I  D  -  A  B  -                I       A
+    J D:   G  J  A  I  I  D  -  A  B  -               / \     / \
+    C H:   G  J  A  I  I  D  -  A  B  -              D   E   C   H
+    D G:   G  J  A  I  I  D  J  A  B  -              |
+    J I:   G  J  A  I  I  D  J  A  B  -              F
+
+
+
+C)  Heapen etterhvert:        D1
+                         F2   E2   B1
+                         E2   B2   E2   E2
+                     A*  B2   C3   C3   C3   C2
+
+
+    Minimums-spenntreet:      A        B
+                             /  \       \
+                            F-----\------D
+                                    \
+                                C----E
+
+
+
+D)     F  A  B  D  C  K  G  E  J  I  H

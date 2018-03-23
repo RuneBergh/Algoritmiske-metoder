@@ -1,0 +1,57 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 22_257.TXT
+
+//   L›sningsforslag til oppgave nr. 2, 5 og 7
+//   i kap.22 s.331 i l‘reboka "Algorithms in C++".
+
+
+A)  Exercise nr.2 s.331 i l‘reboka:
+      I forbindelse med 'Q' som "escape character" kan:
+         - "QQx"  gjerne forekomme.
+                  Dette betyr at n† kommer det 17 stk (=Q) av bokstaven 'x'.
+         - "QQQ"  gjerne forekomme, BARE SISTE 'Q' etterf›lges av ' ' (blank).
+                  Dette betyr at n† kommer det 17 stk (=Q) av bokstaven 'Q'.
+
+
+
+B)  Exercise nr.5 s.331 i l‘reboka:
+      - "ABRACADABRA" har f›lgende bokstavfrekvens:
+                           A   B   C   D   R
+                    k      1   2   3   4  18
+                count[k]   5   2   1   1   2
+
+      - Dette medf›rer f›lgende dad-array:
+                    k      1   2   3   4  18  27  28  29  30
+                count[k]   5   2   1   1   2   2   4   6  11
+                  dad[k]  30  29  -27 27 -28  28 -29 -30   0
+
+      - Tegnet som et tre/en trie:
+                       30
+                      /  \
+                     A    29
+                         /  \
+                        B    28
+                            /  \
+                           27   R
+                          / \
+                         D   C
+
+      - Vi f†r alts† f›lgende bitm›nster:
+                           A     B      C     D     R
+                    k      1     2      3     4    18
+                  bits     0    10   1101  1100   111
+                 code[k]   0     2     13    12     7
+                 len[k]    1     2      4     4     3
+
+      - Totalt antall bit i kodet melding blir:
+            5*1 + 2*2 + 1*4 + 1*4 + 2*3   =   23
+                                            =====
+
+
+
+C)  Exercise nr.7 s.331 i l‘reboka:
+      Bokstavenes frekvenser er alle ulike. Blir Huffman kodingstreet unikt ?
+
+      Nei. Treet kan f† ulikt utseende alt etter hva man lager som h›yre og
+           venstre barn, n†r flere frekvenser ALLIKEVEL SENERE blir like.
+           (F.eks. vil summen av frekvensene 1 og 2 bli 3, som kanskje
+           allerede er en annen bokstavs frekvens.)

@@ -1,0 +1,77 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H06_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     4.desember 2006, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, november 2006.
+
+
+
+OPPGAVE A:
+==========
+
+   Prioritetsk›en etterhvert:
+                               D-1
+                               E-2   E-1
+                               C-3   B-2   B-2
+                          A*   B-3   C-3   C-3   C-3
+
+
+   Minimums spenntre:     A---- C
+                          |
+                          D---- E
+                          |
+                          B
+
+
+
+
+
+OPPGAVE B:
+==========
+
+     Input:  Katalogen:  Output:
+       M
+       a      256 (Ma)     M
+       n      257 (an)     a
+       U      258 (nU)     n
+       -      259 (U_)     U
+       M      260 (_M)     -
+       a    (bygger bare videre, ingen output)  
+       n      261 (Man)   256
+       U    (bygger bare videre, ingen output)
+       -      262 (nU_)   258
+       U      263 (_U)     - 
+       U      264 (UU)     U
+       U    (bygger bare videre, ingen output)  
+       -      265 (UU_)   264
+       U    (bygger bare videre, ingen output)  
+       U      266 (_UU)   263
+       U           
+    <slutt>               264
+
+
+
+
+
+OPPGAVE C:
+==========
+
+    Tilstandsmaskinen:
+
+          b                               a
+        ----                            ----          a, b
+        |  |                            |  |          ----
+     ---v----        --------        ---v----         |  |
+     |------|   a    |------|   a    |------|   b    -v----
+   > || q0 || -----> || q1 || -----> || q2 || -----> | q3 |
+     |------|        |------|        |------|        ------
+     --------        --------        --------
+        ^                |
+        |       b        |
+        ------------------
+
+    Maskinen godtar en input som best†r av et vilk†rlig antall
+    og blanding av a'er og b'er, bare (substrengen) "aab" IKKE 
+    forekommer et sted.
+

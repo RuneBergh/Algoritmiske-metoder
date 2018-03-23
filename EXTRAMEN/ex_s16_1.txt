@@ -1,0 +1,82 @@
+﻿
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S16_1.TXT
+
+//  Løsning til kontinuasjonseksamen i Alg.met, august 2016, oppgave nr.1.
+//  Laget av Frode Haug, NTNU
+
+
+
+
+OPPGAVE A:
+==========
+
+    Postfix-uttrykket:    3 4 + 3 2 * + 2 + 5 3 * 4 2 + * +
+
+(  skrevet Infix:     ((((3 + 4) + (3 * 2)) + 2) + ((5 * 3) * (4 + 2)))   )
+
+
+    og har svaret:        105
+                                                            2
+                                  2                3     4  4  6
+                            4   3 3 6     2     5  5 15 15 15 15 90
+    Stakken underveis:  - 3 3 7 7 7 7 13 13 15 15 15 15 15 15 15 15 105 - 
+
+
+
+
+
+OPPGAVE B:
+==========
+
+    "MYSUSETER" satt inn i:
+
+        1)  Heap:   Y U T R S E S E M                                    
+               
+
+
+        2)  Binært søketre:             M 
+                                     /     \
+                                    E       Y 
+                                     \      / 
+                                      E    S     
+                                          / \
+                                         R   U     
+                                            /
+                                           S
+                                            \
+                                             T
+
+
+
+        3)  2-3-4 tre:               E  S  U
+                                     / \ / \
+                                    E MR ST Y 
+
+
+
+        4)  Red-Black tre:              S           
+                                     //    \\
+                                   E         U
+                                 /   \     /   \
+                                E     M   s     Y
+                                      \\  \\
+                                       R   T   (eller MR og ST rotert andre veien)
+
+
+
+
+OPPGAVE C:
+==========
+
+   Start:   M Y S U S E T E R
+            M Y
+            M S Y
+                  S U
+            M S S U Y
+                      E T
+                          E R
+                      E E R T
+            E E M R S S T U Y
+
+
+   Ferdig:  E E M R S S T U Y

@@ -1,0 +1,85 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H03_1.TXT
+
+//     L›sningsforslag til eksamen i 
+//     "Algoritmiske metoder", oppgave nr.1, 12.desember 2003.
+
+//     Laget av Frode Haug, HiG, desember 2003.
+
+
+
+OPPGAVE A:
+==========
+     Keyene:           T   E   G   N   E   S   E   R   I   E   R
+     k (alfabetnr.):  20   5   7  14   5  19   5  18   9   5  18
+
+     Hash1 (M = 11):   9   5   7   3   5   8   5   7   9   5   7
+     Hash2 (M = 11):   1   2   7   7   2   2   2   3   5   2   3
+
+
+     Indeks:           0   1   2   3   4   5   6   7   8   9  10
+     Innhold:          -   -   -   -   -   -   -   -   -   T   -
+                       -   -   -   -   -   E   -   -   -   T   -
+                       -   -   -   -   -   E   -   G   -   T   -
+                       -   -   -   N   -   E   -   G   -   T   -
+                       E*  -   -   N   -   E   -   G   -   T   -
+                       E*  -   -   N   -   E   -   G   S   T   -
+                       E*  -   E*  N   -   E   -   G   S   T   -
+                       E*  -   E*  N   -   E   -   G   S   T   R*
+                       E*  I*  E*  N   -   E   -   G   S   T   R*
+                       E*  I*  E*  N   E*  E   -   G   S   T   R*
+                       E*  I*  E*  N   E*  E   R*  G   S   T   R*
+                                                           
+     (* = bokstaver som hashes p† plass ved bruk av hash2 ogs†.)
+
+
+
+
+OPPGAVE B:
+==========
+
+  "SLIMBILLEN" sorteres vha. Quicksort.
+    Figur tilsvarende 9.3 s.119 i l‘reboka blir da som f›lger:
+    (NB: Partisjonselementet er skrevet med STOR bokstav,
+         mens resten er skrevet med sm† bokstaver.)
+
+        e  l  i  m  b  i  l  l  N  s
+        e  l  i  i  b  L  l  m
+        B  l  i  i  e
+           E  i  i  l
+              i  i  L
+              I  i
+                          l  M
+
+
+
+
+OPPGAVE C:
+==========
+
+      Store bokstaver markerer de som er involvert i downheap og BYTTES.
+      Sm† bokstaver er de som ogs† er involvert, men beholder sin plass.
+    
+      Bottom-up heap konstruksjon:
+            1  2  3  4  5  6  7  8  9 10
+            S  L  I  M  B  I  L  L  E  N 
+                        N              B
+                     m           l  e   
+                  L        i  I         
+               N     m  L              b
+            s  n  l
+
+      Dvs:  s  n  l  m  l  i  i  l  e  b
+
+
+      Heap-sort:
+            N  M  l  L  l  i  i  B  e  S
+            M  L  l  E  l  i  i  b  N  s
+            L  L  l  e  B  i  i  M  n  s
+            L  I  l  e  b  i  L  m  n  s
+            L  i  I  e  b  L  l  m  n  s
+            I  E  i  B  L  l  l  m  n  s
+            I  e  B  I  l  l  l  m  n  s
+            E  B  I  i  l  l  l  m  n  s
+            B  E  i  i  l  l  l  m  n  s
+
+      Svar: B  E  I  I  L  L  L  M  N  S           

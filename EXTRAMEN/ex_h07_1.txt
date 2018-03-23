@@ -1,0 +1,81 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H07_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     4.desember 2007, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, november 2007.
+
+
+
+OPPGAVE A:
+==========
+
+     (start:)       silledill
+   H: 4  I: 5       EillSdill     'E' vandrer forbi 'S'
+   H: 4  I: 6       eDllsIill     'D' vandrer forbi 'I'
+   H: 4  I: 7       edIlsiLll     'I' vandrer forbi 'L'
+   H: 4  I: 8       edilsilll        (Ingenting skjer)
+   H: 4  I: 9       edilLillS     'L' vandrer forbi 'S'
+
+   H: 1  I: 2       DEillills     'D' vandrer forbi 'E'
+   H: 1  I: 3       deillills        (Ingenting skjer)
+   H: 1  I: 4       deillills        (Ingenting skjer)
+   H: 1  I: 5       deillills        (Ingenting skjer)
+   H: 1  I: 6       deiILLlls     'I' vandrer forbi 'L' og 'L'
+   H: 1  I: 7       deiilllls        (Ingenting skjer)
+   H: 1  I: 8       deiilllls        (Ingenting skjer)
+   H: 1  I: 9       deiilllls        (Ingenting skjer)
+
+
+
+
+
+OPPGAVE B:
+==========
+
+      Store bokstaver markerer de som er involvert i downheap og BYTTES.
+      Sm† bokstaver er de som ogs† er involvert, men beholder sin plass.
+    
+
+      Bottom Up Heap-konstruksjon:
+            1  2  3  4  5  6  7  8  9 10 11
+            S  I  L  L  E  D  I  L  L  E  N
+
+                        N              e  E
+                     l           l  l      
+                  l        d  i            
+               N     l  I              e  e
+            s  n  l                        
+
+      Dvs:  s  n  l  l  i  d  i  l  l  e  e
+
+
+      Heapsort:
+            N  L  l  L  i  d  i  E  l  e  S
+            L  L  l  L  i  d  i  e  E  N  s
+            L  L  l  E  i  d  i  e  L  n  s
+            L  I  l  e  E  d  i  L  l  n  s
+            L  i  I  e  e  d  L  l  l  n  s
+            I  E  i  D  e  L  l  l  l  n  s
+            I  e  E  d  I  l  l  l  l  n  s
+            E  D  e  I  i  l  l  l  l  n  s
+            E  d  E  i  i  l  l  l  l  n  s
+            D  E  e  i  i  l  l  l  l  n  s
+
+      Svar: D  E  E  I  I  L  L  L  L  N  S
+
+
+
+
+
+OPPGAVE C:
+==========
+                L                          L
+          E          LS              /           \
+      AAD   II    L  LL  ST         E             L
+                                 /     \        /  \\
+                                A       I      L     S
+                              // \\      \\        /   \
+                             A     D      I       L     S
+                                                   \\    \\ 
+                                                    L     T

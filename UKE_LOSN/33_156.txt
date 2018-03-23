@@ -1,0 +1,74 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 33_156.TXT
+
+//   L›sningsforslag til oppgave nr. 1, 5 og 6
+//   i kap.33 s.493 i l‘reboka "Algorithms in C++".
+
+
+A)  Exercise nr.1 s.493 i l‘reboka:
+
+       En node kan MAKSIMUM ta imot den MINSTE verdien av:
+          1) Summen av det alle barna kan ta imot
+          2) Flyten fra "mora" og ned til den selv 
+
+       Dersom vi lagrer "flow" fra mora ned til et barn, hos barnet,
+       f†r vi f›lgende pseudokode:
+
+       int flyt(node* t)  {
+           if ( <ikke har noen barn> )  return flow;
+           else  {
+              int tot = 0;
+              for (<hvert barn>)  tot += flyt(<barn nr.'i'>);
+              return ( (tot < flow) ? tot : flow );
+           }
+       }
+
+       I main:    maksFlyt = flyt(root);
+
+
+
+B)  Exercise nr.5 s.493 i l‘reboka:
+
+       USANT.  Dersom kilden sender ut maksimal flyt langs alle sine kanter
+               og ALLE nodene som mottar dette klarer † sende ALT videre,
+               og ALLE nodene deretter klarer det samme, o.s.v.,
+               s† finner vi maksimal flyt UTEN † unders›ke ALLE kantene.
+               F.eks:             (kilde)
+                                     A 
+                                  1/   \1
+                                  B     C
+                                1/ \1 1/ \1
+                                D   E F   G
+                               1|  1| |1  |1
+                                |   \ /   |
+                                |____H____|
+                                   (kum)
+
+              Maksimal flyt vil uansett ikke kunne v‘re mer enn 2
+              (da dette er det maksimale som g†r ut fra 'A').
+              Dette er allerede oppfylt ved † bruke stiene: ABDH og ACGH.
+              Vi har dermed ikke behov for † sjekke stiene om E og F.
+
+
+
+C)  Exercise nr.6 s.493 i l‘reboka:
+       Poenget med nettverk og flow er † finne nettets maksimale
+       gjennomstr›mning. Dvs. hvor mye som maksimalt kan str›mme ut
+       fra kilden, og i LIKE STOR mengde str›mme inn i kummen.
+
+       Dersom vi har en cykel i nettverket, s† betyr dette at noe av
+       flowen inn fra kilden vil sirkulere i nettverket og ikke komme
+       ut i kummen. Dermed blir Ford-Fulkerson's metode "meningsl›se"
+       og en "uendelig" mengde kan sirkulere rundt, mens minimalt
+       kommer ut igjen.  F.eks:
+                   (kilde)
+                      A           Flow fra A til B og D til E.
+                      | 2/2       Cykel om B, C og D.
+                      V           Figuren ved siden av er tegnet i det
+                      B           det som kommer inn i A har fordelt seg
+                1/N ^  \ 2/N      rundt. Hva skjer n† i B ??
+                   /     V        Jo, B mottar plutselig 3 deler, og
+                  D <---- C       vi har jo bare 2 i flow fra A !
+              1/1 |   2/N                           
+                  V
+                  E
+                (kum)

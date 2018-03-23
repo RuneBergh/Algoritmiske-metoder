@@ -1,0 +1,80 @@
+﻿//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H15_2.TXT
+
+//     Løsningsforslag til eksamen i "Algoritmiske metoder",
+//     14.desember 2015, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, november 2015.
+
+
+
+
+OPPGAVE A:       
+==========
+     Input:  Katalogen:  Output:
+       M
+       O     256: MO       M
+       -     257: O_       O
+       M     258: _M       -
+       O  (bygger bare videre, ingen output)
+       S     259: MOS     256
+       -     260: S_       S
+       M  (bygger bare videre, ingen output)
+       O     261: _MO     258
+       S     262: OS       O
+       E     263: SE       S
+       -     264: E_       E
+       M  (bygger bare videre, ingen output)     
+       O  (bygger bare videre, ingen output)
+       S     265: _MOS    261
+       T     266: ST       S
+    <slutt>                T
+
+
+
+
+
+OPPGAVE B:
+==========
+   Prioritetskøen etterhvert (NVd = Nodenavn, Vekt, dad):
+                               
+                             E1f   D1a
+                       F1a   D1a   C1a   C1a
+                       D1a   C1a   G2e   G2e   G2e
+                  A*   C1a   B2f   B2f   B2f   B2f   B2f
+
+
+   Minimums spenntreet:   D     B
+                         /     /  
+                        /     /   
+                       A-----F-----E
+                        \         /
+                         \       /
+                          C     G
+
+
+
+
+
+OPPGAVE C:
+==========
+   Max.flyt for HELE nettverket er 88.
+   Max.flyt ift. kapasitet (F/K) KAN i de ulike rørene/kantene F.EKS. være:
+
+      AB:  28 / 40
+      AD:  30 / 30
+      AF:  30 / 30
+      BC:   8 / 20
+      BF:  20 / 20
+      CD:   0 /  6
+      CF:   2 /  6
+      CG:   6 /  6
+      DF:   8 / 10
+      DH:  10 / 10
+      DI:  12 / 12
+      FH:  32 / 32
+      FI:  28 / 28
+      GE:  18 / 30
+      HE:  30 / 30
+      HG:  12 / 20
+      HI:   0 / 14
+      IE:  40 / 40

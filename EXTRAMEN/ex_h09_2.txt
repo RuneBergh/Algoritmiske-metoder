@@ -1,0 +1,75 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H09_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     21.desember 2009, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, desember 2009.
+
+
+
+OPPGAVE A:
+==========
+   De TRE ulike topologiske sorteringssekvensene er:
+             G  A  F  B  C
+             G  F  A  B  C
+             F  G  A  B  C
+
+
+
+
+
+OPPGAVE B:
+==========
+     Input:  Katalogen:  Output:
+       T
+       I     256: TI       T
+       L     257: IL       I
+       -     258: L_       L
+       T     259: _T       -
+       I  (bygger bare videre, ingen output)
+       N     260: TIN     256 
+       E     261: NE       N
+       -     262: E_       E
+       T  (bygger bare videre, ingen output)   
+       I     263: _TI     259
+       N     264: IN       I
+       D     265: ND       N
+       -     266: D_       D
+       T  (bygger bare videre, ingen output)
+       I  (bygger bare videre, ingen output)
+       N     267: _TIN    263
+       D  (bygger bare videre, ingen output)
+       R     268:  NDR    265
+       E     269:  RE      R
+    <slutt>                E
+
+
+
+
+
+OPPGAVE C:
+==========
+    Tilstandsmaskinen:                  b               
+                                      ----          
+                                      |  V         --------
+         ------    a   ------    b   ------    c   |------|
+       > | q0 | -----> | q1 | -----> | q2 | -----> || q3 ||
+         ------        ------        ------        |------|
+            |             |             |          --------    
+            |             |             |              |
+            |             |             |              |
+            |             |             |              |
+         b,c|          a,c|            a|         a,b,c|
+            |             |             |              |
+            |             |             |              |
+            |             |             |              V
+            |             |             |          ------
+            -------------------------------------> | q4 |<--
+                                                   ------  |
+                                                      |    |
+                                                      ------
+                                                     a, b, c
+
+    Maskinen godtar input som best†r av EN singel a,
+    etterfulgt av en eller flere (et vilk†rlig antall) b'er,
+    og avsluttes med EN singel c.

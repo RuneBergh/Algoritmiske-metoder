@@ -1,0 +1,52 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 11_12347.TXT
+
+//   L›sningsforslag til oppgave nr. 1, 2, 3, 4 og 7 
+//   i kap.11 s.162 i l‘reboka "Algorithms in C++".
+
+
+A)  Oppgave nr.1 s.162:
+
+      Resultat:   7 5 3 1 4 2
+      Underveis:  1  51  512  6521  5421  85214  5421  75214
+      
+
+
+
+B)  Oppgave nr.2 s.162:
+
+      JA !  (Da alle "foreldre" har mindre "barn".)
+
+
+
+
+C)  Oppgave nr.3 s.162:
+
+      Resultat:   Y T U S Q N E A S I O E
+      Underveis:  E  EA  SAE  YSEA  YSEAQ  YSUAQE  YSUAQEE  YSUSQEEA
+                  YTUSQEEAS  YTUSQEEASI  YTUSQEEASIO
+
+
+
+
+D)  Oppgave nr.4 s.162:
+
+      Vi forutsetter at det er 31 stk (IKKE 32) og at ALLE er ulike. 
+      Det 3.st›rste KAN dermed ha posisjon 2-7.
+      Det 3.minste KAN IKKE ha posisjon 1-7. Dvs. KAN ha posisjon 8-31.
+
+
+
+
+E)  Oppgave nr.7 s.162:
+
+      MINIMUMSANTALLET keys som m† flyttes/ombyttes er 3.
+
+      Om a[2] er st›rre enn a[3], og a[N] er st›rre enn a[4] og a[5],
+      s† er EN ombytting nok. 
+      Eks 1:          15
+                 14        13
+               3    6    9    12
+              1 2  4 5  7 8  10 11
+          Ved 'Remove' vil a[N] havne p† toppen, og bytte plass med a[2],
+          og deretter ikke forflytte seg noe mer. Totalt 3 flytt av keys.
+

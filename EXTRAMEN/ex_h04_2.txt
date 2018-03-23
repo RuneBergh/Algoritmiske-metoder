@@ -1,0 +1,83 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H04_2.TXT
+
+//     L›sningsforslag til eksamen i 
+//     "Algoritmiske metoder", oppgave nr.2, 3.desember 2004.
+
+//     Laget av Frode Haug, HiG, november 2004.
+
+
+
+OPPGAVE A:
+==========
+
+"Dad"-arrayen etterhvert:
+           A  B  C  D  E  F  G
+     A C:  1  -  A  -  -  -  -
+     B F:  1  1  A  -  -  B  -
+     D E:  1  1  A  1  D  B  -
+     B G:  1  2  A  1  D  B  B
+     E F:  1  4  A  B  D  B  B    Weight Balancing
+     G E:  1  4  A  B  B  B  B    Path Compression
+     F D:  1  4  A  B  B  B  B    (Ingenting skjer)
+     A D:  B  6  A  B  B  B  B    Weight Balancing
+     C E:  B  6  B  B  B  B  B    Path Compression
+     E B:  B  6  B  B  B  B  B    (Ingenting skjer)
+
+
+Resulterende skog:          B         
+                       / / / \ \ \
+                       A C D E F G
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   Prioritetsk›en etterhvert:
+                               B-1
+                               D-2   E-2
+                               C-2   D-2   D-1
+                          A*   E-3   C-2   C-1   C-1
+
+
+   Minimums spenntre:    A
+                          \
+                       E---B
+                       |\____D
+                       C
+                        
+
+
+
+
+OPPGAVE C:
+==========
+
+    Tilstandsmaskinen:
+
+
+            _______
+            |     | b,c                       _______
+         ___V____ |                           |     |
+     --> |______|--    a   ______   a,c    ___V__   | a,b,c
+         || q0 ||--------->| q1 |--------->| q2 |----
+         |------|          ------          ------
+         --------           ^  |
+             ^              |  |
+             |             a|  |b
+             |              |  |
+             |              |  |
+             |            __|__V__
+             |   b,c      |______|
+             -------------|| q3 ||
+                          |------|
+                          --------
+
+
+    Maskinen godtar et vilk†rlig antall par (0 eller flere) av "ab".
+    Det m† gjerne komme s† mange (0 eller flere)b'er og c'er det
+    bare vil, b†de f›r, etter og innimellom dette.
+    (Dette medf›rer bl.a. at en "a" kan IKKE etterf›lges av enda
+    en "a" eller en "c".)

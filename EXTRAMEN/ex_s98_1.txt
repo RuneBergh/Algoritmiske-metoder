@@ -1,0 +1,65 @@
+//  Fil:  FRODEH \ ALG_MET1 \ EXTRAMEN \EX_S98_1.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i
+//     "Algoritmiske metoder I", oppgave nr.1,  17.august 1998.
+
+//     Laget av Frode Haug,  HIG,  august 1998.
+
+
+
+A)     Opprinnelig array:  92 84 70 34 29 57 62 13 21 26 7 18 
+       Insert 80 :         92 84 80 34 29 70 62 13 21 26 7 18 57 
+       Insert 88 :         92 84 88 34 29 70 80 13 21 26 7 18 57 62 
+       Remove    :         88 84 80 34 29 70 62 13 21 26 7 18 57 
+       Remove    :         84 57 80 34 29 70 62 13 21 26 7 18 
+       Replace 9 :         80 57 70 34 29 18 62 13 21 26 7 9 
+
+
+
+B)  Bottom-up heap konstruksjon:
+            1  2  3  4  5  6  7  8  9 10 11 12 13
+            H  E  I  A  S  T  O  R  H  A  M  A  R
+                           t                 a  r    | Store bokstaver markerer
+                        s              a  m          | de som er involvert og
+                     R           A  h                | BYTTES.
+                  T        R  o              a  I    | Sm† bokstaver er de som
+               S     r  M              a  E          | ogs† er involvert,
+            T  s  R        I  o              a  H    | men beholder sin plass.
+    Dvs:    T  S  R  R  M  I  O  A  H  A  E  A  H
+
+ Heap-sort: T  S  R  R  M  I  O  A  H  A  E  A  H
+            S  R  r  H  m  i  o  a  h  a  e  a  T    |
+            R  M  r  h  E  i  o  a  h  a  A  S  t    |
+            R  m  O  h  e  i  A  a  h  a  R  s  t    | Store bokstaver markerer
+            O  m  I  h  e  A  a  a  h  R  r  s  t    | de som er involvert og
+            M  H  i  h  e  a  a  a  O  r  r  s  t    | BYTTES.
+            I  h  A  h  e  a  a  M  o  r  r  s  t    |
+            H  H  a  A  e  a  I  m  o  r  r  s  t    | Sm† bokstaver er de som
+            H  E  a  a  A  H  i  m  o  r  r  s  t    | enten er involvert og
+            E  A  a  a  H  h  i  m  o  r  r  s  t    | IKKE byttes, eller at
+            A  a  a  E  h  h  i  m  o  r  r  s  t    | de bare ligger det
+            A  a  A  e  h  h  i  m  o  r  r  s  t    | uendret.
+            A  A  a  e  h  h  i  m  o  r  r  s  t    |
+ Svar:      A  A  A  E  H  H  I  M  O  R  R  S  T
+
+
+
+C)     "O":    F›r:       K                  Etter:     K
+                       //   \\                        /   \
+                      D       P                      D      P
+                     ...    /   \                   ...   /   \
+                    .....  M     T                ....   N     T
+                            \\                         // \\
+                              N                        M   O
+
+
+
+       "G":    F›r:       K                  Etter:     K
+                       //   \\                        /   \
+                      D       P                      D      P
+                    /   \    ...                   /  \\   ...
+                   A     H   ....                 A    H   ....
+                       // \\                         /   \
+                       F   J                        F     J
+                                                     \\
+                                                      G

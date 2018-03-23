@@ -1,0 +1,44 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H94_1.TXT
+
+//     Lõsningsforslag til eksamen i "Algoritmiske metoder",
+//     desember 1994, oppgave 1.
+
+
+
+Situasjon A:
+------------
+   Quicksort. Mye sortering, der ingen metode har sine spesielle fortrinn
+   pga. arrayenes lengde eller innhold. Derfor bõr den mest effektive 
+   metode velges, dvs. Quicksort (jfr. prop.9.1 s.121 i lëreboka opp mot 
+   de andre metodenes ytelse).
+   (Heapsort og Mergesort er ogsÜ raske, sÜ de kunne ogsÜ ha vërt valgt.)
+
+
+
+Situasjon B:
+------------
+   Insertion sort. Det er sÜ fÜ elementer at det ikke lõnner seg Ü sette i
+   gang en av de avanserte metodene (Quicksort, Mergesort eller Heapsort).
+   NÜr det er smÜ key'er (her heltall) er denne metoden Ü foretrekke framfor 
+   Selection sort (jfr. prop.8.1 og 8.2 s.102-103 i lëreboka).
+
+
+
+Situasjon C:
+------------
+   Insertion sort. Denne metoden har nettopp den fordelen at den meget
+   effektivt drar nytte av at arrayen er "nesten sortert" (jfr. prop.8.4
+   s.103 i lëreboka). 
+
+
+
+Situasjon D:
+------------
+   Heapsort. Da programmet er interaktivt, sÜ Mè dette gÜ rimelig kjapt.
+   Dvs. KUN en av metodene Quicksort, Mergesort eller Heapsort er aktuelle.
+   Mergesort bruker ekstra plass (jfr. prop.12.2 s.172 i lëreboka), og DET
+   har vi lite av. Heapsort er den eneste som kan GARANTERE max. tid og max.
+   antall sammenligninger (jfr. prop.11.1 - 11.3 s.153 og 158 i lëreboka).
+   Quicksort er som oftest raskere (jfr. prop.9.1 s.121 i lëreboka), men den 
+   kan IKKE gi en GARANTI for max.tiden.
+

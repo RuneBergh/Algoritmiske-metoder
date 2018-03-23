@@ -1,0 +1,83 @@
+
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H95_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     12.desember 1995, oppgave 2.
+
+//     Laget av Frode Haug, HIG, h›sten 1995.
+
+
+
+a)   Opprinnelig array:  97 84 56 22 72 42 8 17 14 7 12 37 
+     Insert 63 :         97 84 63 22 72 56 8 17 14 7 12 37 42 
+     Insert 40 :         97 84 63 22 72 56 40 17 14 7 12 37 42 8 
+     Remove    :         84 72 63 22 12 56 40 17 14 7 8 37 42 
+     Replace 4 :         72 22 63 17 12 56 40 4 14 7 8 37 42 
+
+
+b)   Keyene:    71   45   15   29   87
+     Hash1:      1    3    1    1    3
+     Hash2:      1    3    1    3    1
+
+     Indeks:     0   1   2   3   4   5   6
+     Innhold:   --  71  --  --  --  --  --
+                --  71  --  45  --  --  -- 
+                --  71  15  45  --  --  -- 
+                --  71  15  45  29  --  -- 
+                --  71  15  45  29  87  -- 
+
+     Dersom hash1 ALLTID returnerer 0 vil all s›king etter ledig plass
+     starte med indeks nr.0. Verdien fra hash2 vil s›rge for at vi, selvom 
+     vi etterhvert m† lete et stykke, tilslutt finner en ledig plass.
+
+     Dersom hash2 ALLTID returnerer 0 vil vi ALDRI finne noen ledig plass,
+     n†r indeksen som hash1 gav oss allerede er opptatt. Dette skyldes
+     at  "x = (x+0) % M"  ALDRI vil gi noen ny indeks (da tillegget er 0).
+
+
+c)        C                                      C
+        /                                      /
+       A           N†r "B" legges inn:        A
+        \\                                  // \\
+          A                                A     B
+
+
+           C                                           K
+        /     \\                                   //     \\
+      A          P        N†r "L" legges inn:    C           P
+       \\      /   \                           /   \       /   \
+        A    K       U                        A     G     N     U
+           // \\   // \\                       \\       //    // \\
+           G   N   R   X                        A       L     R   X
+
+
+           C                                           P
+        /     \\                                   //     \\
+      A          P        N†r "T" legges inn:    C           U
+       \\      /   \                           /   \       /   \
+        A    K       U                        A     K     R     X
+           // \\   // \\                       \\ // \\    \\
+           G   N   R   X                        A G   N     T
+
+
+
+d)  Innholdet i prioritetsk›en under konstruksjon av minimums-spenntreet:
+
+                  E1    F2    C1
+                  B2    C2    D2    D2
+            A*    C3    B2    B2    B2    B1   
+
+
+     Minimums-spenntre blir:
+
+            A           B
+            |             \
+            E       C       D
+             \     /       /
+              --- F -------
+
+
+
+e)  Korteste sti fra "D" til ALLE de andre nodene vil involvere kantene:
+         AB  BD  CD  EF og FD
+

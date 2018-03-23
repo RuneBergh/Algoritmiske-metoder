@@ -1,0 +1,59 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 29_14790.TXT
+
+//   L›sningsforslag til oppgave nr. 1, 4, 7, 9 og 10
+//   i kap.29 s.436 i l‘reboka "Algorithms in C++".
+
+     
+A)  Exercise nr.1 s.436 i l‘reboka:
+      Nabo-liste (adjacency-structure). Da det bare er † sjekke 
+      om det finnes noen elementer i vedkommende nodes liste.
+     
+
+B)  Exercise nr.4 s.436 i l‘reboka:
+      5-nodes graf, der alle har alle-til-alle-forbindelse.
+     
+
+C)  Exercise nr.7 s.436 i l‘reboka:
+      Depth-first search forest, reverse order, adjacency LIST:
+                    M ..       I       ......... G
+                   /   :       |       :        /
+                  J    :       H       :       E ..
+                 / \   :               :      /   :
+                K   L .:               :     F    :
+                                       :    / \   :
+                                       :.. A   D..:
+                                          / \
+                                         C   B
+     Depth-first search forest, reverse order, adjacency MATRIX:
+                    M ..       I       ....... G
+                   /   :       |       :      /
+                  J    :       H       :     A
+                 / \   :               :   / | \
+                K   L .:               :  B  C  F ...
+                                       :       /    :
+                                       :      D     :
+                                       :     /      :
+                                       :... E ......:
+                            
+
+D)  Exercise nr.9 s.436 i l‘reboka:
+    Dvs. 1.linje i siste avsnitt s.421 skrives:  
+         GE, AF, FE, HI, FD, ED, JK, JL, JM, LM, AC, AB og AG.
+      A    B    C    D    E    F    G    H    I    J    K    L    M
+      -------------------------------------------------------------
+      G    A    A    E    D    D    A    I    H    M    J    M    L
+      B              F    F    E    E              L         J    J
+      C                   G    A                   K
+      F
+
+
+E)  Exercise nr.10 s.436 i l‘reboka:
+            ....... J          H        ............ A
+            :      / \         |        :          / | \
+            :     M   K        I        :         G  B  C
+            :    /                      :        /
+            :.. L                       :       E ...
+                                        :      /    :
+                                        :     D     :
+                                        :    /      :
+                                        :.. F ......:

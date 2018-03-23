@@ -1,0 +1,107 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H08_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     19.desember 2008, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, desember 2008.
+
+
+
+OPPGAVE A:
+==========
+
+   - "VAFFELSTEKER STYRK STERK STEKTE VAFLER FRA VAFFELRORA HAN HADDE"
+      har bokstavfrekvensen:
+                ' '  A   D   E   F   H   K   L   N   O   R   S   T   V   Y
+      k          0   1   4   5   6   8  11  12  14  15  18  19  20  22  25
+      count[k]   8   7   2   9   6   2   4   3   1   1   7   4   5   3   1
+
+
+   - Dette medf›rer f›lgende dad-array:
+                ' '  A   D   E   F   H   K   L   N   O   R   S   T   V   Y
+      k          0   1   4   5   6   8  11  12  14  15  18  19  20  22  25
+      count[k]   8   7   2   9   6   2   4   3   1   1   7   4   5   3   1
+      dad[k]   -36 -35 -29  37  34  29 -32  31  28 -27  35  32  33 -30  27
+
+      k         27  28  29  30  31  32  33  34  35  36  37  38  39  40
+      count[k]   2   3   4   6   7   8  11  13  14  16  20  27  36  63
+      dad[k]   -28  30 -31 -33 -34  36 -37  38 -38  39 -39  40 -40   0
+
+
+                                     
+   - Tegnet som et tre/en trie:          40   
+                                   /             \
+                               38                   39
+                           /       \             /      \
+                        34            35       36        37
+                       /  \         /   \      /  \     /  \
+                      F   31       R     A   32   ' '  E    33  
+                         /  \               /  \           /  \
+                        L    29            S    K         T   30
+                            /  \                             /  \
+                           H     D                          28   V
+                                                           / \
+                                                          N   27
+                                                              / \
+                                                             Y   O
+
+
+   - Vi f†r alts† f›lgende bitm›nster:
+          ' '  A     D   E   F     H    K    L      N       O   R    S    T     V       Y
+   k       0   1     4   5   6     8   11   12     14      15  18   19   20    22      25
+ count[k]  8   7     2   9   6     2    4    3      1       1   7    4    5     3       1
+  len[k]   3   3     5   3   3     5    4    4      6       7   3    4    4     5       7
+         101 011 00111 110 000 00110 1001 0010 111100 1111011 010 1000 1110 11111 1111010
+( code[k]  5   3     7   6   0     6    9    2     60     123   2    8   14    31     122 )
+
+
+ 
+   - Totalt antall bit i kodet melding blir:
+     (8*3) + (7*3) + (2*5) + (9*3) + (6*3) + (2*5) + (4*4) + (3*4) + (1*6) +
+     (1*7) + (7*3) + (4*4) + (5*4) + (3*5) + (1*7) = 230 bits
+                                                    =========
+
+
+
+
+OPPGAVE B:
+==========
+"Dad"-arrayen etterhvert:
+
+           A  B  C  D  E  F  G  H
+     E F:  -  -  -  -  1  E  -  -
+     D C:  -  -  D  1  1  E  -  -
+     B C:  -  D  D  2  1  E  -  -       Weight Balancing
+     B F:  -  D  D  4  D  E  -  -       Weight Balancing
+     A C:  D  D  D  5  D  E  -  -       Weight Balancing
+     G H:  D  D  D  5  D  E  1  G
+     G C:  D  D  D  7  D  E  D  G       Weight Balancing
+     F A:  D  D  D  7  D  D  D  G       Path Compression
+     B H:  D  D  D  7  D  D  D  D       Path Compression
+
+
+
+Resulterende skog:          D
+                   /  /  /  |  \  \  \
+                   A  B  C  E   F  G  H
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   Korteste sti fra "I" til ALLE de andre nodene vil involvere kantene:
+
+         AH  BI  CI  DG  EB  FB  GI  HB
+
+
+
+   Prioritetsk›en etterhvert:
+
+                               E-5
+              G-3   C-3        D-5   D-5
+              C-3   B-3   B-3  H-7   H-7   H-7   F-7
+         I*   B-3   D-5   D-5  F-7   F-7   F-7   A-9   A-9
+

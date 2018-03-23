@@ -1,0 +1,54 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 09_4678.TXT
+
+//   L›sningsforslag til oppgave nr. 4, 6, 7 og 8 
+//   i kap.9 s.131 i l‘reboka "Algorithms in C++".
+
+
+A)  Oppgave nr.4 s.131:
+      N lg N:    N†r stanser p† like med partisjonselementet 
+                 (jfr. koden s.118) og bytter disse. Dermed
+                 blir partisjonselementet for hver gang flyttet
+                 til omtrent midt i vedkommende subarray. Dvs.
+                 halverer stadig de igjenv‘rende † sortere.
+                 Jfr. nedre halvdel s.120.
+
+
+      (N**2)/2:  N†r IKKE stanser p† like med partisjonselementet
+                 (jfr. while-l›kkene i koden s.118 inneholder '<=' 
+                 og '>='). Dermed vil 'i' stadig l›pe helt opp til
+                 partisjonselementet og bare dette vil bli "silt vekk"
+                 f›r neste sortering av subarray.)
+                 Jfr. Selection-sort, prop.8.1 s.102.
+
+
+
+
+B)  Oppgave nr.8 s.131:
+
+       N/M:      Vi f†r N/M ulike subarrayer † sortere vha 'Insertion', 
+                 og hver av disse m† ha en 'sentinel key'.
+
+
+
+
+C)  Oppgave nr.6 s.131:
+
+       N†r endrer EKS_08.CPP slik at opererer p† teksten "ABABABA":
+           AAABABB
+           AA
+              BABB
+              AB
+
+       N†r endrer EKS_09.CPP slik at opererer p† teksten "ABABABA":
+           AAABABB
+           AA 
+              BABB
+              AB
+
+
+
+
+D)  Oppgave nr.7 s.131:
+
+       N†r endrer EKS_08.CPP slik at opererer p† teksten "EASYQUESTION":
+       Tilsammen 46 sammenligninger.

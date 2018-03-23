@@ -1,0 +1,68 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H99_1.TXT
+
+//     Lõsningsforslag til eksamen i "Algoritmiske metoder I",
+//     13.desember 1999, oppgave 1.
+
+//     Laget av Frode Haug, HIG,  desember 1999.
+
+
+
+
+OPPGAVE A:
+==========
+
+   SANT.
+
+   For ALLE de tre traverseringsmetodene (preorder, inorder, postorder)
+   sÜ besõkes ALLTID venstre subtre FùR det hõyre. Det blir altsÜ bare
+   et spõrsmÜl om nÜr rota besõkes ift. til barna.
+   Derfor vil ALLTID bladnodene forekomme i den samme relative rekkefõlgen.
+   Studer et konkret binërt tre, sÜ ser du .....
+
+
+   Den nye traverseringsmetoden vil vëre POSTORDER baklengs.
+   Dvs. den vil lage en utskrift som er POSTORDER-SEKVENSEN SKREVET BAKLENGS.
+
+
+
+
+OPPGAVE B:
+==========
+
+   H: 4  I: 5       dilletanter       (Ingenting skjer)
+   H: 4  I: 6       dilletanter       (Ingenting skjer)
+   H: 4  I: 7       diAletLnter   'A' vandrer forbi 'L'.
+   H: 4  I: 8       dialetlnter       (Ingenting skjer)
+   H: 4  I: 9       dialetlnter       (Ingenting skjer)
+   H: 4  I: 10      dEaleIlntTr   'E' vandrer forbi 'T' og 'I'.
+   H: 4  I: 11      dealeilnttr       (Ingenting skjer)
+
+   H: 1  I: 2       dealeilnttr       (Ingenting skjer)
+   H: 1  I: 3       ADEleilnttr   'A' vandrer forbi 'E' og 'D'.
+   H: 1  I: 4       adeleilnttr       (Ingenting skjer)
+   H: 1  I: 5       adeELilnttr   'E' vandrer forbi 'L'.
+   H: 1  I: 6       adeeILlnttr   'I' vandrer forbi 'L'.
+   H: 1  I: 7       adeeillnttr       (Ingenting skjer)
+   H: 1  I: 8       adeeillnttr       (Ingenting skjer)
+   H: 1  I: 9       adeeillnttr       (Ingenting skjer)
+   H: 1  I: 10      adeeillnttr       (Ingenting skjer)
+   H: 1  I: 11      adeeillnRTT   'R' vandrer forbi 'T' og 'T'.
+
+
+
+
+OPPGAVE C:
+==========
+
+Start:   D I L L E T A N T E R
+         D I 
+         D I L 
+               E L 
+               E L T 
+         D E I L L T 
+                     A N 
+                     A N T 
+                           E R 
+                     A E N R T 
+Slutt:   A D E E I L L N R T T 
+

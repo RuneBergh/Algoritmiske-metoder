@@ -1,0 +1,99 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S95_3.TXT
+
+//     Lõsningsforslag til eksamen i "Algoritmiske metoder",
+//     august 1995, oppgave 3.
+
+//     Laget av Frode Haug, HIG, sommeren 1995.
+
+
+OPPGAVE A:
+==========
+
+- Hõyre treet til "R" er fõrst:      R
+                                       \
+                                         X
+                                       // \\
+                                      S     Y
+
+
+
+
+- NèR NY "R" ER LAGT INN:             R   
+                                       \\
+                                         X
+                                       /   \
+                                      S     Y
+                                    //
+                                   R
+
+
+
+- Venstre treet til "I" er fõrst:        I
+                                        /
+                                       E
+                                    //   \\
+                                   A       G
+                                 /   \    / \
+                                A     C  E   H
+                                    //    \\
+                                   A        E
+
+
+- NèR "F" ER LAGT INN:                     I
+                                         //
+                                        E
+                                     /     \
+                                   A         G
+                                 /   \      / \
+                                A     C    E   H
+                                    //   // \\
+                                    A   E     F
+
+
+
+
+OPPGAVE B:
+==========
+
+Skip-arrayen:   A B C D E F G H I J K L M N O P Q R S T U V W X Y Z í ù è
+                6 6 6 6 0 6 6 6 6 6 5 6 3 6 4 2 6 1 6 6 6 6 6 6 6 6 6 6 6
+
+
+Sõkingen:       A P R I K O S E K O M P O T T K O M P R E S J O N
+                K O M P R E
+                        K O M P R E
+                                K O M P R E
+                                            K O M P R E
+                                              K O M P R E
+
+
+
+OPPGAVE C:
+==========
+
+c1)  Nabomatrisen:      | A  B  C  D  E  F  G 
+                      --|--------------------
+                      A | 1  0  0  1  1  1  0
+                      B | 0  1  0  0  1  1  0
+                      C | 0  0  1  1  0  1  1
+                      D | 1  0  1  1  0  0  0
+                      E | 1  1  0  0  1  0  1
+                      F | 1  1  1  0  0  1  0
+                      G | 0  0  1  0  1  0  1
+
+
+c2) Dybde-fõrst sõketreet:     ....................
+                              A............       :
+                                \         :       :
+                                  D       :       :
+                                    \     :       :
+                                      C   :       :
+                                      : \ :       :
+                                      :   F       :
+                                      :     \     :
+                                      :       B   :
+                                      :         \ :
+                                      :           E    
+                                      :             \  
+                                      :...............G
+                                              

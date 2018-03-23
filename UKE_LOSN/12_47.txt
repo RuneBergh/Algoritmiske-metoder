@@ -1,0 +1,35 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 12_47.TXT
+
+//   L›sningsforslag til oppgave nr. 4 og 7 
+//   i kap.12 s.176 i l‘reboka "Algorithms in C++".
+
+
+A)  Studie av hva a, b og c peker til underveis i koden s.165 og 168.
+
+
+B)  Oppgave nr.4 s.176:
+
+       SANT !  Pga:
+           1)  Property 12.4 s.172.
+           2)  Mergesort-funksjonen (s.166) inneholder ingen sjekk
+               p† hvordan verdier allerede ligger, og dermed ingen
+               form for "avskj‘ring". Derfor gj›r den akkurat det 
+               samme arbeidet, uansett hvordan input m†tte v‘re.
+         
+
+
+
+C)  Oppgave nr.7 s.176:
+
+       EASYQUESTION
+       AE
+       AES
+          QY
+          QUY
+       AEQSUY
+             ES
+             EST
+                IO
+                INO
+             EINOST
+       AEEINOQSSTUY

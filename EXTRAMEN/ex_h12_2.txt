@@ -1,0 +1,95 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H12_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     18.desember 2012, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, desember 2012.
+
+
+
+OPPGAVE A:       
+==========
+
+   - "TDF ER SYKKELTOUREN SOM STORT SETT SYKLES RUNDT OMKRING I FRANKRIKE"
+      har bokstavfrekvensen:
+            ' '  A   D   E   F   G   I   K   L   M   N   O   R   S   T   U   Y
+     k       0   1   4   5   6   7   9  11  12  13  14  15  18  19  20  21  25
+  count[k]  10   1   2   6   2   1   3   6   2   2   4   4   7   6   7   2   2
+
+
+
+   - Dette medf›rer f›lgende dad-array:
+            ' '  A   D   E   F   G   I   K   L   M   N   O   R   S   T   U   Y
+  k          0   1   4   5   6   7   9  11  12  13  14  15  18  19  20  21  25
+  count[k]  10   1   2   6   2   1   3   6   2   2   4   4   7   6   7   2   2
+  dad[k]    39 -27  31  36 -30  27 -31 -35  30 -29  34 -33  37  35 -36  29 -28
+
+  k         27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42
+  count[k]   2   4   4   4   5   8   8   9  12  13  15  17  22  28  39  67
+  dad[k]    28  33 -32  32 -34  38 -37 -38 -39  40 -40  41 -41  42 -42   0
+
+
+
+   - Tegnet som et tre/en trie:           42   
+                                   /               \
+                               40                      41
+                            /      \               /        \
+                          36        37            38        39
+                         /  \      /   \        /    \     /  \
+                        E    T    R    33      32     34  ' '   35
+                                      /  \   /   \   /  \      /  \
+                                    28    O 30   29 N   31    S    K
+                                   /  \     /\   /\     /\
+                                  27   Y   L  F U  M   D  I
+                                 / \
+                                G   A
+
+
+   - Vi f†r alts† f›lgende bitm›nster:
+           ' '   A     D    E    F      G     I     K    L     M     N    O   R    S   T    U     Y
+    k       0    1     4    5    6      7     9    11   12    13    14   15  18   19  20   21    25
+count[k]   10    1     2    6    2      1     3     6    2     2     4    4   7    6   7    2     2
+  len[k]    3    6     5    3    5      6     5     4    5     5     4    4   3    4   3    5     5
+          110 011001 10110 000 10001 011000 10111 1111 10000 10011 1010 0111 010 1110 001 10010 01101
+( code[k]   6   25    22    0   17     24    23    15    16   19    10    7   2   14   1   18    13 )
+
+
+   - Totalt antall bit i kodet melding blir:
+     (10*3) + (1*6) + (2*5) + (6*3) + (2*5) + (1*6) + (3*5) + (6*4) + (2*5) +
+     (2*5)  + (4*4) + (4*4) + (7*3) + (6*4) + (7*3) + (2*5) + (2*5) = 257 bits
+                                                                      ========
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   "Dad"-arrayen etterhvert:
+
+              A  B  C  D  E
+        A E:  1  -  -  -  A
+        B E:  2  A  -  -  A    Weight Balancing
+        C D:  2  A  1  C  A
+        E C:  4  A  A  C  A
+        B C:  4  A  A  C  A       (Ingenting skjer)
+        D A:  4  A  A  A  A    Path Compression
+
+
+   Resulterende skog:       A
+                         / / \ \ 
+                        B C   D E 
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   De FIRE ulike topologiske sorteringssekvensene er:
+             A  E  C  B  F  D
+             A  E  C  F  B  D
+             E  A  C  B  F  D
+             E  A  C  F  B  D

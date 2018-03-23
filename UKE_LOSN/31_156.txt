@@ -1,0 +1,56 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 31_156.TXT
+
+//   Lõsningsforslag til oppgave nr. 1, 5 og 6
+//   i kap.31 s.469 i lëreboka "Algorithms in C++".
+
+
+A)  Exercise nr.1 s.469 i lëreboka:
+
+    Fig.31.2 s.453 angir tre ulike alternativer for minimums-spenntre. 
+
+    NOEN (av flere) andre alternativer KAN vëre:
+       - Likt med venstre graf i figur 31.2, bare at EF byttes ut med FL.
+       - Likt med venstre graf i figur 31.2, bare at AF byttes ut med BD.
+       - Likt med venstre graf i figur 31.2, bare at EF byttes ut med DE.
+       - Likt med midtre  graf i figur 31.2, bare at DE byttes ut med JM.
+       - Likt med hõyre   graf i figur 31.2, bare at BD byttes ut med AF.
+       - Likt med hõyre   graf i figur 31.2, bare at BD byttes ut med AF,
+                                                  og DE byttes ut med FL.
+
+
+
+B)  Exercise nr.5 s.469 i lëreboka:
+
+    Om vi "stÜr pÜ" en SPESIFIKK node, og betrakter kantene ut fra KUN denne
+    ene, vil det ikke bli et minimums-spenntre eller korteste-sti-spenntre,
+    ved Ü koble den med lavest vekt til grafen. Vi Mè koble til den kanten
+    med lavest vekt av alle de kanter som grenser til ALLE grafens noder.
+
+    Eks:       A -- 2 -- B
+               |      /
+               1    6
+               |  /
+               C
+               
+    Starter vi med A, sÜ vil vi med en slik "gal" strategi fõrst velge
+    Ü koble til C. Dens laveste kant er nÜ '6' mot B, og denne vil sÜ
+    tilkobles. Dette SER vi ikke er den grafen med minst vekt pÜ kantene.
+              
+
+   
+C)  Exercise nr.6 s.469 i lëreboka:
+
+    Figur 31.10 s.462 angir kortest-sti-spenntre for bokstavene A, G og M.
+    For de andre bokstavene i treet, sÜ vil fõlgende kanter vëre involvert.
+    
+          B:  AB  --  CB  DB  EB  FA  GE  HG  IK  JG  KJ  LF  ML
+          C:  AB  BC  --  DB  EC  FA  GE  HG  IK  JG  KJ  LF  ML 
+          D:  AF  BD  CB  --  ED  FD  GE  HG  IK  JG  KJ  LF  ML  
+          E:  AF  BE  CE  DE  --  FE  GE  HG  IK  JG  KJ  LE  MJ  
+          F:  AF  BD  CB  DF  EF  --  GE  HG  IK  JG  KJ  LF  ML  
+          H:  AF  BE  CE  DE  EG  FE  GH  --  IH  JK  KI  LJ  MJ  
+          I:  AF  BE  CE  DE  EG  FE  GJ  HI  --  JK  KI  LJ  MJ  
+          J:  AF  BE  CE  DE  EG  FE  GJ  HG  IK  --  KJ  LJ  MJ  
+          K:  AF  BE  CE  DE  EG  FE  GJ  HI  IK  JK  --  LJ  MJ  
+          L:  AF  BD  CB  DF  EL  FL  GJ  HG  IK  JL  KJ  --  ML  
+

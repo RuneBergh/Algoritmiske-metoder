@@ -1,0 +1,19 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 05_4.TXT
+
+//   L›sningsforslag til oppgave nr. 4 
+//   i kap.5 s.66 i l‘reboka "Algorithms in C++".
+
+
+Oppgave 4 s.66:
+
+                          P (5,1)
+                       /     \
+                     M (4,2)   L (6,2)
+                  /              \
+                S (2,3)            E (7,3)
+              /    \                 \
+           A (1,4)   A (3,4)           R (9,4)
+                                    /    \ 
+                                  T (8,5)  E (11,5)
+                                          /
+                                         E (10,6)

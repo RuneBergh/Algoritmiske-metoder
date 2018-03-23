@@ -1,0 +1,83 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H11_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     20.desember 2011, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, desember 2011.
+
+
+
+OPPGAVE A:       
+==========
+     Input:  Katalogen:  Output:
+       S
+       O     256:  SO      S
+       S     257:  OS      O
+       S     258:  SS      S
+       -     259:  S_      S
+       S     260:  _S      -
+       O  (bygger bare videre, ingen output)
+       S     261:  SOS    256
+       S  (bygger bare videre, ingen output)   
+       E     262:  SSE    258
+       R     263:  ER      E
+       -     264:  R_      R
+       S  (bygger bare videre, ingen output)
+       O     265:  _SO    260   
+       M     266:  OM      O
+       -     267:  M_      M
+       S  (bygger bare videre, ingen output)
+       O  (bygger bare videre, ingen output)
+       M     268:  _SOM   265
+       R     269:  MR      M
+       E     270:  RE      R
+    <slutt>                E
+
+
+
+
+
+OPPGAVE B:
+==========
+   Prioritetsk›en etterhvert:
+                                 C-1f
+                          F-1a   D-1a   D-1a   G-1d
+                          D-1a   B-2a   E-2c   E-2c  E-1g
+                     A*   B-2a   E-3f   B-2a   B-2a  B-1g  B-1g
+
+
+   Minimums spenntreet:   F-----A
+                         /      |
+                        /       |
+                       C     B-----G--
+                                |  | |
+                          |-----|--- |
+                          E     D-----
+
+
+
+
+
+OPPGAVE C:
+==========
+   Max.flyt for HELE nettverket er 46.
+   Max.flyt ift. kapasitet (F/K) KAN i de ulike r›rene/kantene F.EKS. v‘re:
+
+      AB:  18 / 20
+      AD:  16 / 16
+      AJ:  12 / 12
+      BC:   4 /  4
+      BF:  14 / 14
+      CD:   0 /  6
+      CI:   4 /  6
+      DG:   6 /  8
+      DJ:  10 / 20
+      EJ:  12 / 16
+      FG:   2 /  8
+      FH:  12 / 12
+      GJ:   8 /  8
+      HE:   8 / 12
+      HI:   0 / 10
+      HJ:   4 /  4
+      IE:   4 / 12
+

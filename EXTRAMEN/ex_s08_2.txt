@@ -1,0 +1,145 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S08_2.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i "Algoritmiske metoder",
+//     13.august 2008, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, mai 2008.
+
+
+
+OPPGAVE A:
+==========
+
+   Nodenes naboer fra nabomatrisen:
+
+        A   B   C   D   E   F   G   H   I   J   K   L   M
+        -------------------------------------------------
+        L   G   D   C   G   G   B   F   C   D   C   A   D
+                I   I   L   H   E       D           E
+                K   J       I   F       F           G
+                    M           L
+
+
+
+   Startende i 'D' - f†r dybde-f›rst s›ketree:
+                        .......
+                        :     D
+                        :  /  |  \
+                        : C   J   M
+                        :/ \
+                        I   K
+                       /
+                      F
+                   /    \
+                  G....  H
+                 / \  :
+                B   E :
+                     \:
+                      L
+                       \
+                        A
+
+
+   En node i et slikt tre er et artikulasjonspunkt om det IKKE fra
+   ETHVERT subtre g†r MINST EN stiplet vei/kant forbi noden selv.
+
+   Av figuren kan vi defor se at treet/grafen har f›lgende SEKS art.pkt:
+
+       C (for K),
+       D (for J og M),
+       F (for begge subtr‘r),
+       G (for begge subtr‘r),
+       I (for F-subtreet)
+       L (for A)
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   - "STORHAMAR ER BARE ET HELT STORT STORLAG I BYDELEN STORHAMAR I HAMAR BY"
+     har bokstavfrekvensen:
+
+               ' '  A   B   D   E   G   H   I   L   M   N   O   R   S   T   Y
+     k          0   1   2   4   5   7   8   9  12  13  14  15  18  19  20  25
+     count[k]  12   8   3   1   6   1   4   2   3   3   1   4   9   4   7   2
+
+
+
+   - Dette medf›rer f›lgende dad-array:
+     k          0   1   2   4   5   7   8   9  12  13  14  15  18  19  20  25
+     count[k]  12   8   3   1   6   1   4   2   3   3   1   4   9   4   7   2
+     dad[k]   -38  37 -31  28  35 -27 -33 -29  31 -30  27  33 -37 -32 -35  29  
+
+     k         27  28  29  30  31  32  33  34  35  36  37  38  39  40  41
+     count[k]   2   3   4   6   6   8   8  12  13  16  17  24  29  41  70
+     dad[k]   -28  30  32 -34  34 -36  36  38  39 -39  40 -40  41 -41   0
+
+
+                                      
+   - Tegnet som et tre/en trie:          41   
+                                   /             \
+                               39                   40
+                           /       \             /      \
+                        35            36       37        38
+                       /  \         /   \      /  \     /  \
+                      E    T       33    32   A    R  34   ' '
+                                   / \   / \         /  \
+                                  O   H 29 S       31    30
+                                        /\        /  \  /  \
+                                       Y  I       L  B 28   M
+                                                       /\
+                                                      D 27
+                                                        /\
+                                                       N  G
+
+
+   - Vi f†r alts† f›lgende bitm›nster:
+              ' '  A     B      D   E       G    H     I     L     M       N    O   R    S   T     Y
+     k         0   1     2      4   5       7    8     9    12    13      14   15  18   19  20    25
+     bits    111 100 11001 110100 000 1101011 0101 01101 11000 11011 1101010 0100 101 0111 001 01100
+     code[k]   7   4    25     49   0     107    5    13    24    27     106    4   5    7   1    12
+     len[k]    3   3     5      6   3       7    4     5     5     5       7    4   3    4   3     5
+
+
+
+   - Totalt antall bit i kodet melding blir:
+     (12*3) + (8*3) + (3*5) + (1*6) + (6*3) + (1*7) + (4*4) + (2*5) +
+     (3*5)  + (3*5) + (1*7) + (4*4) + (9*3) + (4*4) + (7*3) + (2*5) = 259 bits
+                                                                      ========
+
+
+
+
+
+OPPGAVE C:
+==========
+
+    Tilstandsmaskinen:
+                                           --------
+                                           V      | a
+                       --------   a    --------   |
+         ------    a   |------| -----> |------| ---
+       > | q0 | -----> || q1 ||        || q3 ||       b
+         ------        |------| ---    |------| ----------------
+            |          --------   |    --------                |
+            |                     | b      --------            |
+            |                     |        V      | b          |
+            |                     |    --------   |            |
+            |                     |    |------| ---            |
+            |                     ---> || q2 ||                |
+            |                          |------| ---------------|
+            |                          --------      a         V
+            |                                                ------
+            -----------------------------------------------> | q4 |<--
+                                b                            ------  |
+                                                                |    |
+                                                                ------
+                                                                 a, b
+
+    Maskinen godtar en input som innledes med EN a.
+    Deretter kan kan det komme et vilk†rlig antall (null eller flere)
+    med KUN a'er ELLER b'er (men ingen blanding av disse).
+

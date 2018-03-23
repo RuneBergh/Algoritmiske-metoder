@@ -1,0 +1,72 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H02_2.TXT
+
+//     L›sningsforslag til eksamen i 
+//     "Algoritmiske metoder I", oppgave nr.2, 9.desember 2002.
+
+//     Laget av Frode Haug, HiG, november 2002.
+
+
+
+
+
+OPPGAVE A:
+==========
+         A  B  C  D  E  F  G
+    AD:  -  -  -  A  -  -  -                                   A
+    GB:  -  G  -  A  -  -  -                                / / \ \
+    CF:  -  G  -  A  -  C  -                               C D   E G
+    DB:  -  G  -  A  -  C  A                               |       |
+    AE:  -  G  -  A  A  C  A                               F       B
+    BE:  -  G  -  A  A  C  A  -- Ingenting skjer
+    GD:  -  G  -  A  A  C  A  -- Ingenting skjer
+    BF:  -  G  A  A  A  C  A 
+    FD:  -  G  A  A  A  C  A  -- Ingenting skjer
+    CA:  -  G  A  A  A  C  A  -- Ingenting skjer
+
+
+
+
+OPPGAVE B:
+==========                 
+   Max.flyt ift. kapasitet (F/K) KAN i de ulike r›rene/kantene F.EKS. v‘re:
+
+      AB:  60 / 80
+      AC:  70 / 80
+      AD:  30 / 40
+      BE:  40 / 40
+      BF:  20 / 20
+      CB:   0 / 10
+      CD:  10 / 10
+      CF:  50 / 50
+      CG:  10 / 10
+      DG:  40 / 50
+      EH:  40 / 90
+      FH:  30 / 30
+      FI:  40 / 90
+      GI:  50 / 70
+      HJ:  70 / 80
+      IJ:  90 / 90
+
+
+
+
+OPPGAVE C:
+==========
+                                               ________
+    Tilstandsmaskinen:                         |      |
+                                           ____V___   | a,b
+            ______    a     ______    b    |______|   |
+        --> | q0 |--------->| q1 |-------->|| q2 ||----
+        |   ------          ------         |------|
+       b|    |  ^             |            --------
+        |    |  |            a|                    
+        ------  |           __V___
+                ------------| q3 |----
+                    b       ------   |
+                              ^      |a
+                              |      |
+                              --------
+
+    Maskinen godtar et vilk†rlig antall a'er og b'er, bare det p† ett eller
+    annet tidspunkt forekommer EN SINGLE 'a' rett etterfulgt av en 'b'.
+

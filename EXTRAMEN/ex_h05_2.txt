@@ -1,0 +1,76 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H05_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     8.desember 2005, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, november 2005.
+
+
+
+OPPGAVE A:
+==========
+
+"Dad"-arrayen etterhvert:
+           A  B  C  D  E  F  G
+     B C:  -  1  B  -  -  -  -
+     D A:  D  1  B  1  -  -  -
+     F G:  D  1  B  1  -  1  F
+     C A:  D  3  B  B  -  1  F    (Weight Balancing)
+     G A:  B  5  B  B  -  B  F    Weight Balancing OG Path Compression !
+     E D:  B  6  B  B  B  B  F    Weight Balancing
+     A F:  B  6  B  B  B  B  F    (Ingenting skjer)
+     G D:  B  6  B  B  B  B  B    Path Compression
+
+
+Resulterende skog:          B         
+                       / / / \ \ \
+                       A C D E F G
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   - Vi f†r f›lgende bitm›nster og len:
+               ' '    A     E     O     R    S     T
+       bits    110   01    10   0011  0010  000   111
+      len[k]    3     2     2     4     4    3     3
+
+
+   - Bitstr›mmen utgj›r derfor f›lgende tekst/melding:
+
+            "START ER STARS OAOA"
+     
+
+
+
+
+OPPGAVE C:
+==========
+
+    Tilstandsmaskinen:          L, B
+                              _____
+                              |   |
+                            __V___|_
+            B               |______|       D
+          ____         ---->|| q1 ||----------------   _____
+          |  |      L /     |------|               |   |   | L, D, B
+         _V__|_      /      --------               V___V_  |
+     --> | q0 |------                              | q3 |---
+         ------                                    ------
+            |               ________               ^
+            |       D       |______|               |
+            --------------->|| q2 ||---------------|
+                            |------|       L
+                            --------
+                             ^    |
+                             |    |
+                             ------
+                               D, B
+
+
+    Maskinen godtar en input som KUN best†r av bokstaver ELLER sifre,
+    iblandet et vilk†rlig antall blanke - men IKKE KUN blanke.
+

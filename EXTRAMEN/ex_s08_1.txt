@@ -1,0 +1,72 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S08_1.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i "Algoritmiske metoder",
+//     13.august 2008, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, mai 2008.
+
+
+
+OPPGAVE A:
+==========
+
+     (start:)       koppekaff
+   H: 4  I: 5       EoppKkaff     'E' vandrer forbi 'K'
+   H: 4  I: 6       eKppkOaff     'K' vandrer forbi 'O'
+   H: 4  I: 7       ekApkoPff     'A' vandrer forbi 'P'
+   H: 4  I: 8       ekaFkopPf     'F' vandrer forbi 'P'
+   H: 4  I: 9       ekafFoppK     'F' vandrer forbi 'K'
+
+   H: 1  I: 2       ekaffoppk        (Ingenting skjer)
+   H: 1  I: 3       AEKffoppk     'A' vandrer forbi 'K' og 'E'
+   H: 1  I: 4       aeFKfoppk     'F' vandrer forbi 'K'
+   H: 1  I: 5       aefFKoppk     'F' vandrer forbi 'K'
+   H: 1  I: 6       aeffkoppk        (Ingenting skjer)
+   H: 1  I: 7       aeffkoppk        (Ingenting skjer)
+   H: 1  I: 8       aeffkoppk        (Ingenting skjer)
+   H: 1  I: 9       aeffkKOPP     'K' vandrer forbi "OPP"
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   Start:   K A F F E K O P P
+            A K
+            A F K
+                  E F
+            A E F F K
+                      K O
+                          P P
+                      K O P P
+   Ferdig:  A E F F K K O P P
+
+
+
+
+
+OPPGAVE C:
+==========
+              AFK
+
+
+
+               F
+           AE    FKK
+
+
+
+              FK
+           AE  F  KOP
+
+
+
+               K                           K
+          F          O                 /       \
+      AAE   FH   KKN   PP           F             O
+                                 /     \        /   \
+                                A       F      K     P
+                              // \\      \\  // \\    \\
+                             A     E      H  K   N      P

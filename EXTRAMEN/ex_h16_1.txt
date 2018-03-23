@@ -1,0 +1,85 @@
+﻿
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H16_1.TXT
+
+//  Løsning til eksamen i Alg.met, desember 2016, oppgave nr.1.
+//  Laget av Frode Haug, NTNU
+
+
+
+
+OPPGAVE A:
+==========
+
+   Utskriften blir:   0 0 1 1
+
+
+
+
+
+OPPGAVE B:
+==========
+
+    "LEEDSUNITED" satt inn i:
+
+
+        1)  Heap:   U T S L E E N D I E D                                   
+               
+
+
+        2)  Binært søketre:             L 
+                                     /     \
+                                    E       S 
+                                   / \     / \ 
+                                  D   E   N   U  
+                                   \   \     /
+                                    D   I   T     
+                                       /
+                                      E
+
+
+
+        3)  2-3-4 tre:                  L
+                                     /     \
+                                    E       S
+                                  /   \   /   \
+                                DDE   EI N    TU
+
+
+
+
+        4)  Red-Black tre:              L
+                                     /     \
+                                    E       S
+                                  /   \   /   \
+                                 D     I N     U
+                               // \\  //     //
+                               D   E  E      T      
+
+                                            (eller EI og TU rotert andre veien)
+
+
+
+
+OPPGAVE C:
+==========
+
+"NEWCASTLE" sorteres vha. Quicksort.
+ Figur tilsvarende 9.3 s.119 i læreboka blir da som følger:
+ (NB: Partisjonselementet er skrevet med STOR bokstav,
+      mens resten er skrevet med små bokstaver.)
+
+
+              0  1  2  3  4  5  6  7  8
+   Initielt:  N  E  W  C  A  S  T  L  E
+
+              a  c  E  e  n  s  t  l  w
+
+              a  C
+ 
+                       e  n  s  t  l  W
+
+                       e  L  s  t  n
+
+                             N  t  s
+
+                                S  t

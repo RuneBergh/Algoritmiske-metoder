@@ -1,0 +1,76 @@
+﻿
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S17_2.TXT
+
+//  Løsning til kontinuasjonseksamen i Alg.met, august 2017, oppgave nr.2.
+//  Laget av Frode Haug, NTNU
+
+
+
+
+
+
+OPPGAVE A:
+==========
+
+  Keyene:           C   H   R   I   S   T   O   S   R   A   C   H   E   S
+  k (alfabetnr.):   3   8  18   9  19  20  15  19  18   1   3   8   5  19
+
+  Hash1 (M = 17):   3   8   1   9   2   3  15   2   1   1   3   8   5   2
+  Hash2:            1   4   2   3   1   4   1   1   2   3   1   4   3   1
+
+  Indeks:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+            -   -   -   C   -   -   -   -   -   -   -   -   -   -   -   -   -
+            -   -   -   C   -   -   -   -   H   -   -   -   -   -   -   -   -
+            -   R   -   C   -   -   -   -   H   -   -   -   -   -   -   -   -
+            -   R   -   C   -   -   -   -   H   I   -   -   -   -   -   -   -
+            -   R   S   C   -   -   -   -   H   I   -   -   -   -   -   -   -
+            -   R   S   C   -   -   -   T*  H   I   -   -   -   -   -   -   -
+            -   R   S   C   -   -   -   T*  H   I   -   -   -   -   -   O   -
+            -   R   S   C   S*  -   -   T*  H   I   -   -   -   -   -   O   -
+            -   R   S   C   S*  R*  -   T*  H   I   -   -   -   -   -   O   -
+            -   R   S   C   S*  R*  -   T*  H   I   A*  -   -   -   -   O   -
+            -   R   S   C   S*  R*  C*  T*  H   I   A*  -   -   -   -   O   -
+            -   R   S   C   S*  R*  C*  T*  H   I   A*  -   H*  -   -   O   -
+            -   R   S   C   S*  R*  C*  T*  H   I   A*  E*  H*  -   -   O   -
+            -   R   S   C   S*  R*  C*  T*  H   I   A*  E*  H*  S*  -   O   -
+
+            (* = bokstaver som hashes på plass ved bruk av hash2 også.)
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   "Dad"-arrayen etterhvert:
+        
+               A  B  C  D  E  F
+         FA:   F  -  -  -  -  1
+         EB:   F  E  -  -  1  1
+         DC:   F  E  D  1  1  1
+         AB:   F  E  D  1  F  3
+         CA:   F  E  D  F  F  5   Weight Balancing
+         CB:   F  F  F  F  F  5   Path Compression (2 stk)
+
+
+   Resulterende skog:       F
+                        / / | \ \ 
+                       A B  C  D E
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   De ÅTTE ulike topologiske sorteringssekvensene er:
+       C D A B E G F
+       C D A B G E F
+       C D A E B G F
+       C D A E G B F
+       C D A G B E F
+       C D A G E B F
+       C D G A B E F
+       C D G A E B F

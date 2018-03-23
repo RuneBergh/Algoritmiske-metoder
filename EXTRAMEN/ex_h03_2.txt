@@ -1,0 +1,112 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H03_2.TXT
+
+//     L›sningsforslag til eksamen i 
+//     "Algoritmiske metoder", oppgave nr.2, 12.desember 2003.
+
+//     Laget av Frode Haug, HiG, desember 2003.
+
+
+
+OPPGAVE A:
+==========
+
+a1)  Nabomatrisen:      | A  B  C  D  E  F  G  H
+                      --|-----------------------
+                      A | 1  1  1  0  0  1  1  0
+                      B | 1  1  0  0  1  0  0  1
+                      C | 1  0  1  0  0  1  1  0
+                      D | 0  0  0  1  1  1  0  1
+                      E | 0  1  0  1  1  0  0  1
+                      F | 1  0  1  1  0  1  0  1
+                      G | 1  0  1  0  0  0  1  0
+                      H | 0  1  0  1  1  1  0  1
+
+
+a2) Dybde-f›rst s›ketreet:
+                      ..............A
+                      : : :        /
+                      : : :       B..
+                      : : :      /  :
+                      : : :     E.. :
+                      : : :    /  : :
+                      : : :   D.. : :
+                      : : :  /  : : :
+                      : : :.F   : : :
+                      : :  / \  : : :
+                      : :.C   H.:.:.:
+                      :  /
+                      :.G
+
+
+
+OPPGAVE B:
+==========
+
+"Dad"-arrayen etterhvert:      A  B  C  D  E  F  G  H
+                         A G:  1  -  -  -  -  -  A  -
+                         B F:  1  1  -  -  -  B  A  -
+                         D C:  1  1  D  1  -  B  A  -
+                         E H:  1  1  D  1  1  B  A  E
+                         G F:  3  A  D  1  1  B  A  E
+                         H G:  5  A  D  1  A  B  A  E   Weight Balancing
+                         F H:  5  A  D  1  A  A  A  A   Path Compression
+                         E F:  5  A  D  1  A  A  A  A   (Ingenting skjer)
+
+
+Resulterende skog:         A          D
+                       / / | \ \      |
+                       B E F G H      C
+
+
+
+
+OPPGAVE C:
+==========
+
+   - "TORSKEN ER DORSK TOSKEN ER SVORSK OG TOKEN ER IKKE NORSK"
+      har bokstavfrekvensen:
+                  ' '  D   E   G   I   K   N   O   R   S   T   V
+           k       0   4   5   7   9  11  14  15  18  19  20  22
+        count[k]  10   1   7   1   1   8   4   7   7   6   3   1
+
+
+
+   - Dette medf›rer f›lgende dad-array:
+            k      0   4   5   7   9  11  14  15  18  19  20  22 
+         count[k] 10   1   7   1   1   8   4   7   7   6   3   1
+         dad[k]   35 -28 -33  28 -27  34  31  33 -32 -31  30  27
+
+            k      27  28  29  30  31  32  33  34  35  36  37
+         count[k]   2   2   4   7  10  14  14  18  24  32  56
+         dad[k]   -29  29 -30  32 -34  36 -35 -36  37 -37   0
+
+
+
+   - Tegnet som et tre/en trie:              37
+                                        /          \
+                                     35              36
+                                  /     \          /     \
+                                ' '      33      32       34
+                                        /  \    /  \     /  \
+                                       O    E  30   R   K    31
+                                              / \          /    \
+                                             T  29        N      S 
+                                               /  \
+                                             28    27
+                                            / \   / \
+                                           G   D V   I
+
+
+   - Vi f†r alts† f›lgende bitm›nster:
+            ' '   D    E    G     I       K   N    O   R   S    T    V
+     k       0    4    5    7     9      11  14   15  18  19   20   22
+    bits    00 100101 011 100100 100111 110 1110 010 101 1111 1000 100110
+   code[k]   0   37    3    36     39    6   14   2   5   15    8   38
+   len[k]    2    6    3     6     6     3    4   3   3    4    4    6
+
+
+
+   - Totalt antall bit i kodet melding blir:
+         10*2 + 1*6 + 7*3 + 1*6 + 1*6 + 8*3 +
+         4*4 + 7*3 + 7*3 + 6*4 + 3*4 + 1*6  = 183 bits
+                                              ========

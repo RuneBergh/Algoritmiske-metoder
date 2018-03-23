@@ -1,0 +1,96 @@
+﻿
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H16_2.TXT
+
+//  Løsning til eksamen i Alg.met, desember 2016, oppgave nr.2.
+//  Laget av Frode Haug, NTNU
+
+
+
+
+
+
+OPPGAVE A:
+==========
+
+   Når "H" fjernes:
+        - "H" har ingen høyre barn, derfor er
+        - den FØRSTE setningen med  "if (t->r == z) x = x->l;"  aktuell.
+
+        - Treet under "I" etter at "H" er fjernet:
+
+                            I
+                          /   \ 
+                         G     K
+                              / \
+                             J   L
+
+
+   Når "F" fjernes:
+        - vil ingen av de to første situasjonene være aktuelle, derfor er
+        - den TREDJE setningen med  "else ......"  aktuell.
+          Her vil den sekvensielt etterfølgende noden (dvs. "G")
+          erstatte den som fjernes (dvs. "F").
+
+        - Treet etter at "F" er fjernet:
+
+                             M    
+                       /          \
+                     G           ....
+                  /     \
+                ....      I
+                        /   \
+                       H   ....             
+
+
+   Når "T" fjernes:
+        - "T" har et høyre barn uten sitt venstre barn, derfor er
+        - den ANDRE setningen med  "else if (t->r->l == z) ....."  aktuell.
+
+        - Treet under "Q" etter at "T" er fjernet:
+
+                             Q
+                          /     \
+                        ....     U
+                               /   \
+                              S     V
+                             /  
+                            R
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   - Vi har følgende bitmønster for bokstavene:
+                A    D    E   K     L     M    N     P     R     U
+              1100  010  10  000  1110  1101  011  1111  0011  0010
+
+
+   - Bitstrømmen utgjør derfor følgende tekst/melding:  "DUNDERKLUMPEN"
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   "Dad"-arrayen etterhvert:
+        
+              A  B  C  D  E  F
+         FD:  -  -  -  F  -  1
+         BA:  B  1  -  F  -  1
+         EC:  B  1  E  F  1  1
+         CD:  B  1  E  F  3  E
+         AF:  B  E  E  F  5  E    Weight Balancing
+         CA:  E  E  E  F  5  E    Path Compression 
+
+
+
+   Resulterende skog:      E
+                        / / \ \ 
+                       A B   C F
+                               |
+                               D  

@@ -1,0 +1,57 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S05_1.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i 
+//     "Algoritmiske metoder", oppgave nr.1, 9.august 2005.
+
+//     Laget av Frode Haug, HiG, juni 2005.
+
+
+
+
+OPPGAVE A:
+==========
+
+  "FRIMERKENE" sorteres vha. Quicksort.
+    Figur tilsvarende 9.3 s.119 i l‘reboka blir da som f›lger:
+    (NB: Partisjonselementet er skrevet med STOR bokstav,
+         mens resten er skrevet med sm† bokstaver.)
+
+        0  1  2  3  4  5  6  7  8  9
+        e  e  E  m  r  r  k  f  n  i
+        E  e
+                 f  I  r  k  m  n  r
+                       n  k  m  R  r
+                       k  M  n
+
+
+
+
+
+
+OPPGAVE B:
+==========
+
+    Opprinnelig array: 74 58 59 52 57 56 58 47 48 49 50 51
+    Insert 57  :       74 58 59 52 57 57 58 47 48 49 50 51 56
+    Insert 75  :       75 58 74 52 57 57 59 47 48 49 50 51 56 58
+    Remove     :       74 58 59 52 57 57 58 47 48 49 50 51 56
+    Remove     :       59 58 58 52 57 57 56 47 48 49 50 51
+    Replace 50 :       58 57 58 52 50 57 56 47 48 49 50 51
+
+
+
+
+
+
+OPPGAVE C:
+==========
+                L                           L
+         EIK         R
+     E  EF I KK    M  RRS             /           \
+                                     I              R
+                                  //   \\         /   \
+                                 E       K       M     R
+                               /   \   /   \         // \\
+                              E    F  I     K        R   S
+                                  //         \\
+                                  E           K

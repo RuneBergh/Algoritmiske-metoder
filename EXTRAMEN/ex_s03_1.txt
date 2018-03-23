@@ -1,0 +1,60 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \ EX_S03_1.TXT
+
+//     L›sningsforslag til eksamen i 
+//     "Algoritmiske metoder (I)", oppgave nr.1, 8.august 2003.
+
+//     Laget av Frode Haug, HiG, august 2003.
+
+
+
+OPPGAVE A:
+==========
+
+   H: 4  I: 5       billesuppe        (Ingenting skjer)
+   H: 4  I: 6       billesuppe        (Ingenting skjer)
+   H: 4  I: 7       billesuppe        (Ingenting skjer)
+   H: 4  I: 8       billesuppe        (Ingenting skjer)
+   H: 4  I: 9       billesuppe        (Ingenting skjer)
+   H: 4  I: 10      bElleIuppS    'E' vandrer forbi 'S' og 'I'
+
+   H: 1  I: 2       belleiupps        (Ingenting skjer) 
+   H: 1  I: 3       belleiupps        (Ingenting skjer) 
+   H: 1  I: 4       belleiupps        (Ingenting skjer) 
+   H: 1  I: 5       beELLiupps    'E' vandrer forbi 'L' og 'L'
+   H: 1  I: 6       beeILLupps    'I' vandrer forbi 'L' og 'L'
+   H: 1  I: 7       beeillupps        (Ingenting skjer) 
+   H: 1  I: 8       beeillPUps    'P' vandrer forbi 'U'
+   H: 1  I: 9       beeillpPUs    'P' vandrer forbi 'U'
+   H: 1  I: 10      beeillppSU    'S' vandrer forbi 'U'
+
+
+
+
+OPPGAVE B:
+==========
+
+Start:   B I L L E S U P P E
+         B I 
+         B I L 
+               E L 
+         B E I L L 
+                   S U 
+                   P S U 
+                         E P 
+                   E P P S U 
+Ferdig:  B E E I L L P P S U
+
+
+
+
+OPPGAVE C:
+==========
+               L                               L
+         B           NR                   /         \
+      B    EEI     L PP SUU            B               R
+                                     /   \          //   \
+                                    B     E        N      U 
+                                        // \\    /   \  // \\
+                                        E   I   L     P S   U
+                                                      \\
+                                                       P

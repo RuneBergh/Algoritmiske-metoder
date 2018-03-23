@@ -1,0 +1,81 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H99_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     13.desember 1999, oppgave 2.
+
+//     Laget av Frode Haug, HIG,  desember 1999.
+
+
+
+
+OPPGAVE A:
+==========
+
+   Etter at 'E' er satt inn:          M
+                                   //   \
+                                  G       R
+                                /   \   // \\
+                               D     J  P   X
+                                \\
+                                 E
+
+
+   Etter at 'T' er satt inn:          M
+                                   //   \\
+                                  G       R
+                                /   \    / \
+                               D     J  P   X
+                                \\         //
+                                 E         T
+
+
+   Etter at 'W' er satt inn:          M
+                                    /   \
+                                  G       R
+                                /   \    / \
+                               D     J  P   W
+                                \\        // \\
+                                 E        T   X
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   Max.flyt ift. kapasitet (F/K) KAN i de ulike r›rene/kantene F.EKS. v‘re:
+
+      AB:  12 / 12
+      AC:  17 / 18
+      BD:   6 /  6
+      BE:   6 /  8
+      CF:   7 / 10
+      CG:  10 / 10
+      DH:   6 /  8
+      EH:   4 /  5
+      EI:   2 /  5
+      FI:   5 /  5
+      FJ:   2 /  2
+      GJ:   6 /  6
+      GM:   4 /  8
+      HK:  10 / 10
+      IK:   7 /  8
+      IL:   0 /  2
+      JL:   6 /  6
+      JM:   2 /  4
+      KN:  17 / 20
+      LN:   6 /  8
+      MN:   6 / 15
+
+
+
+
+OPPGAVE C:
+==========
+
+   FSM'en godtar setninger/spr†k som:
+        - best†r av like mange 'b'er som 'a'er.
+        - ikke p† noe tidspunkt totalt har FLERE 'b'er enn 'a'er.
+        - ikke p† noe tidspunkt totalt har MER enn TO 'a'er ift.'b'er.
+

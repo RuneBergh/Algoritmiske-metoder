@@ -1,0 +1,63 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_J97_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder (I)",
+//     24.februar 1997, oppgave 2.
+
+//     Laget av Frode Haug, HIG,  februar 1997.
+
+
+A)                  N                                 N
+                /       \                         /       \
+              E          RT                     E           R
+            /   \      /  |  \                /   \       /  \\
+          E     EHI   N  RT  TUY            E      H     N     T
+                                                 // \\       /   \
+                                                 E   I      T     U
+                                                          //    // \\
+                                                         R      T   Y
+
+
+B)  Store bokstaver markerer de som er involvert i downheap og BYTTES.
+    Sm† bokstaver er de som ogs† er involvert, men beholder sin plass.
+    
+    Bottom-up heap konstruksjon:
+        1  2  3  4  5  6  7  8  9 10 11 12 13 14
+        I  N  T  E  R  N  E  T  U  H  Y  R  E  T
+                          T                    E
+                       R                 N  e
+                    Y              h  R
+                 U           t  E
+              t        r  t             (n  e  e)
+            Y    u  R              h  N
+        Y  U  t  T  r        I  e
+ Dvs:   Y  U  T  T  R  R  T  I  E  H  N  N  E  E
+
+ Heap-sort:
+        U  T  t  I  r  r  t  E  e  h  n  n  e  Y                  
+        T  R  t  i  N  r  t  e  e  h  E  n  U  y                  
+        T  r  T  i  n  r  N  e  e  h  e  T  u  y                  
+        T  r  R  i  n  E  n  e  e  h  T  t  u  y                  
+        R  N  r  i  H  e  n  e  e  T  t  t  u  y                  
+        R  n  N  i  h  e  E  e  R  t  t  t  u  y                  
+        N  I  n  E  h  e  e  R  r  t  t  t  u  y                  
+        N  i  E  e  h  e  N  r  r  t  t  t  u  y                  
+        I  H  e  e  E  N  n  r  r  t  t  t  u  y                  
+        H  E  e  e  I  n  n  r  r  t  t  t  u  y                  
+        E  e  e  H  i  n  n  r  r  t  t  t  u  y                  
+        E  e  E  h  i  n  n  r  r  t  t  t  u  y                  
+        E  E  e  h  i  n  n  r  r  t  t  t  u  y                  
+ Svar:  E  E  E  H  I  N  N  R  R  T  T  T  U  Y
+
+
+C)                  ............
+        ............A.......   :
+        :         /        :   :
+        :       B          :   :
+        :     /  \         :   :
+        :   E      F       :   :
+        : /        : \     :   :
+        D          :   C   :   :
+                   :     \ :   :
+                   :.......G   :
+                             \ :
+                               H

@@ -1,0 +1,96 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H94_3.TXT
+
+//     Lõsningsforslag til eksamen i "Algoritmiske metoder",
+//     desember 1994, oppgave 3.
+
+//     Laget av Frode Haug, HIG, hõsten 1994.
+
+
+
+OPPGAVE A:
+==========
+
+- Venstre treet til "R" er fõrst:       //
+                                       N
+                                     /   \
+                                    M     P
+                                  //
+                                 L
+
+
+- NèR "J" ER LAGT INN:                  //
+                                       N
+                                     /   \
+                                    L      P
+                                  // \\
+                                 J     M
+
+
+
+
+- Venstre treet til "I" er fõrst:       /
+                                       E
+                                    //   \\
+                                   A       G
+                                 /   \    / \
+                                A     C  E   H
+                                    //    \\
+                                   A        E
+
+
+- NèR "B" ER LAGT INN:                  //
+                                       E
+                                     /   \
+                                   A       G
+                                 /   \    / \
+                                A     B  E   H
+                                    // \\ \\
+                                    A   C   E
+
+
+
+
+OPPGAVE B:
+==========
+
+Skip-arrayen:   A B C D E F G H I J K L M N O P Q R S T U V W X Y Z í ù è
+                4 4 4 4 0 4 4 4 4 4 4 4 4 4 4 4 4 2 4 4 4 1 4 4 4 4 4 4 4
+
+
+Sõkingen:       E K S A M E N S N E R V E R
+                E R V E
+                        E R V E
+                                E R V E
+                                  E R V E
+
+
+
+
+OPPGAVE C:
+==========
+
+c1)  Nabomatrisen:      | A  B  C  D  E  F  G 
+                      --|--------------------
+                      A | 1  1  1  0  1  1  0
+                      B | 1  1  0  1  0  0  1
+                      C | 1  0  1  0  0  1  0
+                      D | 0  1  0  1  0  1  1
+                      E | 1  0  0  0  1  1  1
+                      F | 1  0  1  1  1  1  0
+                      G | 0  1  0  1  1  0  1
+
+
+c2) Dybde-fõrst sõketreet:
+                   ...................
+            ..... A ..............   :
+            :       \            :   :
+            :      .. B          :   :
+            :      :    \        :   :
+            :      :   .. D      :   :
+            :      :   :    \    :   :
+            :      :   :      F ..   :
+            :      :   :    /   \    :
+            :......:...:. C       E .: 
+                   :   :            \
+                   :   :............. G
+                   :..................:

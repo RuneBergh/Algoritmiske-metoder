@@ -1,0 +1,88 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S94_1.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i 
+//     "Algoritmiske metoder", oppgave nr.1, august 1994.
+
+//     Laget av Ove Johan Foss, HIG,  sommeren 1994.
+
+
+a)
+  Legge inn et tall  t:   Bare legge det inn med push.
+  
+  Addere       to tall:   Ta ut to tall med pop og legge inn summen av 
+			  de to med push.
+			  
+  Multiplisere to tall:   Ta ut to tall med pop og legge inn produktet av 
+			  de to med push.
+			  
+  Subtrahere   to tall:   Ta ut to tall med pop. Det f›rst uttatte skal
+			  subtraheres/trekkes fra det andre uttatte tallet.
+			  Legge inn resultatet av subtrahering med push.
+			  
+  Dividere     to tall:   Ta ut to tall med pop. Det andre uttatte skal
+			  divideres med det f›rste uttattet tallet. Det m† 
+			  sjekkes om det f›rste uttatte tallet er ulikt 0.
+			  Legge inn resultatet av divisjonen med push.
+			  
+  Hente ut resultat   :   En enkel push.
+  
+
+  
+b)
+  Opprett stakk:     Stack  s(100);
+  
+  De seks operasjonene vil v‘re:
+
+  void tall (int t)  
+    {  push (t);  }
+  
+  void add ()
+    {  push (pop () + pop ());  }
+  
+  void mult ()
+    {  push (pop () * pop ());  }
+  
+  void sub ()
+    {  int t = pop();   push (pop () - t);  }
+  
+  void div ()
+    {  int t = pop();  if (t != 0)  push (pop () / t);  
+			      else  cout << "Division by zero!";  }
+  int res ()
+    {  return pop ();  }
+  
+  
+  
+c)
+  Med array  og testing p† korrekt uttrykk.
+  
+  int s[N];
+  int topp = 0;
+  
+  void tall (int t)
+    {  if ( topp == N )  <Feil: "For dypt niv† i uttrykket !"> ;
+       else s[topp++] = t;  }
+   
+  void add ()
+    {  if ( topp <= 1 )  <Feil: For f† tall p† stakken> ;
+       else  {  topp--;  s[topp-1] = s[topp] + s[topp-1]; }  }
+  
+  void mult ()
+    {  if ( topp <= 1 )  <Feil: For f† tall p† stakken> ;
+       else  {  topp--; s[topp-1] = s[topp] * s[topp-1];  }  }
+  
+  void sub ()
+    {  if ( topp <= 1 )  <Feil: For f† tall p† stakken> ;
+       else  {  topp--;  s[topp-1] = s[topp-1] - s[topp];  }  }
+  
+  void div ()
+    {  if ( topp <= 1 )  <Feil: For f† tall p† stakken> ; 
+       else if s[topp-1] == 0)  <Feil: Divisjon med 0> ;
+       else  {  topp--;  s[topp-1] = s[topp-1] / s[topp];  }  }
+  
+  int res ()
+    {  if ( topp >= 2 )   <Feil: Ikke ferdig. Flere tall igjen p† stakken> ;
+       else if (topp == 0)  <Feil:  Ingen resultat/tall p† stakken> ;
+       else return s[--topp];
+  }
+  

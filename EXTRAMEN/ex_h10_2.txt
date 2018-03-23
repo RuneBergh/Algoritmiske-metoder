@@ -1,0 +1,92 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H10_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     21.desember 2010, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, desember 2010.
+
+
+
+OPPGAVE A:
+==========
+
+a1)  Nabomatrisen:      | A  B  C  D  E  F  G  H
+                      --|-----------------------
+                      A | 1  0  0  0  1  1  0  1
+                      B | 0  1  0  0  1  1  0  0
+                      C | 0  0  1  0  0  1  1  0
+                      D | 0  0  0  1  0  0  1  1
+                      E | 1  1  0  0  1  0  0  0
+                      F | 1  1  1  0  0  1  1  1
+                      G | 0  0  1  1  0  1  1  1
+                      H | 1  0  0  1  0  1  1  1
+
+
+a2) Dybde-f›rst s›ketreet:
+                         ......F......
+                         : :   :\    :
+                         : :   : A   :
+                         : :   :/ \  :
+                         : :   H   E :
+                         : :  /:    \:
+                         : : D :     B
+                         : :/  :
+                         : G...:
+                         :/
+                         C
+
+
+
+
+
+OPPGAVE B:
+==========
+
+"Dad"-arrayen etterhvert:
+
+
+           A  B  C  D  E  F  G  H
+     F G:  -  -  -  -  -  1  F  -
+     A E:  1  -  -  -  A  1  F  -
+     E B:  2  A  -  -  A  1  F  -
+     D B:  3  A  -  A  A  1  F  -   Weight Balancing
+     D C:  4  A  A  A  A  1  F  -
+     G B:  6  A  A  A  A  A  F  -   Weight Balancing
+     H F:  7  A  A  A  A  A  F  A   Weight Balancing
+     G D:  7  A  A  A  A  A  A  A   Path Compression
+
+
+
+Resulterende skog:          A
+                      / / / | \ \ \
+                     B C D  E  F G H
+
+
+
+
+
+OPPGAVE C:
+==========
+    Tilstandsmaskinen:       a                b
+                           -----            -----
+                           |   V            |   V
+                          --------         --------
+                    a     |------|   b     |------|    a
+                 -------->|| q1 ||-------->|| q2 ||--------
+                 |        |------|         |------|       V
+              ------      --------         --------     ------
+            > | q0 |                                    | q5 |<---
+              ------      --------         --------     ------   | a, b
+                 |        |------|         |------|       ^  |   |
+                 -------->|| q3 ||-------->|| q4 ||--------  -----
+                    b     |------|   a     |------|    b
+                          --------         --------
+                           |   ^            |   ^
+                           -----            -----
+                             b                a
+
+
+    Maskinen godtar input som best†r av EN eller flere a'er,
+    evt. etterfulgt av KUN b'er (0 eller flere) - eller omvendt
+    (dvs: EN eller flere b'er, evt. etterfulgt av KUN a'er).
+

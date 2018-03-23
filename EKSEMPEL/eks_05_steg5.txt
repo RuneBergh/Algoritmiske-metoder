@@ -1,0 +1,95 @@
+---------------------------------------------------
+|    UTSKRIFT SOM VISER:                          |
+|        - Innholdet i arrayen 'brukt'            |
+|        - Innholdet i arrayen 'p'                |
+|        - De rekursive kallene                   |
+|        - Kallet av og output fra 'display(p)'   |
+|     ifm. EKS_05  5.steg/utgave.                 |
+---------------------------------------------------
+
+Laget av Trond Grefsrud.
+
+
+
+
+SAMLET OUTPUT:
+==============
+123 132 213 231 312 321
+
+
+
+N = 3:
+------
+
+gen5(1) {
+	brukt[1] = true
+	p[1] = 1
+	gen5(2) {
+		brukt[2] = true
+		p[2] = 2
+		gen5(3) {
+			brukt[3] = true
+			p[3] = 3
+			display(p):	123
+			brukt[3] = false
+		}
+		brukt[2] = false
+		brukt[3] = true
+		p[2] = 3
+		gen5(3) {
+			brukt[2] = true
+			p[3] = 2
+			display(p):	132
+			brukt[2] = false
+		}
+		brukt[3] = false
+	}
+	brukt[1] = false
+	brukt[2] = true
+	p[1] = 2
+	gen5(2) {
+		brukt[1] = true
+		p[2] = 1
+		gen5(3) {
+			brukt[3] = true
+			p[3] = 3
+			display(p):	213
+			brukt[3] = false
+		}
+		brukt[1] = false
+		brukt[3] = true
+		p[2] = 3
+		gen5(3) {
+			brukt[1] = true
+			p[3] = 1
+			display(p):	231
+			brukt[1] = false
+		}
+		brukt[3] = false
+	}
+	brukt[2] = false
+	brukt[3] = true
+	p[1] = 3
+	gen5(2) {
+		brukt[1] = true
+		p[2] = 1
+		gen5(3) {
+			brukt[2] = true
+			p[3] = 2
+			display(p):	312
+			brukt[2] = false
+		}
+		brukt[1] = false
+		brukt[2] = true
+		p[2] = 2
+		gen5(3) {
+			brukt[1] = true
+			p[3] = 1
+			display(p):	321
+			brukt[1] = false
+		}
+		brukt[2] = false
+	}
+	brukt[3] = false
+}
+

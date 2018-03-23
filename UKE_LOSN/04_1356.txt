@@ -1,0 +1,77 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 04_1356.TXT
+
+//   L›sningsforslag til oppgave nr. 1, 3, 5 og 6 
+//   i kap.4 s.50 i l‘reboka "Algorithms in C++".
+
+
+A) Oppgave 1 s.50:
+
+   N†r nodene i treet i fig.4.3 bes›kes i rekkef›lgen:
+
+     Preorder:      E O ' ' A C P M L T E T ' ' E R E
+
+     Inorder:       A ' ' C O M P L E T E ' ' T R E E
+       
+     Postorder:     A C ' ' M L P O T ' ' E R E E T E
+
+     Level-order:   E O T ' ' P E E A C M L T ' ' R E
+
+
+
+
+B) Oppgave 3 s.50: 
+
+     Uttrykket:         ( ( ( A + B ) * C ) + ( D + E ) )
+
+     Skrives postfix:   A  B  +  C  *  D  E  +  +   (jfr. kode s.28)
+
+     Dette innlest vha. kode s.41:           +
+                                           /   \
+                                         *       +
+                                        /  \    /  \ 
+                                      +     C  D    E
+                                    /   \
+                                   A     B
+
+     (Traversering av dette treet i en postorder rekkef›lge gir 
+     uttrykket skrevet postfix.)
+
+
+
+
+C) Oppgave 5 s.50:
+                       
+     Skriver treet som:     P
+                          M   L
+                        S       E
+                      A   A'      R
+                                T   E'
+                                  E'' 
+
+
+     Innholdet p† stakken for hver gang while-l›kka s.45 starter
+     ('sX' betyr hele subtreet under 'X'):
+
+                          A
+                 sM  sS   A'  A'              T
+             sP  sL  sL  sL  sL  sL  sE  sR  sE'  sE'  E''
+
+
+
+
+D) Oppgave 6 s.50: 
+
+     Skriver treet p† samme m†te som i oppgave C).
+     Innholdet i queuen for hver gang while-l›kka s.48 starter:
+
+             sP
+             sM  sL
+             sL  sS
+             sS  sE
+             sE   A   A'
+              A   A'  sR
+              A' sR
+             sR
+              T  sE'
+             sE'
+              E''

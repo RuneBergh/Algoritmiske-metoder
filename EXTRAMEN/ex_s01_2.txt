@@ -1,0 +1,89 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S01_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     13.august 2001, oppgave 2.
+
+//     Laget av Frode Haug, HiG, august 2001.
+
+
+
+OPPGAVE A:
+==========
+
+    "Dad"-arrayen etterhvert:      A  B  C  D  E  F
+                             B C:  -  C  1  -  -  -
+                             A E:  E  C  1  -  1  -
+                             D B:  E  C  2  C  1  -
+                             B F:  E  C  F  C  1  3
+                             E C:  E  C  F  C  F  5
+
+
+    Resulterende skog:     F
+                          / \ 
+                         C   E 
+                        / \  |  
+                       B   D A  
+
+
+
+
+OPPGAVE B:
+==========
+
+  1) Det finnes MANGE mulige l›sninger, EN kan v‘re:  FCHJDIKAGEB
+
+     Poenget er at man tar bare en eller annen kant ut fra en node,
+     og fortsetter med dette til det stanser (ved at en node ikke har noen
+     etterf›lgere, eller at man allerede har bes›kt den man kommer til.)
+     Is†fall g†r man kun tilbake til den siste/forrige noden som har noen
+     ubes›kte og fortsetter algoritmen/tankegangen ut fra dette punktet.
+
+
+  2) Det finnes MANGE mulige l›sninger, EN kan v‘re:  FACKDHJEIGB
+
+     Poenget er at n†r man kommer til en node, s† legges alle dens
+     naboer bakerst i en k›. S† tar man den f›rste i k›en, og legger dens
+     naboer bakerst. Deretter tas neste i k›en, og slik fortsetter det.
+
+
+  3) Om vi skal koble grafen best†ende av CEHJ sammen med resten av nodene,
+     s† er EG og CD de to kantene som har samme og minste vekt fra ALLE
+     de andre nodene og over til CEHJ. Hvem av dem vi velger er likegyldig,
+     men vi M velge EN av dem for † koble de to komponentene sammen.
+
+
+  4)  F------A-------K
+                     |
+                     |
+      J----C----D----I
+      |    |        /|
+      |    |       B |
+      H    E.........G    (Kanten EG KUNNE v‘rt valgt istedet for CD)
+
+
+
+
+OPPGAVE C:
+==========
+
+    Tilstandsmaskinen:
+             __________________________________
+             |  _______________        a      |
+             |  |        a    |               |
+           __V__V__        ___|____        ___|____
+           |______|   b    |______|   b    |______|   b    ______  a, b
+        -->|| q0 ||------->|| q1 ||------->|| q2 ||------->| q3 |<-----
+        |  |------|        |------|        |------|        ------     |
+       a|  --------        --------        --------          |        |
+        |   |                                                ----------
+        -----   
+
+
+
+    Enklere ?
+    Nei, det er IKKE mulig † tegne den enklere p† en deterministisk m†te !
+
+
+
+    Maskinen godtar et vilk†rlig antall a'er og b'er, bare det ALDRI
+    forekommer tre eller flere b'er rett etter hverandre.

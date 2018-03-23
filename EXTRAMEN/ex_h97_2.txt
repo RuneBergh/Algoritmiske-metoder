@@ -1,0 +1,80 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H97_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder I",
+//     18.desember 1997, oppgave 2.
+
+//     Laget av Frode Haug, HIG,  desember 1997.
+
+
+
+
+A)    - "HIPP HIPP HIPP HURRA HURRA HURRAAAAAAA FOR HIG" har bokstavfrekvensen:
+                  ' ' A  F  G  H  I  O  P  R  U
+            k      0  1  6  7  8  9 15 16 18 21
+         count[k]  7  9  1  1  7  4  1  6  7  3
+
+
+
+      - Dette medf›rer f›lgende dad-array:
+            k      0  1  6  7  8  9 15 16 18 21 27 28 29 30 31 32 33 34 35
+         count[k]  7  9  1  1  7  4  1  6  7  3  2  3  6 10 13 14 19 27 46
+         dad[k]  -32 33 28-27 32 30 27 31-31-29-28 29-30-33 34-34 35-35  0
+
+
+
+      - Tegnet som et tre/en trie:        35
+
+                                      /         \
+                                   33            34
+                                  /  \         /    \
+                                 A    30      31    32
+                                     /  \    /  \  /  \
+                                    I   29   P  R  H  ' '
+                                       /  \
+                                      28   U
+                                     /  \
+                                    F   27
+                                       /  \
+                                      O    G
+
+
+
+      - Vi f†r alts† f›lgende bitm›nster:
+                 ' '   A     F     G      H    I      O      P    R    U
+           k      0    1     6     7      8    9     15     16   18   21
+         bits    111  00  01100  011011  110  010  011010  100  101  0111
+        code[k]   7    0    12    27      6    2     26      4    5    7
+        len[k]    3    2     5     6      3    3      6      3    3    4
+
+
+
+      - Totalt antall bit i kodet melding blir:
+         7*3 + 9*2 + 1*5 + 1*6 + 7*3 + 4*3 + 1*6 + 6*3 + 7*3 + 3*4 =  140
+                                                                      ===
+
+
+
+B)       A  B  C  D  E  F  G
+    AF:  -  -  -  -  -  A  -                                   E
+    BF:  B  -  -  -  -  A  -                                   |
+    BD:  B  -  -  B  -  A  -                                   B
+    BC:  B  -  B  B  -  A  -                                / / \ \
+    CD:  B  -  B  B  -  A  -  -- Ingenting skjer           A C   D G
+    FG:  B  -  B  B  -  A  B                               |
+    AG:  B  -  B  B  -  A  B  -- Ingenting skjer           F
+    EG:  B  E  B  B  -  A  B
+    AE:  B  E  B  B  -  A  B  -- Ingenting skjer
+    CE:  B  E  B  B  -  A  B  -- Ingenting skjer
+    AC:  B  E  B  B  -  A  B  -- Ingenting skjer
+    DE:  B  E  B  B  -  A  B  -- Ingenting skjer
+
+
+
+
+C)   De FEM ulike topologiske sorteringssekvensene er:
+
+             A  B  C  D  E
+             A  B  D  C  E
+             B  A  C  D  E
+             B  A  D  C  E
+             B  D  A  C  E

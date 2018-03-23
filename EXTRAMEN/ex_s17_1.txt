@@ -1,0 +1,79 @@
+﻿
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S17_1.TXT
+
+//  Løsning til kontinuasjonseksamen i Alg.met, august 2017, oppgave nr.1.
+//  Laget av Frode Haug, NTNU
+
+
+
+
+OPPGAVE A:
+==========
+
+   Utskriften blir:   2 6 10 14
+
+
+
+
+
+OPPGAVE B:
+==========
+
+    "KARAVOSTAMO" satt inn i:
+
+
+        1)  Heap:   V T S R O K O A A A M
+               
+
+
+        2)  Binært søketre:             K
+                                    /       \
+                                  A           R
+                                   \        /   \ 
+                                    A      O     V
+                                     \    / \   /
+                                      A  M   O S
+                                                \ 
+                                                 T
+
+
+
+        3)  2-3-4 tre:                KR
+                                    /  |  \
+                                  AAA MOO STV
+                                  
+
+
+
+        4)  Red-Black tre:            K      (eller KR rotert andre veien)
+                                   /     \\
+                                 A        R
+                               // \\    /   \
+                               A   A   O     T
+                                     // \\ // \\
+                                     M   O S   V
+
+
+
+
+
+OPPGAVE C:
+==========
+
+     (start:)       karkinagri
+   H: 4    I: 5     IarkKnagri   'I' vandrer forbi 'K'
+   H: 4    I: 6     iarkknagri               (Ingenting skjer)
+   H: 4    I: 7     iaAkknRgri   'A' vandrer forbi 'R'
+   H: 4    I: 8     iaaGknrKri   'G' vandrer forbi 'K'
+   H: 4    I: 9     iaagknrkri               (Ingenting skjer)
+   H: 4    I: 10    iaagkIrkrN   'I' vandrer forbi 'N'
+
+   H: 1    I: 2     AIagkirkrn   'A' vandrer forbi 'I'
+   H: 1    I: 3     aAIgkirkrn   'A' vandrer forbi 'I'
+   H: 1    I: 4     aaGIkirkrn   'G' vandrer forbi 'I'
+   H: 1    I: 5     aagikirkrn               (Ingenting skjer)
+   H: 1    I: 6     aagiIKrkrn   'I' vandrer forbi 'K'
+   H: 1    I: 7     aagiikrkrn               (Ingenting skjer)
+   H: 1    I: 8     aagiikKRrn   'K' vandrer forbi 'R'
+   H: 1    I: 9     aagiikkrrn               (Ingenting skjer)
+   H: 1    I: 10    aagiikkNRR   'N' vandrer forbi to stk'R'

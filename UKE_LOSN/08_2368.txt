@@ -1,0 +1,58 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 08_2368.TXT
+
+//   L›sningsforslag til oppgave nr. 2, 3, 6 og 8 
+//   i kap.8 s.114 i l‘reboka "Algorithms in C++".
+
+
+A)  Oppgave nr.2 s.114:
+
+       Av property 8.1-8.3 s.102-103 leser vi at "Insertion" 
+       vil ta kortest tid for en allerede sortert array. 
+       Dette bekrefter ogs† property 8.4 s.103.
+
+
+
+
+B)  Oppgave nr.3 s.114:
+
+       En array allerede sortert i omvendt ("reverse") rekkef›lge
+       vil v‘re det desiderte "worst case". Derfor vil tallene i
+       property 8.2 s.103 bli (N*N)/2 sammenligninger og (N*N)/4
+       ombyttinger. For property 8.3 s.103 s† vil begge disse 
+       tallene fortsatt v‘re (N*N)/2. 
+       Dermed vil alle tre metodene bruke (N*N)/2 sammenligninger,
+       mens property 8.1 vil ha f‘rrest ombyttinger. Derfor er 
+       "Selection" i DETTE tilfellet den beste metoden. 
+
+
+
+
+C)  Oppgave nr.6 s.114:
+
+       Legger til en innledende ' ' (blank) i teksten:  ' EASYQUESTION'.
+
+                 Etter  8 stk. 7-sort sammenligninger:  ' EAIONUESTSYQ".
+
+                 Etter 13 stk. 3-sort sammenligninger:  ' EAIENQOSTSYU".
+
+       Svaret er: tilsammen 21 sammenligninger.
+
+                (Etter 16 stk. 1-sort sammenligninger:  ' AEEINOQSSTUY".)
+
+
+
+
+D)  Oppgave nr.8 s.114:
+
+       Stabil = den relative rekkef›lgen p† like elementer etter at en 
+                sortering er utf›rt er bevart/ivaretatt/den samme.
+
+       NEI! "Selection" er IKKE stabil. F›lgende eksempel viser dette:
+                 SMS'AS"
+            Den f›rste S vil bytte plass med den minste (=A). Dermed er den
+            faktisk ferdig sortert, mens S-ene har byttet innbyrdes plass.
+
+
+       JA!  "Insertion" og "Bubble" derimot er STABILE sorteringsmetoder.
+            Bl.a. vil en studie av fig.8.2 vise dette.
+

@@ -1,0 +1,61 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H02_1.TXT
+
+//     L›sningsforslag til eksamen i 
+//     "Algoritmiske metoder (I)", oppgave nr.1, 9.desember 2002.
+
+//     Laget av Frode Haug, HiG, november 2002.
+
+
+
+OPPGAVE A:
+==========
+
+   H: 4  I: 5       GtroSanoff    'G' vandrer forbi 'S'
+   H: 4  I: 6       gArosTnoff    'A' vandrer forbi 'T'
+   H: 4  I: 7       gaNostRoff    'N' vandrer forbi 'R'
+   H: 4  I: 8       ganostroff        (Ingenting skjer)
+   H: 4  I: 9       FanoGtroSf    'F' vandrer forbi 'S' og 'G'
+   H: 4  I: 10      fanogFrosT    'F' vandrer forbi 'T'
+
+   H: 1  I: 2       AFnogfrost    'A' vandrer forbi 'F'
+   H: 1  I: 3       afnogfrost        (Ingenting skjer)
+   H: 1  I: 4       afnogfrost        (Ingenting skjer)
+   H: 1  I: 5       afGNOfrost    'G' vandrer forbi 'O' og 'N'
+   H: 1  I: 6       afFGNOrost    'F' vandrer forbi 'O', 'N' og 'G'
+   H: 1  I: 7       affgnorost        (Ingenting skjer)
+   H: 1  I: 8       affgnoORst    'O' vandrer forbi 'R'
+   H: 1  I: 9       affgnoorst        (Ingenting skjer)
+   H: 1  I: 10      affgnoorst        (Ingenting skjer)
+
+
+
+
+OPPGAVE B:
+==========
+
+Start:   S T R O G A N O F F
+         S T
+         R S T 
+               G O 
+         G O R S T 
+                   A N 
+                   A N O 
+                         F F 
+                   A F F N O 
+Slutt:   A F F G N O O R S T 
+
+
+
+
+OPPGAVE C:
+==========
+               I                               I
+         FF          OS                       
+     AB   F  FG    N OR   T               /         \
+                                        F              S
+                                      /   \\        //   \
+                                     B      F       O     T
+                                    //    /   \   /   \
+                                    A    F     G N     R
+                                              //      //
+                                              F       O

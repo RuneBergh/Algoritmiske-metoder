@@ -1,0 +1,61 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H04_1.TXT
+
+//     L›sningsforslag til eksamen i 
+//     "Algoritmiske metoder", oppgave nr.1, 3.desember 2004.
+
+//     Laget av Frode Haug, HiG, november 2004.
+
+
+
+OPPGAVE A:
+==========
+
+   H: 4  I: 5       sumpsvamp        (Ingenting skjer)
+   H: 4  I: 6       sumpsvamp        (Ingenting skjer)
+   H: 4  I: 7       suApsvMmp     'A' vandrer forbi 'M'
+   H: 4  I: 8       suaMsvmPp     'M' vandrer forbi 'P'
+   H: 4  I: 9       PuamSvmpS     'P' vandrer forbi 'S' og 'S'
+
+   H: 1  I: 2       puamsvmps        (Ingenting skjer)
+   H: 1  I: 3       APUmsvmps     'A' vandrer forbi 'P' og 'U'
+   H: 1  I: 4       aMPUsvmps     'M' vandrer forbi 'P' og 'U'
+   H: 1  I: 5       ampSUvmps     'S' vandrer forbi 'U'
+   H: 1  I: 6       ampsuvmps        (Ingenting skjer)
+   H: 1  I: 7       amMPSUVps     'M' vandrer forbi 'P', 'S', 'U' og 'V'
+   H: 1  I: 8       ammpPSUVs     'P' vandrer forbi 'S', 'U' og 'V'
+   H: 1  I: 9       ammppsSUV     'S' vandrer forbi 'U' og 'V'
+
+
+
+
+
+OPPGAVE B:
+==========
+
+Start:   S U M P S V A M P
+         S U 
+         M S U 
+               P S 
+         M P S S U 
+                   A V 
+                       M P 
+                   A M P V 
+Ferdig:  A M M P P S S U V 
+
+
+
+
+
+OPPGAVE C:
+==========
+
+               P                            P
+         M          SU                 /         \
+     AEE   MN    P  SS  V            M             S
+                                   /   \         /   \\
+                                  E     M       P     U
+                                // \\    \\         /   \
+                                A   E     N        S     V
+                                                    \\
+                                                     S
+

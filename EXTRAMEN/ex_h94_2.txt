@@ -1,0 +1,55 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H94_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     desember 1994, oppgave 2.
+
+//     Laget av Frode Haug, HIG, h›sten 1994.
+
+
+
+A)  Bin‘rt s›ketre:             E  
+                             /     \
+                           A         K
+                                  /     \
+                                E         S
+                                 \      /   \
+                                  E    M      S
+                                   \     \      \
+                                    E      N       V
+                                             \
+                                               N
+                                                 \
+                                                   R
+                                                     \
+                                                       R
+
+
+B)  Heap:   V S S N R N R A M E E E E K
+
+
+C)  2-3-4 tre:            K
+                       /     \
+                     E        NS
+                   /   \     / | \
+                  A    EEE  M NRR SV
+
+
+D)  Red-Black tre:       K
+                      /      \
+                    E          N          Evnt. S-N
+                  /   \      /  \\
+                A      E    M     S
+                     // \\      /   \
+                    E     E    R     S     Evnt. V-S
+                             // \\    \\
+                            N     R     V
+
+
+
+E)          E   K   S   A   M   E   N   S   N   E   R   V   E   R
+        k:  5  11  19   1  13   5  14  19  14   5  18  22   5  18
+    h1(k):  5  11   5   1  13   5   0   5   0   5   4   8   5   4
+
+
+    Arrayen:    N  A  N  R  R  E  S  E  S  E  V  K  E  M
+            i:  0  1  2  3  4  5  6  7  8  9 10 11 12 13  

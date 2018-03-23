@@ -1,0 +1,54 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S95_2.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     august 1995, oppgave 2.
+
+//     Laget av Frode Haug, HIG, sommeren 1995.
+
+
+
+A)  Bin‘rt s›ketre:             K
+                           /         \
+                         I             O
+                       /   \        /     \
+                     A       J    N          T
+                      \          / \        /  \
+                       E        K   N      S      U
+                      / \        \   \    / \
+                     A   E        M   N  O   S
+                                       \      \
+                                        N      S
+
+
+
+B)  Heap:   U S T S O S N O M N J N N E K A A K E I
+
+
+
+C)  2-3-4 tre:             N   S  
+                       /     |     \
+                   A I K     O       T
+                 /  | | \   / \     / \
+                A  EE J KM NNN O   SS  U
+
+
+
+D)  Red-Black tre:                 N
+                             /          \\
+                         I                   S
+                      //   \\              /   \
+                     A        K           O     T
+                   /   \     / \         / \   / \
+                  A     E   J   K       N   O S   U
+                         \\      \\   // \\    \\
+                           E       M  N   N      S
+
+
+
+E)          K  O  N  T  I  N  U  A  S  J  O  N  S  E  K  S  A  M  E  N
+        k: 11 15 14 20  9 14 21  1 19 10 15 14 19  5 11 19  1 13  5 14
+    h1(k): 11 15 14  0  9 14  1  1 19 10 15 14 19  5 11 19  1 13  5 14
+
+
+    Arrayen:    T  U  A  S  S  E  A  E  N  I  J  K  K  M  N  O  N  O  N  S
+            i:  0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19

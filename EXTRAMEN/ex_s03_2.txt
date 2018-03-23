@@ -1,0 +1,70 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \ EX_S03_2.TXT
+
+//     Lõsningsforslag til eksamen i 
+//     "Algoritmiske metoder (I)", oppgave nr.2, 8.august 2003.
+
+//     Laget av Frode Haug, HiG, august 2003.
+
+
+
+
+OPPGAVE A:
+==========
+                R   ù   D   B   I   L   L   E   S   U   P   P   E
+            k: 18  28   4   2   9  12  12   5  19  21  16  16   5
+      hash(k):  5   2   4   2   9  12  12   5   6   8   3   3   5
+      
+
+  Arrayen:  i:  0   1   2   3   4   5   6   7   8   9  10  11  12 
+                -   -   -   -   -   R   -   -   -   -   -   -   -
+                -   -   ù   -   -   R   -   -   -   -   -   -   -
+                -   -   ù   -   D   R   -   -   -   -   -   -   -
+                -   -   ù   B   D   R   -   -   -   -   -   -   -
+                -   -   ù   B   D   R   -   -   -   I   -   -   -
+                -   -   ù   B   D   R   -   -   -   I   -   -   L
+                L   -   ù   B   D   R   -   -   -   I   -   -   L
+                L   -   ù   B   D   R   E   -   -   I   -   -   L
+                L   -   ù   B   D   R   E   S   -   I   -   -   L
+                L   -   ù   B   D   R   E   S   U   I   -   -   L
+                L   -   ù   B   D   R   E   S   U   I   P   -   L
+                L   -   ù   B   D   R   E   S   U   I   P   P   L
+                L   E   ù   B   D   R   E   S   U   I   P   P   L
+   (Resultat:)  L   E   ù   B   D   R   E   S   U   I   P   P   L
+
+
+
+
+
+OPPGAVE B:
+==========
+        A  B  C  D  E  F  G                               A
+   AF:  -  -  -  -  -  A  -                            / / \ \     
+   BG:  -  -  -  -  -  A  B                            B D E F
+   FG:  -  A  -  -  -  A  B                            | |
+   DC:  -  A  D  -  -  A  B                            G C
+   AG:  -  A  D  -  -  A  B  -- Ingenting skjer
+   BE:  -  A  D  -  A  A  B
+   GD:  -  A  D  A  A  A  B
+   BD:  -  A  D  A  A  A  B  -- Ingenting skjer
+   FC:  -  A  D  A  A  A  B  -- Ingenting skjer
+   CE:  -  A  D  A  A  A  B  -- Ingenting skjer
+
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   Prioritetskõen etterhvert:
+                               F-2   D-2   C-2
+                               C-3   C-2   E-3   E-1
+                          A*   B-3   B-3   B-3   B-3   B-1
+
+
+   Minimums spenntre:     A         B
+                         /          |
+                        F---------D |    
+                         \          |  
+                          C---------E

@@ -1,0 +1,81 @@
+﻿//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H13_2.TXT
+
+//     Løsningsforslag til eksamen i "Algoritmiske metoder",
+//     18.desember 2013, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, desember 2013.
+
+
+
+OPPGAVE A:       
+==========
+
+  Keyene:           G   A   R   R   I   C   K   T   H   E   A   T   R   E
+  k (alfabetnr.):   7   1  18  18   9   3  11  20   8   5   1  20  18   5
+
+  Hash1 (M = 17):   7   1   1   1   9   3  11   3   8   5   1   3   1   5
+  Hash2:            1   3   2   2   3   1   1   4   4   3   3   4   2   3
+
+  Indeks:   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16
+            -   -   -   -   -   -   -   G   -   -   -   -   -   -   -   -   -
+            -   A   -   -   -   -   -   G   -   -   -   -   -   -   -   -   -
+            -   A   -   R*  -   -   -   G   -   -   -   -   -   -   -   -   -
+            -   A   -   R*  -   R*  -   G   -   -   -   -   -   -   -   -   -
+            -   A   -   R*  -   R*  -   G   -   I   -   -   -   -   -   -   -
+            -   A   -   R*  C*  R*  -   G   -   I   -   -   -   -   -   -   -
+            -   A   -   R*  C*  R*  -   G   -   I   -   K   -   -   -   -   -
+            -   A   -   R*  C*  R*  -   G   -   I   -   K   -   -   -   T*  -
+            -   A   -   R*  C*  R*  -   G   H   I   -   K   -   -   -   T*  -
+            -   A   -   R*  C*  R*  -   G   H   I   -   K   -   -   E*  T*  -
+            -   A   -   R*  C*  R*  -   G   H   I   A*  K   -   -   E*  T*  -
+            -   A   T*  R*  C*  R*  -   G   H   I   A*  K   -   -   E*  T*  -
+            -   A   T*  R*  C*  R*  -   G   H   I   A*  K   -   R*  E*  T*  -
+            E*  A   T*  R*  C*  R*  -   G   H   I   A*  K   -   R*  E*  T*  -
+
+            (* = bokstaver som hashes på plass ved bruk av hash2 også.)
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   "Dad"-arrayen etterhvert:
+        
+              A  B  C  D  E  F  G
+        F G:  -  -  -  -  -  1  F
+        C B:  -  C  1  -  -  1  F
+        D B:  -  C  2  C  -  1  F    Weight Balancing
+        E A:  E  C  2  C  1  1  F
+        A G:  E  C  2  C  3  E  F
+        D F:  E  C  E  C  6  E  F    Weight Balancing
+        G B:  E  E  E  C  6  E  E    Path Compression
+
+
+
+   Resulterende skog:       E
+                        / / | \ \ 
+                       A B  C  F G
+                            |
+                            D
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   Korteste sti fra "C" til ALLE de andre nodene vil involvere kantene:
+
+         AF  BA  DE  EF  FC  GC  HA  IA
+
+
+
+   Prioritetskøen etterhvert:
+                                   I-3a
+                                   H-3a   H-3a
+                     E-2f   A-2f   D-3e   D-3e   D-3e
+              F-1c   A-2f   D-3e   G-3c   G-3c   G-3c   G-3c
+         C*   G-3c   G-3c   G-3c   B-4a   B-4a   B-4a   B-4a   B-4a

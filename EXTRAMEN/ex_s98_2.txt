@@ -1,0 +1,84 @@
+//  Fil:  FRODEH \ ALG_MET1 \ EXTRAMEN \EX_S98_2.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i
+//     "Algoritmiske metoder I", oppgave nr.2,  17.august 1998.
+
+//     Laget av Frode Haug,  HIG,  august 1998.
+
+
+
+A)    - "SOMMERFERIE OG SOMMERFERIE FRU BLOM SA BLOMSTEN" har bokstavfrekvensen:
+                  ' '  A   B   E   F   G   I   L   M   N   O   R   S   T   U
+            k      0   1   2   5   6   7   9  12  13  14  15  18  19  20  21
+         count[k]  6   1   2   7   3   1   2   2   6   1   5   5   4   1   1
+
+
+
+      - Dette medf›rer f›lgende dad-array:
+            k      0   1   2   5   6   7   9  12  13  14  15  18  19  20  21
+         count[k]  6   1   2   7   3   1   2   2   6   1   5   5   4   1   1
+         dad[k]  -36  29 -31  37 -32 -28  31 -30  36  28  35 -34  34 -27  27
+
+            k      27  28  29  30  31  32  33  34  35  36  37  38  39  40
+         count[k]   2   2   3   4   4   6   8   9  11  12  15  20  27  47
+         dad[k]    30 -29  32 -33  33 -35 -37  38 -38  39 -39  40 -40   0
+
+
+
+      - Tegnet som et tre/en trie:           40
+                                        /          \
+                                     38              39
+                                  /     \          /     \
+                                34       35      36       37
+                               /  \     /  \    /  \     /  \
+                              S    R   O   32  M   ' '  E    33
+                                          /  \             /    \
+                                        29    F          31      30
+                                       /  \             /  \    /  \
+                                      A    28          I    B  27   L
+                                          /  \                 / \
+                                         N    G               U   T
+
+
+      - Vi f†r alts† f›lgende bitm›nster:
+                 ' '    A      B     E     F      G      I      L     M  
+            k     0     1      2     5     6      7      9     12    13 
+          bits   101  01100  11101  110  0111  011011  11100  11111  100
+         code[k]  5    12     29     6     7      27     28    31     4
+         len[k]   3     5      5     3     4      6      5     5      3
+
+                     N     O    R    S      T       U
+            k       14    15   18   19     20      21
+          bits    011010  010  001  000  111101  111100
+         code[k]    26     2    1    0     61      60
+         len[k]      6     3    3     3     6       6
+
+
+
+      - Totalt antall bit i kodet melding blir:
+          6*3 + 1*5 + 2*5 + 7*3 + 3*4 + 1*6 + 2*5 +
+          2*5 + 6*3 + 1*6 + 5*3 + 5*3 + 4*3 + 1*6 + 1*6 = 170 bits
+                                                          ========
+
+
+B)         A  B  C  D  E  F  G
+     AB:   -  A  -  -  -  -  -                                  A
+     AE:   -  A  -  -  A  -  -                             / /  |  \ \
+     BC:   -  A  A  -  A  -  -                            B  C  D  E  F
+     DG:   -  A  A  -  A  -  D                                  |
+     EG:   -  A  A  A  A  -  D                                  G
+     CF:   -  A  A  A  A  A  D 
+     BF:   -  A  A  A  A  A  D     -- Ingenting skjer
+     CE:   -  A  A  A  A  A  D     -- Ingenting skjer
+     AD:   -  A  A  A  A  A  D     -- Ingenting skjer
+     DF:   -  A  A  A  A  A  D     -- Ingenting skjer
+     BE:   -  A  A  A  A  A  D     -- Ingenting skjer
+
+
+
+C)   De FEM ulike topologiske sorteringssekvensene er:
+             A  C  B  E  D
+             A  C  E  B  D
+             A  C  E  D  B
+             A  E  C  B  D
+             A  E  C  D  B

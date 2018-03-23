@@ -1,0 +1,83 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_S07_2.TXT
+
+//     L›sningsforslag til kontinuasjonseksamen i "Algoritmiske metoder",
+//     8.august 2007, oppgave nr.2.
+
+//     Laget av Frode Haug, HiG, mai 2006.
+
+
+
+OPPGAVE A:
+==========
+
+"Dad"-arrayen etterhvert:
+
+           A  B  C  D  E  F  G
+     A F:  1  -  -  -  -  A  -
+     C D:  1  -  1  C  -  A  -
+     B F:  2  A  1  C  -  A  -    Weight Balancing
+     E D:  2  A  2  C  C  A  -    Weight Balancing
+     A D:  5  A  A  C  C  A  -    (Weight Balancing)
+     F G:  6  A  A  C  C  A  A
+     B G:  6  A  A  C  C  A  A    (Ingenting skjer)
+     E A:  6  A  A  C  A  A  A    Path Compression
+
+
+Resulterende skog:          A
+                      /  /  |  \  \
+                      B  C  E  F  G
+                         |
+                         D
+
+
+
+
+
+OPPGAVE B:
+==========
+
+     Input:  Katalogen:  Output:
+       t
+       h      256 (th)      t
+       i      257 (hi)      h
+       s      258 (is)      i
+       -      259 (s_)      s
+       i      260 (_i)      -
+       s    (bygger bare videre, ingen output) 
+       -      261 (is_)    258
+       h      262 (_h)      -
+       i    (bygger bare videre, ingen output) 
+       s      263 (his)    257
+       -    (bygger bare videre, ingen output)
+       t      264 (s_t)    259
+       h    (bygger bare videre, ingen output)  
+       i      265 (thi)    256
+       n      266 (in)      i
+       g      267 (ng)      n
+    <slutt>                 g
+
+
+
+
+
+OPPGAVE C:
+==========
+
+    Tilstandsmaskinen:
+
+                                b
+         ____ _________________________________________
+       b |  | |                                       |
+         v  | v                                    --------
+         ------   a    ------   b    ------   b    |------|
+       > | q0 | -----> | q1 | -----> | q2 | -----> || q3 || 
+         ------        ------        ------        |------|
+                       ^ |^ ^          |           --------
+                     a |_|| |__________| a             |
+                          |____________________________|
+                                         a
+
+
+    Maskinen godtar en input som best†r av et vilk†rlig antall
+    og blanding av a'er og b'er, bare det avslutter med "abb".
+

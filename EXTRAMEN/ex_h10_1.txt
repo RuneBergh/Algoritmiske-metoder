@@ -1,0 +1,65 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H10_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     21.desember 2010, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, desember 2010.
+
+
+
+OPPGAVE A:
+==========
+
+( Skrevet p† infix-m†te:   A  B  +  C  D  *  *  E  F  *  G  +  +  H  *  )
+
+
+  Parsetreet:              *
+                        /     \
+                    +           H
+                /       \
+           *               +
+         /   \           /   \
+       +       *       *       G
+      / \     / \     / \
+     A   B   C   D   E   F
+
+
+
+
+
+OPPGAVE B:
+==========      
+
+  "HIGHGATE" sorteres vha. Quicksort.
+   Figur tilsvarende 9.3 s.119 i l‘reboka blir da som f›lger:
+   (NB: Partisjonselementet er skrevet med STOR bokstav,
+        mens resten er skrevet med sm† bokstaver.)
+
+   Initielt:  H  I  G  H  G  A  T  E
+              0  1  2  3  4  5  6  7
+
+              a  E  g  h  g  h  t  i
+
+                    g  h  g  h  I  t
+
+                    g  g  H  h
+
+                    G  g
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   Start:   H G C E M E T E R Y
+            G H
+            C G H
+                  E M
+            C E G H M
+                      E T
+                      E E T
+                            R Y
+                      E E R T Y
+   Ferdig:  C E E E G H M R T Y

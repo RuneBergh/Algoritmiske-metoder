@@ -1,0 +1,86 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H12_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     18.desember 2012, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, desember 2012.ÿÿÿ
+
+
+
+OPPGAVE A:
+==========
+
+    Etter 2.for-l›kke  - count:   5 3 4
+
+    Etter 3.for-l›kke  - count:   5 8 12
+
+    MIDT i 4.for-l›kke - count:   3 7 9
+                       -     b:   - - - A A - - B - C C C
+
+
+
+
+
+OPPGAVE B:
+==========
+    "PEYRESOURDE" satt inn i:
+
+        1)  Heap:   Y U S R E P O E R D E
+                                      
+
+
+        2)  Bin‘rt s›ketre:             P
+                                   /         \
+                                 E             Y
+                               /   \        / 
+                              D     E      R
+                                     \      \
+                                      O      S
+                                     /      / \
+                                    E      R   U
+
+
+
+        3)  2-3-4 tre:                  P
+                                    /       \
+                                  E           S
+                                /   \       /   \
+                              DE     EO   RR     UY
+
+
+
+
+
+
+        4)  Red-Black tre:              P
+                                    /       \
+                                  E           S
+                                /   \       /   \
+                               E     O     R     Y
+                             //    //       \\  //    Eller alle fire rotert
+                             D     E         R  U       andre veien.
+
+
+
+
+
+OPPGAVE C:
+==========
+
+  "BATTAJUS" sorteres vha. Quicksort.
+   Figur tilsvarende 9.3 s.119 i l‘reboka blir da som f›lger:
+   (NB: Partisjonselementet er skrevet med STOR bokstav,
+        mens resten er skrevet med sm† bokstaver.)
+
+   Initielt:  B  A  T  T  A  J  U  S
+              0  1  2  3  4  5  6  7
+
+              b  a  j  a  S  t  u  t
+
+              a  A  j  b
+
+                    B  j
+
+                             T  u  t
+
+                                T  u 

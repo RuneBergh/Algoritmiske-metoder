@@ -1,0 +1,54 @@
+//   Fil:  FRODEH \ ALG_MET \ LAB_LOSN \ 16_23567.TXT
+
+//   L›sningsforslag til oppgave nr. 2, 3, 5, 6 og 7
+//   i kap.16 s.244 i l‘reboka "Algorithms in C++".
+
+
+A)  Exercise nr.2 s.244 i l‘reboka:
+
+    Usortert, worst case:  N. Alle hash'es til samme indeks, 
+                              og hektes inn i LIFO liste.
+    Sortert, worst case:  (N*N)/2. Alle hash'es til samme indeks,
+                                   og skal alltid legges inn bakerst i
+                                   lista. Derfor er det gjennomsnittlig
+                                   N/2 † bla forbi for hver gang.
+
+
+
+B)  Exercise nr.3 s.244 i l‘reboka:
+
+       A  O  N  Q  E  S  E  U  S  T   I   Y
+    0  1  2  3  4  5  6  7  8  9  10  11  12
+
+
+
+C)  Exercise nr.5 s.244 i l‘reboka:
+
+    (N*N)/2. Da alle key'er f†r samme hash-verdi av h1 og h2.
+             Etter ALLTID † f† et "krasj" ved f›rste s›k for h1, s†
+             m† man gjennomsnittlig lete N/2 plasser f›r man finner 
+             den neste ledige plassen.
+
+
+
+D)  Exercise nr.6 s.244 i l‘reboka:
+
+    Usortert, 'Separate Chaining' er best, da man hasher til en indeks og 
+    elementene hektes inn f›rst i vedkommende liste. For 'Linear Probing' 
+    og 'Double Hashing' s† vil det bli mye leting etter en ledig plass. 
+    S‘rlig dersom h1 (og h2) i tillegg skulle plassere ulike key'er like 
+    ved hverandre i arrayen. Alle tre metodene vil i dette tilfellet 
+    inneb‘re mye leting ved 'Search'.
+
+                                     
+
+E)  Exercise nr.7 s.244 i l‘reboka:
+
+    N†r kjenner antall key'er, s† vil 'Usortert, Separate Chaining' 
+    v‘re bedre enn 'Double Hashing' ved f.eks:
+         - N†r mange like key'er (jfr.oppgave D).
+         - N†r hash-funksjonen sprer d†rlig utover 
+           (dvs. blir nesten som mange like key'er).
+         - ..........
+         - ..........
+

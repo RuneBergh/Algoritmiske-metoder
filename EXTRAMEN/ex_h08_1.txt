@@ -1,0 +1,92 @@
+//  Fil:  FRODEH \ ALG_MET \ EXTRAMEN \EX_H08_1.TXT
+
+//     L›sningsforslag til eksamen i "Algoritmiske metoder",
+//     19.desember 2008, oppgave nr.1.
+
+//     Laget av Frode Haug, HiG, desember 2008.
+
+
+
+OPPGAVE A:
+==========
+
+  - DISTRIBUERT TELLING (side 112-113) kan brukes direkte slik den st†r
+    i l‘reboka.
+
+  - QUICKSORT (side 118) kan ogs† brukes, ved † endre LITT p† den:
+        1) Om partisjonselementet (det helt til h›yre/sist i arrayen) er det:
+             - MINSTE  av de to verdiene, s† endres 1.while-l›kke til: <=
+             - STRSTE av de to verdiene, s† endres 2.while-l›kke til: >=
+
+        2) De to rekursive kallene til slutt fjernes (bortkommenteres),
+    Dermed er arrayen ferdig sortert etter EN runde med partisjonering!
+
+
+
+
+
+OPPGAVE B:
+==========
+
+   Start:   S T R A F F E K A S T
+            S T
+            R S T
+                  A F
+                  A F F                  
+            A F F R S T
+                        E K
+                        A E K
+                              S T
+                        A E K S T
+   Ferdig:  A A E F F K R S S T T
+
+
+
+
+
+OPPGAVE C:
+==========
+
+   N†r "V" fjernes:
+        - "V" har et h›yre barn uten sitt venstre barn, derfor er
+        - den ANDRE setningen med  "else if (t->r->l == z) ....."  aktuell.
+        - Treet etter at "V" er fjernet:
+                 S
+              /     \
+            ...        W
+                         \
+                           X
+
+
+   N†r "Q" fjernes:
+        - "Q" har ingen h›yre barn, derfor er
+        - den FRSTE setningen med  "if (t->r == z) x = x->l;"  aktuell.
+        - Treet etter at "Q" er fjernet:
+                 S 
+              /     \
+            D       ...
+          /   \
+        ...    K
+              / \
+             G   N
+            /   / 
+           F   L
+
+
+   N†r "D" fjernes:
+        - vil ingen av de to overst†ende casene v‘re aktuelle, derfor er
+        - den TREDJE setningen med  "else ......"  aktuell.
+          Her vil den sekvensielt etterf›lgende noden (dvs. "F")
+          erstatte den som fjernes (dvs. "D").
+        - Treet etter at "D" er fjernet:
+                 S
+              /     \
+            F       ...
+          /   \
+        B       Q
+               /
+              K
+             / \
+            G   N
+               /
+              L
