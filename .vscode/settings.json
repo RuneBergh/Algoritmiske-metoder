@@ -6,6 +6,8 @@
         "locale": "cpp",
         "memory": "cpp",
         "tuple": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "algorithm": "cpp",
+        "iostream": "cpp"
     }
 }
