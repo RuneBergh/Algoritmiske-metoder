@@ -13,12 +13,39 @@ const int N = 6;                       //  Arrayens lengde.
 char arr[N];                            //  Global array av int'er.
 
 
+bool erKonsonant(char a)
+{
+
+char konsonanter[9]={'A', 'E', 'I', 'O', 'U', 'Y','Æ', 'Ø','Å'};
+for (int i =0; i<20 ; i++)
+  {
+    if( a ==konsonanter[i] ) return true;
+  }
+  return false;
+}
+
 bool navnOK(char a[], int len)
 {
-char vokaler[21]={};
-char konsonanter[6]={};
-  if 
-  return true
+
+if (a[0] == a[1]) return false;  //to like i starten
+
+for( int i=1; i < N; i++)   // går igjenom hele arrayen  
+ if (!erKonsonant(a[i-1]) && !erKonsonant(a[i]))  // hvis begge er vokaler
+  { 
+    if(a[i-1]==a[i]) 
+       {
+         return false;
+       }                // hvis de er like return false
+    if (i >= 2 && !erKonsonant(a[i-2])             //hvis det er mer enn 2 tidligere og den 3. er vokal return false
+       {
+         return false;
+       }
+  }
+return true;
+
+
+
+
 }
 
 void display(char a[])  {               //  Viser arrayens innhold.
