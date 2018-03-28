@@ -109,11 +109,7 @@ return false;
 
 void perm(int i)  {
   int t;
-  char was[length];
-   for(int j = 0; j <= 255; j++)
-    was[j] = 0;
-  
-  
+
   if (i == length-1)                        //  N�dd en ny permutasjon:
    {   if(navnOK(arr,i))
     { display(arr);}                     //  Skriver ut arrayens innhold.
@@ -122,7 +118,6 @@ void perm(int i)  {
      perm(i+1);                        //  Beholder n�v�rende nr.'i'.
 	 			                       //    Permuterer resten.
      for (t = i+1; t < length; t++)  {
-       
        bytt(arr[i], arr[t]);         //  Bytter nr.'i' etter tur med alle
 			 if (!erbyttet(arr, i, t)  &&  navnOK(arr, i))
        {	                       //    de andre etterf�lgende.
