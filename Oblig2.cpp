@@ -14,6 +14,8 @@ int length;
 
 char *arr ;                            //  Global array av int'er.
 
+char *orgarr;
+
 void les(const char* t, char* s, const int LEN) {
     do {
         cout << '\t' << t << ": ";  //  Skriver ledetekst.
@@ -22,15 +24,13 @@ void les(const char* t, char* s, const int LEN) {
 }
 
 
-
-
-bool erKonsonant(char a)
+bool erVokal(char a)
 {
 
-char konsonanter[6]={'A', 'E', 'I', 'O', 'U', 'Y'};
+char vokal[6]={'A', 'E', 'I', 'O', 'U', 'Y'};
 for (int i =0; i<6 ; i++)
   {
-    if( a ==konsonanter[i] ) return true;
+    if( a ==vokal[i] ) return true;
   }
   return false;
 }
@@ -44,24 +44,22 @@ if (a[0] == a[1]) return false;  //to like i starten
 for( int i=1; i < length; i++) 
   {  // går igjenom hele arrayen  
           
-     if (!erKonsonant(a[i-1]) && !erKonsonant(a[i]))  // hvis begge er vokaler
+     if (erVokal(a[i-1]) && erVokal(a[i]))  // hvis begge er vokaler
       {  
          if(a[i-1]==a[i])    // to like vokaler
-            {
+            { 
               return false;
             }                
-      
-       
-      
-         if (i >= 2 && !erKonsonant(a[i-2]))            //tre like vokaler
+    
+         if (i >= 2 && erVokal(a[i-2]))            //tre like vokaler
           {
              return false;
           }
       }
-  if (i>=2 && erKonsonant(a[i]) && erKonsonant(a[i-1]) && erKonsonant(a[i-2])  )
+  if (i>=2 && !erVokal(a[i]) && !erVokal(a[i-1]) && !erVokal(a[i-2])  )
     {
       if ( a[i]==a[i-1]==a[i-2]) return false;    //om det er tre like konsonanter
-      if (i>=3 && erKonsonant(a[i-3])) return false;   //om det kommer fire konsonanter etter hverandre
+      if (i>=3 && !erVokal(a[i-3])) return false;   //om det kommer fire konsonanter etter hverandre
     }
 
 }
@@ -96,21 +94,44 @@ void roterVenstre(char *a, char i)  {   //  Roterer elementer mot venstre.
   a[length-1] = x;                          //  Legger f�rst inn bakerst.
 }
 
+bool erbyttet(char * a, int i, int t)
+{
+  {
+    for (int j=i+1;j<=t;j++)   // finne indeks til i og j
+    {
+      if (a[i]==a[j])
+      return true;
+    }
+  }
+
+return false;
+}
 
 void perm(int i)  {
   int t;
+  char was[length];
+   for(int j = 0; j <= 255; j++)
+    was[j] = 0;
+  
+  
   if (i == length-1)                        //  N�dd en ny permutasjon:
-   {   if (navnOK(arr,i))
+   {   if(navnOK(arr,i))
     { display(arr);}                     //  Skriver ut arrayens innhold.
-  }else {                               //  Skal permutere:
+  }else {     
+                              //  Skal permutere:
      perm(i+1);                        //  Beholder n�v�rende nr.'i'.
 	 			                       //    Permuterer resten.
      for (t = i+1; t < length; t++)  {
-	     bytt(arr[i], arr[t]);         //  Bytter nr.'i' etter tur med alle
-				                       //    de andre etterf�lgende.
-	     perm(i+1);                    //  For hver av ombyttene: permuterer
+       
+       bytt(arr[i], arr[t]);         //  Bytter nr.'i' etter tur med alle
+			 if (!erbyttet(arr, i, t)  &&  navnOK(arr, i))
+       {	                       //    de andre etterf�lgende.
+	     perm(i+1);  
+       }                 //  For hver av ombyttene: permuterer
      }                                 //    resten av de N� etterf�lgende.
      roterVenstre(arr, i);             //  Gjenoppretter opprinnelig array.
+            
+  
   } 
 }
 
@@ -123,7 +144,7 @@ int main()  {
  les("Les inn array", buffer, N);  
   length =   strlen(buffer);             
   arr = new char[strlen(buffer) + 1];  strcpy(arr, buffer);
- 
+  orgarr = new char[strlen(arr) + 1];  strcpy(orgarr, arr);
  for (int i =0;i<length;i++)
    arr[i] = toupper(arr[i]);
 
