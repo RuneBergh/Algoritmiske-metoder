@@ -5,7 +5,6 @@ using namespace std;
 
 const int MAX =8 ;
  int boardsize;
- int flyttNR=1;
  int ant=0;
  
 
@@ -23,78 +22,33 @@ void display()  {            //  Skriver ut brettets innhold.
 	  cout << board[i][j] << "  ";
       cout << "\n\t";
   }
-  cout << "\t\t\tSkriv ett tegn .....";   cin >> ch;
+  cout << "\t\t\tSkriv ett tegn .....";   //cin >> ch;
 }
 
 
-
-bool validmove(int i,int j)
+void permhorse(int i, int j,int nr)
 {
-    if (i<1 || j<1 || j>boardsize || i>boardsize)
-        return false;
-
-    if(board[i][j]==0 )
-        return true;
-
-return false;
-
-}
-
-void permhorse(int i, int j)
-{
-  cout << "i= "<<i << "j= "<< j;
-       if(flyttNR==((boardsize*boardsize)+1))              //fylt opp brettet, skriv ut løsning
+    if (i>=1 && j>=1 && j<=boardsize && i<=boardsize && board[i][j] == 0)
+    {
+        board[i][j]=nr;
+       if(nr==boardsize*boardsize)
+       {                                //fylt opp brettet, skriv ut løsning
          display();
-    for (int t=1;t<=(boardsize*boardsize);t++)
-    { 
-         if(validmove(i,j))
-         {
-            board[i][j]=flyttNR++;
-            permhorse(i,j);
-         }
-
-        if(validmove(i+2,j-1))
-         {
-            permhorse(i+2,j-1);
-         }
-
-         if(validmove(i+2,j+1))
-         {
-            permhorse(i+2,j+1);
-         }
-
-         if(validmove(i-2,j-1))
-         {
-            permhorse(i-2,j-1);
-         }
-
-          if(validmove(i-2,j+1))
-         {
-            permhorse(i-2,j+1);
-         }
-
-          if(validmove(i-1,j-2))
-         {
-            permhorse(i-1,j-2);
-         }
-
-         if(validmove(i+1,j-2))
-         {
-            permhorse(i+1,j-2);
-         }  
-
-          if(validmove(i+1,j+2))
-         {
-            permhorse(i+1,j+2);
-         }
+       } else{
+            permhorse(i+2,j-1,nr+1);
+            permhorse(i+2,j+1,nr+1);
+            permhorse(i-2,j-1,nr+1);
+            permhorse(i-2,j+1,nr+1);
+            permhorse(i+1,j-2,nr+1);
+            permhorse(i+1,j+2,nr+1);
+            permhorse(i-1,j-2,nr+1);
+            permhorse(i-1,j+2,nr+1);
+        }
+               board[i][j] = 0;      //  Frigir ruten igjen. Her er cluet for å få mer enn en løsning
 
     }
+
 }
-
-
-
-
-
 
 int main ()
 {
@@ -106,6 +60,6 @@ int main ()
     cout << "linje: "; cin >> linje; cout << "Kolonne="; cin >> kolonne;
      
   }while (boardsize < 1  || boardsize > MAX);
-permhorse(linje, kolonne);
+permhorse(linje, kolonne,1);
     return 0;
 }
