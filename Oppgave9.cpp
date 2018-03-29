@@ -16,23 +16,15 @@ void displayboard ()
 {
 char ch;
   cout << "\n\n\nLsning nr." << ++ant << ":\n";
-
-
     for(int i=1; i<=boardsize; i++)
         {
-
            for (int j=1;j<=boardsize;j++)
              {
                 board[i][j]? cout << "1  ":cout<< "0  ";
-
              }
                  cout << endl;
-
          }
-
     cout << "\t\t\tSkriv ett tegn .....";   cin >> ch;
-
-
 }
 
 bool checkboard(int linje, int kolonne)
@@ -86,8 +78,5 @@ int main ()
   } while (boardsize < 1  || boardsize > MAX);
 
 permqueen(1);
-
-
-
     return 0;
 }

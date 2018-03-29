@@ -98,7 +98,7 @@ void settDronning(int j)  {
 	    brett[i][j] = 0;       //  Frigir posisjonen.
 	 }
 }
-
+4
 
 // ************************   HOVEDPROGRAM:   *****************************
 
